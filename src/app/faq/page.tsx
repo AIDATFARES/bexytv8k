@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, CircleHelp, Clock3, CreditCard, HelpCircle, Mail, MessageCircle, MonitorPlay, Send, Settings2, UserRound } from "lucide-react";
 
-type Category = "About freegotv" | "Setup & streaming" | "Plans & access" | "Payments & support";
+type Category = "About bexytv" | "Setup & streaming" | "Plans & access" | "Payments & support";
 
 type FAQItem = {
   category: Category;
@@ -13,7 +13,7 @@ type FAQItem = {
 };
 
 const categories: { label: Category; icon: typeof CircleHelp }[] = [
-  { label: "About freegotv", icon: CircleHelp },
+  { label: "About bexytv", icon: CircleHelp },
   { label: "Setup & streaming", icon: Settings2 },
   { label: "Plans & access", icon: UserRound },
   { label: "Payments & support", icon: CreditCard },
@@ -21,73 +21,73 @@ const categories: { label: Category; icon: typeof CircleHelp }[] = [
 
 const faqs: FAQItem[] = [
   {
-    category: "About freegotv",
-    question: "1. What is FreeGoTV?",
+    category: "About bexytv",
+    question: "1. What is BexyTV?",
     answer: (
       <>
-        FreeGoTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
-        <Link href="/channels" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">live TV channels</Link> and{" "}
-        <Link href="/pricing" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">IPTV subscription plans</Link>.
+        BexyTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
+        <Link href="/channels" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">live TV channels</Link> and{" "}
+        <Link href="/pricing" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">IPTV subscription plans</Link>.
       </>
     ),
   },
   {
-    category: "About freegotv",
-    question: "2. Is FreeGoTV authorized?",
+    category: "About bexytv",
+    question: "2. Is BexyTV authorized?",
     answer: (
       <>
-        FreeGoTV is intended to be used in accordance with applicable laws, local regulations, and our service terms. Please ensure that the content you access and the way you use the service are permitted in your location.
+        BexyTV is intended to be used in accordance with applicable laws, local regulations, and our service terms. Please ensure that the content you access and the way you use the service are permitted in your location.
       </>
     ),
   },
   {
-    category: "About freegotv",
-    question: "3. What channels and content are included with FreeGoTV?",
+    category: "About bexytv",
+    question: "3. What channels and content are included with BexyTV?",
     answer: (
       <>
-        FreeGoTV includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">full channels catalog</Link>.
+        BexyTV includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">full channels catalog</Link>.
       </>
     ),
   },
   {
-    category: "About freegotv",
-    question: "4. Can I watch live sports and PPV events on FreeGoTV?",
+    category: "About bexytv",
+    question: "4. Can I watch live sports and PPV events on BexyTV?",
     answer: (
       <>
-        FreeGoTV includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">live sports section</Link>.
+        BexyTV includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">live sports section</Link>.
       </>
     ),
   },
   {
-    category: "About freegotv",
+    category: "About bexytv",
     question: "5. Which devices can I use?",
     answer: (
       <>
-        FreeGoTV works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">installation guides</Link> to get started.
+        BexyTV works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">installation guides</Link> to get started.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "1. How do I install FreeGoTV on my device?",
+    question: "1. How do I install BexyTV on my device?",
     answer: (
       <>
-        Start by installing a compatible IPTV player on your device. Enter the FreeGoTV credentials from your email. View our step-by-step <Link href="/installation" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">installation guides</Link> for detailed instructions.
+        Start by installing a compatible IPTV player on your device. Enter the BexyTV credentials from your email. View our step-by-step <Link href="/installation" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">installation guides</Link> for detailed instructions.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "2. Can I use FreeGoTV on a Smart TV?",
+    question: "2. Can I use BexyTV on a Smart TV?",
     answer: (
       <>
-        Yes, FreeGoTV can be used on Smart TVs including Samsung, LG, and Android TV models using compatible IPTV players like Tivimate or Smarters.
+        Yes, BexyTV can be used on Smart TVs including Samsung, LG, and Android TV models using compatible IPTV players like Tivimate or Smarters.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "3. What internet speed do I need for smooth FreeGoTV streaming?",
+    question: "3. What internet speed do I need for smooth BexyTV streaming?",
     answer: (
       <>
         For reliable playback, allow at least 10 Mbps per stream for HD and 25 Mbps per stream for 4K. Ethernet or 5 GHz Wi-Fi is recommended.
@@ -96,43 +96,43 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Setup & streaming",
-    question: "4. Why is FreeGoTV buffering or freezing?",
+    question: "4. Why is BexyTV buffering or freezing?",
     answer: (
       <>
-        Restart your IPTV app and router. If buffering persists, check your Wi-Fi signal or <Link href="/contact" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">contact support</Link> for quick assistance.
+        Restart your IPTV app and router. If buffering persists, check your Wi-Fi signal or <Link href="/contact" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">contact support</Link> for quick assistance.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "5. Do I need a VPN to use FreeGoTV?",
+    question: "5. Do I need a VPN to use BexyTV?",
     answer: (
       <>
-        A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Contact our <Link href="/contact" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">support team</Link> for VPN setup recommendations.
+        A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Contact our <Link href="/contact" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">support team</Link> for VPN setup recommendations.
       </>
     ),
   },
   {
     category: "Plans & access",
-    question: "1. Are there any hidden fees or contracts with FreeGoTV?",
+    question: "1. Are there any hidden fees or contracts with BexyTV?",
     answer: (
       <>
-        No contracts and no hidden fees. Choose an <Link href="/pricing" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">IPTV subscription plan</Link> with transparent pricing and instant delivery.
+        No contracts and no hidden fees. Choose an <Link href="/pricing" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">IPTV subscription plan</Link> with transparent pricing and instant delivery.
       </>
     ),
   },
   {
     category: "Plans & access",
-    question: "2. Can I use FreeGoTV on multiple devices?",
+    question: "2. Can I use BexyTV on multiple devices?",
     answer: (
       <>
-        Yes! We offer multi-device subscription plans. Select the 1, 2, or 3 device option on our <Link href="/pricing" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">pricing page</Link>.
+        Yes! We offer multi-device subscription plans. Select the 1, 2, or 3 device option on our <Link href="/pricing" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">pricing page</Link>.
       </>
     ),
   },
   {
     category: "Plans & access",
-    question: "3. What are FreeGoTV M3U and Xtream Codes details?",
+    question: "3. What are BexyTV M3U and Xtream Codes details?",
     answer: (
       <>
         Your welcome email includes both M3U playlist URLs and Xtream Codes credentials for fast setup in any IPTV app.
@@ -141,19 +141,19 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Payments & support",
-    question: "1. Does FreeGoTV offer a free trial?",
+    question: "1. Does BexyTV offer a free trial?",
     answer: (
       <>
-        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20freegotv%20IPTV." target="_blank" rel="noreferrer" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">free trial</a> so you can test our service before subscribing.
+        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20bexytv%20IPTV." target="_blank" rel="noreferrer" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">free trial</a> so you can test our service before subscribing.
       </>
     ),
   },
   {
     category: "Payments & support",
-    question: "2. Which payment methods does FreeGoTV accept?",
+    question: "2. Which payment methods does BexyTV accept?",
     answer: (
       <>
-        We accept PayPal, Crypto (Bitcoin), Credit Cards, and Instant Bank Transfers. For help with payments, reach out to our <Link href="/contact" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">support team</Link>.
+        We accept PayPal, Crypto (Bitcoin), Credit Cards, and Instant Bank Transfers. For help with payments, reach out to our <Link href="/contact" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">support team</Link>.
       </>
     ),
   },
@@ -169,7 +169,7 @@ const faqs: FAQItem[] = [
 ];
 
 export default function FAQ() {
-  const [activeCategory, setActiveCategory] = useState<Category>("About freegotv");
+  const [activeCategory, setActiveCategory] = useState<Category>("About bexytv");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const visibleFaqs = faqs.filter((faq) => faq.category === activeCategory);
 
@@ -183,7 +183,7 @@ export default function FAQ() {
     const email = String(formData.get("email") || "").trim();
     const subject = String(formData.get("subject") || "General support").trim();
     const message = String(formData.get("message") || "").trim();
-    const text = encodeURIComponent(`Hello FreeGoTV support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
+    const text = encodeURIComponent(`Hello BexyTV support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
     window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
@@ -191,15 +191,15 @@ export default function FAQ() {
     <main className="flex-grow px-4 sm:px-6 pb-20 pt-12 md:pt-16 bg-white">
       <div className="mx-auto max-w-[1140px]">
         <header className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#0EA5E9]">Help center</p>
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6366F1]">Help center</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-tight">
             Frequently Asked Questions<br />(FAQ)
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-sm sm:text-base leading-relaxed text-stone-700">
             Find answers to common questions about our IPTV service, including{" "}
-            <Link href="/pricing" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">subscriptions</Link>,{" "}
-            <Link href="/installation" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">devices</Link>, streaming quality, payments, and more. If you need further help, our{" "}
-            <Link href="/contact" className="text-[#0EA5E9] font-semibold hover:text-[#0EA5E9] transition-colors">support team</Link> is here for you.
+            <Link href="/pricing" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">subscriptions</Link>,{" "}
+            <Link href="/installation" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">devices</Link>, streaming quality, payments, and more. If you need further help, our{" "}
+            <Link href="/contact" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">support team</Link> is here for you.
           </p>
         </header>
 
@@ -214,7 +214,7 @@ export default function FAQ() {
                       aria-pressed={isSelected}
                       className={`flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold transition-all md:w-full ${
                         isSelected
-                          ? "bg-[#0EA5E9] text-[#0F172A] shadow-lg shadow-sky-500/25"
+                          ? "bg-[#6366F1] text-[#0F172A] shadow-lg shadow-sky-500/25"
                           : "text-[#64748B] hover:bg-white/[0.07] hover:text-[#0F172A]"
                       }`}
                       key={label}
@@ -232,7 +232,7 @@ export default function FAQ() {
 
           <section aria-live="polite" className="space-y-4">
             <div className="mb-5 flex items-center gap-3">
-              <MonitorPlay className="h-5 w-5 text-[#0EA5E9]" />
+              <MonitorPlay className="h-5 w-5 text-[#6366F1]" />
               <h2 className="text-xl font-bold text-[#0F172A]">{activeCategory}</h2>
             </div>
             <div className="grid grid-cols-1 gap-5">
@@ -241,11 +241,11 @@ export default function FAQ() {
                 const contentId = `faq-${activeCategory.replaceAll(" ", "-").toLowerCase()}-${index}`;
 
                 return (
-                  <article className="flex flex-col rounded-2xl overflow-hidden border border-black/10 bg-white shadow-xl hover:border-[#0EA5E9]/40 transition-colors" key={faq.question}>
+                  <article className="flex flex-col rounded-2xl overflow-hidden border border-black/10 bg-white shadow-xl hover:border-[#6366F1]/40 transition-colors" key={faq.question}>
                     {/* Header Banner */}
                     <div className="bg-stone-100 border-b border-black/10 px-5 py-4 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-3">
-                        <HelpCircle className="w-5 h-5 text-[#0EA5E9] shrink-0" />
+                        <HelpCircle className="w-5 h-5 text-[#6366F1] shrink-0" />
                         <h3 className="text-base sm:text-lg font-bold text-[#0F172A] leading-snug">
                           {faq.question}
                         </h3>
@@ -257,7 +257,7 @@ export default function FAQ() {
                         onClick={() => setActiveIndex(isOpen ? null : index)}
                         type="button"
                       >
-                        <ChevronDown className={`h-5 w-5 shrink-0 text-[#0EA5E9] transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+                        <ChevronDown className={`h-5 w-5 shrink-0 text-[#6366F1] transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
                       </button>
                     </div>
 
@@ -279,17 +279,17 @@ export default function FAQ() {
           </header>
           <div className="mt-10 grid gap-8 xl:grid-cols-[278px_minmax(0,1fr)] xl:gap-10">
             <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#0EA5E9]/50" href="mailto:support@freegotv-iptv.shop">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0EA5E9]/20 text-[#0EA5E9]"><Mail className="h-5 w-5" /></span>
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#6366F1]/50" href="mailto:support@bexytv.com">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#6366F1]/20 text-[#6366F1]"><Mail className="h-5 w-5" /></span>
                 <span className="mt-4 block text-base font-bold text-[#0F172A]">Email Us</span>
                 <span className="mt-2 block text-xs leading-5 text-[#64748B]">For general inquiries and support.</span>
-                <span className="mt-3 block text-xs font-semibold text-[#0EA5E9]">support@freegotv-iptv.shop</span>
+                <span className="mt-3 block text-xs font-semibold text-[#6366F1]">support@bexytv.com</span>
               </a>
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#0EA5E9]/50" href="https://wa.me/213552069874?text=Hello%20freegotv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0EA5E9]/20 text-[#0EA5E9]"><MessageCircle className="h-5 w-5" /></span>
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#6366F1]/50" href="https://wa.me/213552069874?text=Hello%20bexytv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#6366F1]/20 text-[#6366F1]"><MessageCircle className="h-5 w-5" /></span>
                 <span className="mt-4 block text-base font-bold text-[#0F172A]">WhatsApp Support</span>
                 <span className="mt-2 block text-xs leading-5 text-[#64748B]">Fastest way to reach us for technical issues.</span>
-                <span className="mt-3 block text-xs font-semibold text-[#0EA5E9]">Start Chat →</span>
+                <span className="mt-3 block text-xs font-semibold text-[#6366F1]">Start Chat →</span>
               </a>
               <div className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0F172A]/10 text-stone-700"><Clock3 className="h-5 w-5" /></span>
@@ -302,12 +302,12 @@ export default function FAQ() {
               <h3 className="text-xl font-bold text-[#0F172A]">Send us a message</h3>
               <form action={sendSupportMessage} className="mt-6 space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="block text-xs font-semibold text-[#64748B]">Name<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-[#0F172A] outline-none transition-colors placeholder:text-[#64748B] focus:border-[#0EA5E9]" name="name" placeholder="John Doe" required /></label>
-                  <label className="block text-xs font-semibold text-[#64748B]">Email address<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-[#0F172A] outline-none transition-colors placeholder:text-[#64748B] focus:border-[#0EA5E9]" name="email" placeholder="john@example.com" required type="email" /></label>
+                  <label className="block text-xs font-semibold text-[#64748B]">Name<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-[#0F172A] outline-none transition-colors placeholder:text-[#64748B] focus:border-[#6366F1]" name="name" placeholder="John Doe" required /></label>
+                  <label className="block text-xs font-semibold text-[#64748B]">Email address<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-[#0F172A] outline-none transition-colors placeholder:text-[#64748B] focus:border-[#6366F1]" name="email" placeholder="john@example.com" required type="email" /></label>
                 </div>
-                <label className="block text-xs font-semibold text-[#64748B]">Subject<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-[#0F172A] outline-none transition-colors placeholder:text-[#64748B] focus:border-[#0EA5E9]" name="subject" placeholder="How can we help?" /></label>
-                <label className="block text-xs font-semibold text-[#64748B]">Message<textarea className="mt-2 min-h-32 w-full resize-y rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-[#0F172A] outline-none transition-colors placeholder:text-[#64748B] focus:border-[#0EA5E9]" name="message" placeholder="Describe your question or issue..." required /></label>
-                <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0EA5E9] hover:bg-[#0EA5E9] py-3.5 text-sm font-bold text-[#0F172A] shadow-lg shadow-sky-500/25 transition-all hover:-translate-y-0.5 active:translate-y-0" type="submit"><Send className="h-4 w-4" />Send message via WhatsApp</button>
+                <label className="block text-xs font-semibold text-[#64748B]">Subject<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-[#0F172A] outline-none transition-colors placeholder:text-[#64748B] focus:border-[#6366F1]" name="subject" placeholder="How can we help?" /></label>
+                <label className="block text-xs font-semibold text-[#64748B]">Message<textarea className="mt-2 min-h-32 w-full resize-y rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-[#0F172A] outline-none transition-colors placeholder:text-[#64748B] focus:border-[#6366F1]" name="message" placeholder="Describe your question or issue..." required /></label>
+                <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#6366F1] hover:bg-[#6366F1] py-3.5 text-sm font-bold text-[#0F172A] shadow-lg shadow-sky-500/25 transition-all hover:-translate-y-0.5 active:translate-y-0" type="submit"><Send className="h-4 w-4" />Send message via WhatsApp</button>
               </form>
             </div>
           </div>

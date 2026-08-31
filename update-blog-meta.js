@@ -6,7 +6,7 @@ let content = fs.readFileSync(file, 'utf8');
 const replacements = [
   {
     oldTitle: 'title: "Best IPTV Players for Android TV in 2026"',
-    newTitle: 'title: "Best IPTV Players for Android TV in 2026 | FreeGoTV"',
+    newTitle: 'title: "Best IPTV Players for Android TV in 2026 | BexyTV"',
     oldDesc: 'description: "Looking for the best IPTV players for Android TV in 2026? Compare TiviMate, IPTV Smarters Pro, Sparkle TV, OTT Navigator and Kodi."',
     newDesc: 'description: "Discover the 5 best IPTV players for Android TV in 2026. We compare TiviMate, IPTV Smarters Pro, and more to help you stream 4K IPTV flawlessly."'
   },

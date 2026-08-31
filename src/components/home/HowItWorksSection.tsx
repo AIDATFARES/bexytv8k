@@ -1,73 +1,62 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 export default function HowItWorksSection() {
   return (
-    <section className="py-20 bg-white text-[#0F172A] relative z-10 border-b border-black/10 overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-6">
+    <section className="py-24 bg-[#060810] bg-tech-grid bg-atmosphere text-white relative z-10 border-t border-white/10 overflow-hidden">
+      <div className="max-w-[1340px] mx-auto px-6 relative z-10">
 
-        {/* ========================================================================= */}
-        {/* PART 1: How does it work? FreeGoTV Timeline */}
-        {/* ========================================================================= */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0EA5E9] mb-2 block">
-            EASY IPTV SETUP
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span className="inline-flex items-center gap-2 border border-[#38BDF8]/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
+            <Sparkles className="w-3.5 h-3.5" /> FAST 3-STEP SETUP
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0EA5E9] tracking-tight">
-            Start Streaming FreeGoTV IPTV in 3 Simple Steps
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+            Start Streaming BexyTV IPTV in{" "}
+            <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">
+              3 Simple Steps
+            </span>
           </h2>
-          <p className="text-stone-700 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-            Getting started with FreeGoTV is remarkably fast and easy. Follow this simple process to unlock your premium entertainment experience instantly.
+          <p className="text-[#A7B0C0] text-base sm:text-lg max-w-2xl mx-auto">
+            Get setup in under 3 minutes with automated credential delivery and instant activation.
           </p>
         </div>
 
         {/* Timeline Steps Container */}
-        <div className="relative max-w-[960px] mx-auto mb-28">
+        <div className="relative max-w-[1000px] mx-auto">
           {/* Vertical Dashed Center Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-0.5 border-l-2 border-dashed border-black/20 hidden md:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-0.5 border-l-2 border-dashed border-white/10 hidden md:block" />
 
           {/* STEP 1 */}
           <div className="relative mb-16 md:mb-20">
-            {/* Step Badge */}
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-4 z-20 flex justify-center mb-6 md:mb-0">
-              <span className="bg-[#14B8A6] text-[#0F172A] font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(14,165,233,0.6)]">
+              <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] text-[#061018] font-black text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-lg shadow-cyan-500/20">
                 Step One
               </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
-              {/* Left Card */}
-              <div className="bg-white text-stone-100 p-8 rounded-2xl shadow-xl relative border border-stone-200"
-              >
-                <h3 className="text-xl font-extrabold text-[#0EA5E9] mb-3">
-                  <a
-                    href="#pricing"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    1. Select Your Premium Plan
-                  </a>
+              <div className="bexy-card p-8 relative border border-white/10">
+                <span className="text-xs font-bold text-[#38BDF8] uppercase tracking-wider mb-2 block">1. SELECT YOUR PLAN</span>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Choose Subscription & Checkout
                 </h3>
-                <p className="text-[#64748B] text-sm leading-relaxed">
-                  Browse our flexible pricing plans and select the package that fits your lifestyle. After secure checkout, your private login credentials are automatically dispatched via email or{" "}
-                  <Link
-                    href="/contact"
-                    className="text-[#0EA5E9] font-semibold hover:text-teal-600 transition-colors"
-                  >
-                    WhatsApp
-                  </Link>{" "}
-                  instantly.
+                <p className="text-[#A7B0C0] text-sm leading-relaxed mb-4">
+                  Select your desired plan (1, 3, 6, or 12 Months). After instant checkout, your M3U playlist URL and Xtream Codes login credentials are immediately sent to your email or WhatsApp.
                 </p>
+                <a href="#pricing" className="text-xs font-bold text-[#38BDF8] hover:text-white transition-colors inline-flex items-center gap-1">
+                  View Plans <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </div>
 
-              {/* Right Image */}
-              <div className="overflow-hidden rounded-2xl bg-[#0F172A]/5 border border-black/10 shadow-xl"
-              >
+              <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl relative aspect-[16/10] group">
                 <Image
                   src="/step-1-order-ai.png"
                   alt="Place your order online"
-                  width={600}
-                  height={380}
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
                 />
               </div>
             </div>
@@ -75,97 +64,72 @@ export default function HowItWorksSection() {
 
           {/* STEP 2 */}
           <div className="relative mb-16 md:mb-20">
-            {/* Step Badge */}
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-4 z-20 flex justify-center mb-6 md:mb-0">
-              <span className="bg-[#14B8A6] text-[#0F172A] font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(14,165,233,0.6)]">
+              <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] text-[#061018] font-black text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-lg shadow-cyan-500/20">
                 Step Two
               </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
-              {/* Left Image */}
-              <div className="overflow-hidden rounded-2xl bg-[#0F172A]/5 border border-black/10 shadow-xl order-2 md:order-1"
-              >
+              <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl relative aspect-[16/10] order-2 md:order-1 group">
                 <Image
                   src="/step-2-setup-ai.png"
                   alt="Instant installation"
-                  width={600}
-                  height={380}
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
                 />
               </div>
 
-              {/* Right Card */}
-              <div className="bg-white text-stone-100 p-8 rounded-2xl shadow-xl relative border border-stone-200 order-1 md:order-2"
-              >
-                <h3 className="text-xl font-extrabold text-[#0EA5E9] mb-3">
-                  <Link
-                    href="/installation"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    2. Connect Your Device
-                  </Link>
+              <div className="bexy-card p-8 relative border border-white/10 order-1 md:order-2">
+                <span className="text-xs font-bold text-[#38BDF8] uppercase tracking-wider mb-2 block">2. INSTALL THE APP</span>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Connect Your Favorite IPTV App
                 </h3>
-                <p className="text-[#64748B] text-sm leading-relaxed">
-                  Follow our comprehensive{" "}
-                  <Link
-                    href="/installation"
-                    className="text-[#0EA5E9] font-semibold hover:text-teal-600 transition-colors"
-                  >
-                    IPTV installation guides
-                  </Link>{" "}
-                  to configure your Smart TV, Firestick, or mobile device. We fully support industry-leading applications like IPTV Smarters and TiviMate.
+                <p className="text-[#A7B0C0] text-sm leading-relaxed mb-4">
+                  Download IPTV Smarters Pro, TiviMate, IBO Player, or XCIPTV on your Smart TV or Firestick. Enter your login details provided in Step 1.
                 </p>
+                <Link href="/installation" className="text-xs font-bold text-[#38BDF8] hover:text-white transition-colors inline-flex items-center gap-1">
+                  Installation Guides <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
           </div>
 
           {/* STEP 3 */}
           <div className="relative">
-            {/* Step Badge */}
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-4 z-20 flex justify-center mb-6 md:mb-0">
-              <span className="bg-[#14B8A6] text-[#0F172A] font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(14,165,233,0.6)]">
+              <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] text-[#061018] font-black text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-lg shadow-cyan-500/20">
                 Step Three
               </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
-              {/* Left Card */}
-              <div className="bg-white text-stone-100 p-8 rounded-2xl shadow-xl relative border border-stone-200"
-              >
-                <h3 className="text-xl font-extrabold text-[#0EA5E9] mb-3">
-                  <Link
-                    href="/channels"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    3. Start Watching Instantly
-                  </Link>
+              <div className="bexy-card p-8 relative border border-white/10">
+                <span className="text-xs font-bold text-[#38BDF8] uppercase tracking-wider mb-2 block">3. ENJOY STREAMING</span>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Stream 50,000+ Channels & VODs
                 </h3>
-                <p className="text-[#64748B] text-sm leading-relaxed">
-                  Dive into over 50,000 live international channels and a massive Video on Demand library. Explore our extensive{" "}
-                  <Link
-                    href="/channels"
-                    className="text-[#0EA5E9] font-semibold hover:text-teal-600 transition-colors"
-                  >
-                    channels catalog
-                  </Link>
-                  {" "}in stunning 4K and HD quality—with zero buffering.
+                <p className="text-[#A7B0C0] text-sm leading-relaxed mb-4">
+                  Sit back and enjoy uninterrupted live sports, 4K movies, and premium international channels with zero buffering and 60 FPS clarity.
                 </p>
+                <Link href="/channels" className="text-xs font-bold text-[#38BDF8] hover:text-white transition-colors inline-flex items-center gap-1">
+                  Explore Channel Catalog <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
 
-              {/* Right Image */}
-              <div className="overflow-hidden rounded-2xl bg-[#0F172A]/5 border border-black/10 shadow-xl"
-              >
+              <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl relative aspect-[16/10] group">
                 <Image
                   src="/step-3-watch-ai.png"
                   alt="Watch and enjoy live TV"
-                  width={600}
-                  height={380}
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
                 />
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

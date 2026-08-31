@@ -1,246 +1,184 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #FFFFFF;
-  --color-surface-dim: #F8FAFC;
-  --color-surface-bright: #FFFFFF;
-  --color-surface-container-lowest: #FFFFFF;
-  --color-surface-container-low: #F1F5F9;
-  --color-surface-container: #F1F5F9;
-  --color-surface-container-high: #E2E8F0;
-  --color-surface-container-highest: #E2E8F0;
-  --color-on-surface: #0F172A;
-  --color-on-surface-variant: #64748B;
-  --color-inverse-surface: #0F172A;
-  --color-inverse-on-surface: #F1F5F9;
-  --color-outline: rgba(47,49,54,0.08);
-  --color-outline-variant: rgba(47,49,54,0.04);
-  --color-surface-tint: #0EA5E9;
-  --color-primary: #0EA5E9;
-  --color-on-primary: #FFFFFF;
-  --color-primary-container: #14B8A6;
-  --color-on-primary-container: #FFFFFF;
-  --color-inverse-primary: #0EA5E9;
-  --color-secondary: #14B8A6;
-  --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #E2E8F0;
-  --color-on-secondary-container: #0F172A;
-  --color-tertiary: #BAE6FD;
-  --color-on-tertiary: #0F172A;
-  --color-tertiary-container: #BAE6FD;
-  --color-on-tertiary-container: #0F172A;
-  --color-background: #F1F5F9;
-  --color-on-background: #0F172A;
-  --color-surface-variant: #FFFFFF;
-
-  /* Brand Colors Override */
-  --color-orange-400: #0EA5E9;
-  --color-orange-500: #14B8A6;
-  --color-orange-600: #0EA5E9;
-  --color-blue-500: #14B8A6;
-  --color-slate-600: #64748B;
-  --color-slate-700: #0F172A;
-  --color-black: #0F172A;
+  --color-background: #060810;
+  --color-secondary-bg: #080B14;
+  --color-card: #0D111B;
+  --color-card-hover: #111621;
+  --color-on-background: #F8FAFC;
+  
+  --color-primary-cyan: #38BDF8;
+  --color-primary-indigo: #818CF8;
+  --color-primary-purple: #7C3AED;
+  --color-text-muted: #A7B0C0;
+  --color-text-hover: #60A5FA;
 
   --radius: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
+  --radius-2xl: 16px;
   --radius-full: 9999px;
 
-  --spacing-margin-desktop: 64px;
-  --spacing-unit: 4px;
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-lg: 24px;
-  --spacing-md: 16px;
-  --spacing-xl: 32px;
-  --spacing-gutter: 24px;
-  --spacing-margin-mobile: 16px;
-
-  --font-title-md: var(--font-inter);
-  --font-headline-lg-mobile: var(--font-inter);
   --font-body-lg: var(--font-inter);
-  --font-headline-lg: var(--font-inter);
-  --font-label-caps: var(--font-geist);
-  --font-body-sm: var(--font-inter);
-  --font-display-lg: var(--font-inter);
-
-  /* Note: FontSize configuration inside Tailwind CSS v4 */
-  --text-title-md: 20px;
-  --text-title-md--line-height: 28px;
-  --text-title-md--font-weight: 500;
-
-  --text-headline-lg-mobile: 24px;
-  --text-headline-lg-mobile--line-height: 32px;
-  --text-headline-lg-mobile--font-weight: 600;
-
-  --text-body-lg: 16px;
-  --text-body-lg--line-height: 24px;
-  --text-body-lg--font-weight: 400;
-
-  --text-headline-lg: 32px;
-  --text-headline-lg--line-height: 40px;
-  --text-headline-lg--letter-spacing: -0.01em;
-  --text-headline-lg--font-weight: 600;
-
-  --text-label-caps: 12px;
-  --text-label-caps--line-height: 16px;
-  --text-label-caps--letter-spacing: 0.05em;
-  --text-label-caps--font-weight: 600;
-
-  --text-body-sm: 14px;
-  --text-body-sm--line-height: 20px;
-  --text-body-sm--font-weight: 400;
-
-  --text-display-lg: 48px;
-  --text-display-lg--line-height: 56px;
-  --text-display-lg--letter-spacing: -0.02em;
-  --text-display-lg--font-weight: 700;
 }
 
 @layer base {
   body {
-    @apply bg-background text-on-background font-body-lg min-h-screen flex flex-col antialiased;
+    background-color: #060810;
+    color: #F8FAFC;
+    font-family: var(--font-inter), sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    antialiased: true;
   }
 }
 
+/* Background Grid System */
+.bg-tech-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+@media (max-width: 1024px) {
+  .bg-tech-grid {
+    background-size: 45px 45px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bg-tech-grid {
+    background-size: 35px 35px;
+  }
+}
+
+/* Atmospheric Lighting System */
+.bg-atmosphere {
+  position: relative;
+}
+
+.bg-atmosphere::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.18) 0%, transparent 45%),
+              radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.10) 0%, transparent 50%),
+              radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.20) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-glow {
+  background: radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.22) 0%, transparent 50%),
+              radial-gradient(circle at 50% 40%, rgba(6, 182, 212, 0.15) 0%, transparent 55%),
+              radial-gradient(circle at 80% 30%, rgba(129, 140, 248, 0.25) 0%, transparent 50%);
+}
+
+.card-glow-featured {
+  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15) 0%, transparent 70%),
+              radial-gradient(circle at 50% 100%, rgba(129, 140, 248, 0.20) 0%, transparent 70%);
+}
+
+/* Component Utility Classes */
 @layer components {
-  .glass-panel {
-    background: rgba(15, 23, 42, 0.5);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(14, 165, 233, 0.15);
-  }
-  .text-glow {
-    text-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
-  }
-  .btn-glow:hover {
-    box-shadow: 0 0 30px rgba(14, 165, 233, 0.4);
+  /* Buttons */
+  .btn-primary {
+    background: linear-gradient(90deg, #38BDF8 0%, #818CF8 100%);
+    color: #061018;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.25);
   }
 
-  .btn-primary-voltra {
-    background: linear-gradient(90deg, #14B8A6 0%, #0EA5E9 100%);
-    color: #ffffff;
-    font-weight: 600;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2);
-    transition: all 0.3s ease;
-  }
-  .btn-primary-voltra:hover {
-    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.35);
+  .btn-primary:hover {
+    filter: brightness(1.1);
     transform: translateY(-2px);
-    filter: brightness(1.05);
-  }
-  .btn-primary-voltra:active {
-    transform: translateY(0);
+    box-shadow: 0 8px 30px rgba(129, 140, 248, 0.4);
   }
 
-  .btn-secondary-voltra {
+  .btn-secondary {
     background: transparent;
-    border: 1px solid #14B8A6;
-    color: #14B8A6;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: #DCE3EE;
     font-weight: 600;
-    border-radius: var(--radius);
-    transition: all 0.3s ease;
+    border-radius: 9999px;
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .btn-secondary-voltra:hover {
-    background: #14B8A6;
-    color: #ffffff;
+
+  .btn-secondary:hover {
+    border-color: rgba(96, 165, 250, 0.35);
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
     transform: translateY(-2px);
   }
 
-  /* -------------------------------------------------------------
-     Page-Type Specific Typography & Text Formatting System
-     ------------------------------------------------------------- */
-  
-  /* 1. MARKETING / SALES PAGES (Home, Pricing, Reseller, Channels) */
+  /* Cards */
+  .bexy-card {
+    background-color: #0D111B;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .bexy-card:hover {
+    background-color: #111621;
+    border-color: rgba(96, 165, 250, 0.25);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Typography formats */
   .text-format-marketing h1 {
-    @apply font-black uppercase tracking-tight text-black leading-tight text-3xl sm:text-5xl lg:text-6xl;
+    @apply font-black tracking-tight text-white leading-tight text-3xl sm:text-5xl lg:text-6xl;
   }
   .text-format-marketing h2 {
-    @apply font-black uppercase tracking-tight text-black text-2xl sm:text-4xl;
+    @apply font-black tracking-tight text-white text-2xl sm:text-4xl;
   }
   .text-format-marketing h3 {
-    @apply font-extrabold uppercase tracking-wide text-black text-lg sm:text-xl;
+    @apply font-extrabold tracking-wide text-white text-lg sm:text-xl;
   }
   .text-format-marketing p {
-    @apply text-slate-600 leading-relaxed text-sm sm:text-base font-normal;
+    @apply text-[#A7B0C0] leading-relaxed text-sm sm:text-base font-normal;
   }
   .text-format-marketing strong, 
   .text-format-marketing b {
-    @apply font-bold text-black;
-  }
-  .text-format-marketing mark,
-  .text-format-marketing .text-highlight {
-    @apply bg-transparent text-orange-500 font-extrabold;
-  }
-  .text-format-marketing .badge-text {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-orange-600;
+    @apply font-bold text-white;
   }
 
-  /* 2. BLOG & EDITORIAL PAGES (Blog listing, Article detail) */
+  /* Blog formatting */
   .text-format-blog h1 {
-    @apply font-bold tracking-tight text-black leading-snug text-3xl sm:text-4xl md:text-5xl capitalize;
+    @apply font-bold tracking-tight text-white leading-snug text-3xl sm:text-4xl md:text-5xl capitalize;
   }
   .text-format-blog h2 {
-    @apply font-bold text-black tracking-normal mt-10 mb-4 text-xl sm:text-2xl border-b border-black/10 pb-2.5;
+    @apply font-bold text-white tracking-normal mt-10 mb-4 text-xl sm:text-2xl border-b border-white/10 pb-2.5;
   }
   .text-format-blog h3 {
-    @apply font-semibold text-black tracking-normal mt-7 mb-3 text-lg sm:text-xl;
+    @apply font-semibold text-white tracking-normal mt-7 mb-3 text-lg sm:text-xl;
   }
   .text-format-blog p {
-    @apply text-slate-700 leading-8 text-base sm:text-lg mb-6 font-normal tracking-wide;
+    @apply text-[#A7B0C0] leading-8 text-base sm:text-lg mb-6 font-normal tracking-wide;
   }
   .text-format-blog strong, 
   .text-format-blog b {
-    @apply font-bold text-black bg-black/[0.04] px-1 py-0.5 rounded;
-  }
-  .text-format-blog em,
-  .text-format-blog i {
-    @apply italic text-slate-600;
+    @apply font-bold text-white bg-white/5 px-1.5 py-0.5 rounded;
   }
   .text-format-blog a {
-    @apply text-orange-500 font-medium underline underline-offset-4 decoration-orange-500/40 hover:text-orange-600 hover:decoration-orange-500 transition-colors;
-  }
-
-  /* 3. TECHNICAL GUIDES & INSTALLATION PAGES */
-  .text-format-technical h1 {
-    @apply font-black uppercase tracking-tight text-black text-3xl sm:text-5xl;
-  }
-  .text-format-technical h2 {
-    @apply font-extrabold tracking-tight text-black text-xl sm:text-3xl mt-8 mb-4 flex items-center gap-3;
-  }
-  .text-format-technical h3 {
-    @apply font-bold text-black text-lg sm:text-xl mt-6 mb-2;
-  }
-  .text-format-technical p {
-    @apply text-slate-600 leading-7 text-sm sm:text-base mb-4 font-normal;
-  }
-  .text-format-technical code,
-  .text-format-technical pre {
-    @apply font-mono text-orange-600 bg-slate-100 px-2.5 py-1 rounded-md border border-black/10 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
-  }
-  .text-format-technical strong,
-  .text-format-technical b {
-    @apply font-bold text-black underline decoration-teal-500/50 decoration-2 underline-offset-2;
-  }
-
-  /* 4. LEGAL & POLICY DOCUMENTS */
-  .text-format-legal h1 {
-    @apply font-black uppercase tracking-tight text-black text-3xl sm:text-4xl lg:text-5xl;
-  }
-  .text-format-legal h2 {
-    @apply font-bold text-black text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-orange-500 pl-3;
-  }
-  .text-format-legal p {
-    @apply text-slate-600 leading-7 font-normal text-sm sm:text-base mb-4 tracking-normal;
-  }
-  .text-format-legal strong,
-  .text-format-legal b {
-    @apply font-semibold text-black;
-  }
-  .text-format-legal a {
-    @apply font-semibold text-orange-500 hover:text-orange-600 transition-colors underline underline-offset-2;
+    @apply text-[#60A5FA] font-medium underline underline-offset-4 hover:text-[#93C5FD] transition-colors;
   }
 }
 
@@ -249,47 +187,6 @@
   100% { transform: translateX(-50%); }
 }
 
-@keyframes marquee-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0%); }
-}
-
 .animate-marquee {
   animation: marquee 35s linear infinite;
-}
-
-.animate-marquee-fast {
-  animation: marquee 24s linear infinite;
-}
-
-.animate-marquee-reverse {
-  animation: marquee-reverse 26s linear infinite;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-up {
-  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-16px);
-  }
-}
-
-.animate-float {
-  animation: float 5.5s ease-in-out infinite;
 }

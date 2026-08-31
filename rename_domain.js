@@ -28,8 +28,8 @@ const files = walkSync(".");
 let modifiedCount = 0;
 
 const replacements = [
-  { regex: /freegotv\.shop/g, replace: "freegotv-iptv.shop" },
-  { regex: /dooriptv\.shop/g, replace: "freegotv-iptv.shop" },
+  { regex: /bexytv\.shop/g, replace: "bexytv.com" },
+  { regex: /dooriptv\.shop/g, replace: "bexytv.com" },
 ];
 
 files.forEach(file => {

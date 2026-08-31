@@ -1,8 +1,8 @@
 import PricingPageContent from "@/components/pricing/PricingPageContent";
 
 export const metadata = {
-  title: "IPTV Subscription Plans & Pricing – Instant Access | FreeGoTV",
-  description: "Choose your premium IPTV subscription plan with FreeGoTV. Enjoy flexible 4K streaming packages, instant activation, and access to 50,000+ channels. View plans now!",
+  title: "IPTV Subscription Plans & Pricing – Instant Access | BexyTV",
+  description: "Choose your premium IPTV subscription plan with BexyTV. Enjoy flexible 4K streaming packages, instant activation, and access to 50,000+ channels. View plans now!",
   alternates: {
     canonical: "/pricing",
   },

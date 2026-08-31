@@ -27,7 +27,7 @@ export default function FeaturesSection() {
       icon: ShieldCheck,
       title: "99.99% Network Reliability",
       desc: "Powered by a robust global cloud network with automated failover nodes, ensuring your streams stay live 24/7.",
-      color: "text-[#0EA5E9]",
+      color: "text-[#6366F1]",
     },
     {
       icon: Wifi,
@@ -61,7 +61,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-on-background mb-sm"
           >
-            FreeGoTV: Engineered for Uninterrupted IPTV Entertainment
+            BexyTV: Engineered for Uninterrupted IPTV Entertainment
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}

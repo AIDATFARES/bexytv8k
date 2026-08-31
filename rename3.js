@@ -28,9 +28,9 @@ const files = walkSync(".");
 let modifiedCount = 0;
 
 const replacements = [
-  { regex: /4k-iptv-usa/g, replace: "freegotv-iptv" },
-  { regex: /4K IPTV USA/g, replace: "FreeGoTV" },
-  { regex: /4kiptvusa/g, replace: "freegotv" },
+  { regex: /4k-iptv-usa/g, replace: "bexytv" },
+  { regex: /4K IPTV USA/g, replace: "BexyTV" },
+  { regex: /4kiptvusa/g, replace: "bexytv" },
 ];
 
 files.forEach(file => {
@@ -48,4 +48,4 @@ files.forEach(file => {
   }
 });
 
-console.log(`Modified ${modifiedCount} files for FreeGoTV branding.`);
+console.log(`Modified ${modifiedCount} files for BexyTV branding.`);

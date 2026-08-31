@@ -32,12 +32,12 @@ export default function TestimonialsSection() {
           </span>
           <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-[#0F172A] sm:text-5xl animate-fade-up">
             <span className="block">Join Thousands of Highly</span>
-            <span className="mt-1 block bg-gradient-to-r from-[#14B8A6] via-[#0D9488] to-[#0EA5E9] bg-clip-text text-transparent">
-              Satisfied FreeGoTV IPTV Streamers
+            <span className="mt-1 block bg-gradient-to-r from-[#D946EF] via-[#8B5CF6] to-[#6366F1] bg-clip-text text-transparent">
+              Satisfied BexyTV IPTV Streamers
             </span>
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#64748B] animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Discover why thousands of users worldwide have made FreeGoTV their primary entertainment source. Read authentic reviews highlighting our unparalleled stability, comprehensive live sports coverage, and exceptional 4K visual quality.
+            Discover why thousands of users worldwide have made BexyTV their primary entertainment source. Read authentic reviews highlighting our unparalleled stability, comprehensive live sports coverage, and exceptional 4K visual quality.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
               >
                 <Image
                   src={`/reviews/${img}`}
-                  alt="FreeGoTV Customer Review"
+                  alt="BexyTV Customer Review"
                   fill
                   sizes="(max-width: 640px) 220px, 280px"
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
@@ -85,16 +85,16 @@ export default function TestimonialsSection() {
 
         <div className="mt-12 text-center animate-fade-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
           <a
-            href="https://wa.me/213552069874?text=Hello%2C%20I%20would%20like%20a%20free%20trial%20for%20freegotv%20IPTV."
+            href="https://wa.me/213552069874?text=Hello%2C%20I%20would%20like%20a%20free%20trial%20for%20bexytv%20IPTV."
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#14B8A6] to-[#0EA5E9] px-7 py-4 text-sm font-extrabold text-white shadow-[0_0_28px_rgba(14,165,233,0.42)] transition-transform hover:-translate-y-0.5 hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#D946EF] to-[#6366F1] px-7 py-4 text-sm font-extrabold text-white shadow-[0_0_28px_rgba(14,165,233,0.42)] transition-transform hover:-translate-y-0.5 hover:scale-105"
           >
             <Trophy className="h-4 w-4" /> Get Your Free Trial
           </a>
           <div className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[10px] text-[#64748B]">
             <span className="flex items-center gap-1.5">
-              <Headphones className="h-3 w-3 text-[#0EA5E9]" /> Instant WhatsApp delivery
+              <Headphones className="h-3 w-3 text-[#6366F1]" /> Instant WhatsApp delivery
             </span>
             <span className="flex items-center gap-1.5">
               <Tv className="h-3 w-3 text-sky-400" /> Works on all devices

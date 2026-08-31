@@ -28,13 +28,13 @@ const files = walkSync(".");
 let modifiedCount = 0;
 
 const replacements = [
-  { regex: /iptv-fiesta/g, replace: "freegotv-iptv" },
-  { regex: /IPTV Fiesta/g, replace: "FreeGoTV" },
-  { regex: /IPTV FIESTA/g, replace: "FREEGOTV" },
-  { regex: /fiestaiptv/g, replace: "freegotv" },
-  { regex: /Fiesta/g, replace: "FreeGoTV" },
-  { regex: /fiesta/g, replace: "freegotv" },
-  { regex: /FIESTA/g, replace: "FREEGOTV" },
+  { regex: /iptv-fiesta/g, replace: "bexytv" },
+  { regex: /IPTV Fiesta/g, replace: "BexyTV" },
+  { regex: /IPTV FIESTA/g, replace: "BEXYTV" },
+  { regex: /fiestaiptv/g, replace: "bexytv" },
+  { regex: /Fiesta/g, replace: "BexyTV" },
+  { regex: /fiesta/g, replace: "bexytv" },
+  { regex: /FIESTA/g, replace: "BEXYTV" },
 ];
 
 files.forEach(file => {

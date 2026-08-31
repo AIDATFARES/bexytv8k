@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles, User, Play } from "lucide-react";
 import BrandLogo from "@/components/ui/BrandLogo";
 
 export default function Navbar() {
@@ -12,7 +12,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,78 +27,98 @@ export default function Navbar() {
     }
   };
 
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Plans", href: "/pricing" },
+    { name: "Install", href: "/installation" },
+    { name: "Devices", href: "/#devices" },
+    { name: "Sports", href: "/#sports" },
+    { name: "Blog", href: "/blog" },
+  ];
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 flex flex-col ${
         scrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-black/10 shadow-2xl"
-          : "bg-white/80 backdrop-blur-md"
+          ? "bg-[#060810]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50"
+          : "bg-[#060810]/85 backdrop-blur-md border-b border-white/5"
       }`}
     >
-      {/* Promotional Top Bar */}
-      <div className="w-full bg-[#14B8A6] text-[#0F172A] py-2 overflow-hidden flex items-center shadow-sm">
+      {/* Top Promotional Announcement */}
+      <div className="w-full bg-gradient-to-r from-blue-900/60 via-purple-900/50 to-cyan-900/60 border-b border-white/10 py-1.5 overflow-hidden flex items-center">
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-          {[...Array(6)].map((_, i) => (
-            <span key={i} className="flex items-center gap-2 px-8 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">
-              🎁 Special Offer: We offer a <span className="font-extrabold underline uppercase tracking-widest">Free Trial</span> to test our service! 
+          {[...Array(4)].map((_, i) => (
+            <span key={i} className="flex items-center gap-2 px-8 text-xs font-medium text-[#A7B0C0] tracking-wide whitespace-nowrap">
+              <Sparkles className="w-3.5 h-3.5 text-[#38BDF8] animate-pulse" />
+              <span>Limited Offer: Get <strong className="text-white">2 Months FREE</strong> on 12-Month 4K IPTV Plans</span>
               <a 
-                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20freegotv%20IPTV." 
+                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20bexytv%20IPTV." 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-block ml-2 bg-[#0F172A] text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold hover:bg-white hover:text-[#0F172A] transition-colors shadow-sm"
+                className="inline-flex items-center gap-1 ml-2 bg-[#38BDF8] text-[#061018] px-2.5 py-0.5 rounded-full text-[11px] font-bold hover:bg-[#818CF8] hover:text-white transition-colors"
               >
-                Claim Now
+                Claim Trial
               </a>
             </span>
           ))}
         </div>
       </div>
-      <div className="w-full max-w-[1480px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between relative">
+
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between relative">
         
         {/* LOGO */}
-        <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2.5 group shrink-0 z-20">
+        <Link href="/" onClick={handleLogoClick} className="flex items-center shrink-0 z-20">
           <BrandLogo />
         </Link>
 
-        {/* Nav Links */}
-        <nav className="hidden lg:flex relative z-10 items-center gap-6 xl:gap-8 px-6 text-sm font-semibold">
-          <Link href="/" onClick={handleLogoClick} className="text-stone-700 hover:text-[#0F172A] transition-colors duration-200">
-            Home
-          </Link>
-          <Link href="/pricing" className="text-stone-700 hover:text-[#0F172A] transition-colors duration-200">
-            Pricing
-          </Link>
-          <Link href="/how-it-works" className="text-stone-700 hover:text-[#0F172A] transition-colors duration-200 whitespace-nowrap">
-            How It Works
-          </Link>
-          <Link href="/channels" className="text-stone-700 hover:text-[#0F172A] transition-colors duration-200 whitespace-nowrap">
-            Channels List
-          </Link>
-          <Link href="/contact" className="text-stone-700 hover:text-[#0F172A] transition-colors duration-200 whitespace-nowrap">
-            Contact Support
-          </Link>
-          <Link href="/reseller" className="text-stone-700 hover:text-[#0F172A] transition-colors duration-200 whitespace-nowrap">
-            Reseller
-          </Link>
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex relative z-10 items-center gap-7 px-6 text-sm font-medium">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={link.href === "/" ? handleLogoClick : undefined}
+                className={`transition-colors duration-200 ${
+                  isActive
+                    ? "text-white font-semibold"
+                    : "text-[#A7B0C0] hover:text-[#60A5FA]"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* RIGHT ACTIONS */}
         <div className="hidden lg:flex items-center gap-4 shrink-0 z-20">
           <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20freegotv%20IPTV."
+            href="https://wa.me/213552069874?text=Hello,%20I%20want%20to%20Login%20to%20my%20BexyTV%20account."
             target="_blank"
             rel="noreferrer"
-            className="px-6 py-2.5 rounded-full text-sm font-bold text-[#0F172A] bg-[#14B8A6] hover:bg-[#0C8CE9] transition-all duration-300 shadow-md hover:shadow-[0_0_20px_rgba(14,165,233,0.4)]"
+            className="text-sm font-semibold text-[#A7B0C0] hover:text-[#60A5FA] transition-colors flex items-center gap-1.5 px-3 py-2"
           >
-            Get Started
+            <User className="w-4 h-4 text-[#38BDF8]" />
+            Login
+          </a>
+          <a
+            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20bexytv%20IPTV."
+            target="_blank"
+            rel="noreferrer"
+            className="btn-primary text-sm py-2.5 px-6"
+          >
+            <Play className="w-4 h-4 fill-current" />
+            Start Free Trial
           </a>
         </div>
 
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden text-[#0F172A] p-2 rounded-lg bg-[#0F172A]/5 hover:bg-[#0F172A]/10 transition-colors z-20"
-          aria-label="Toggle navigation menu"
+          className="lg:hidden text-white p-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors z-20"
+          aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -106,23 +126,35 @@ export default function Navbar() {
 
       {/* MOBILE DROPDOWN MENU */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-black/10 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-300">
-          <nav className="flex flex-col space-y-3 font-semibold text-stone-700">
-            <Link href="/" onClick={handleLogoClick} className="hover:text-[#0F172A] py-1">Home</Link>
-            <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#0F172A] py-1">Pricing</Link>
-            <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#0F172A] py-1">How It Works</Link>
-            <Link href="/channels" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#0F172A] py-1">Channels List</Link>
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#0F172A] py-1">Contact Support</Link>
-            <Link href="/reseller" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#0F172A] py-1">Reseller</Link>
+        <div className="lg:hidden bg-[#080B14] border-b border-white/10 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-300">
+          <nav className="flex flex-col space-y-3 font-medium text-[#A7B0C0]">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:text-[#60A5FA] py-1 text-base"
+              >
+                {link.name}
+              </Link>
+            ))}
           </nav>
-          <div className="pt-4 border-t border-black/10 flex flex-col gap-3">
+          <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
             <a
-              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20freegotv%20IPTV."
+              href="https://wa.me/213552069874?text=Hello,%20I%20want%20to%20Login%20to%20my%20BexyTV%20account."
               target="_blank"
               rel="noreferrer"
-              className="w-full text-center py-3 rounded-full text-sm font-bold text-[#0F172A] bg-[#14B8A6] shadow-lg"
+              className="w-full text-center py-2.5 rounded-full text-sm font-semibold text-[#A7B0C0] border border-white/10"
             >
-              Get Started
+              Login
+            </a>
+            <a
+              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20bexytv%20IPTV."
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary w-full text-center py-3"
+            >
+              Start Free Trial
             </a>
           </div>
         </div>

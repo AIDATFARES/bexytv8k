@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "IPTV Blog – Streaming Guides, Tips & News | FreeGoTV",
-  description: "Read the latest IPTV news, setup tutorials, and streaming tips on the FreeGoTV blog. Enhance your viewing experience with our expert cord-cutting guides.",
+  title: "IPTV Blog – Streaming Guides, Tips & News | BexyTV",
+  description: "Read the latest IPTV news, setup tutorials, and streaming tips on the BexyTV blog. Enhance your viewing experience with our expert cord-cutting guides.",
   alternates: {
     canonical: "/blog",
   },

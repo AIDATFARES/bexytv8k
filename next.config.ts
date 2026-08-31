@@ -19,5 +19,5 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-// Force Vercel deployment update for www.freegotv-iptv.shop canonical domain alignment
+// Force Vercel deployment update for www.bexytv.com canonical domain alignment
 

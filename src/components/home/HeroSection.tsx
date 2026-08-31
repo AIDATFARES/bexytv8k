@@ -1,110 +1,107 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
-import { Monitor, Laptop, Smartphone, Tablet, Tv, Film, ShieldCheck, Zap, Headphones } from "lucide-react";
+import { Tv, ShieldCheck, Zap, Sparkles, CheckCircle2, Play, ArrowRight, Activity, Users, Globe2 } from "lucide-react";
+import IPTVMockupUI from "@/components/home/IPTVMockupUI";
 
 export default function HeroSection() {
-  const highlights = [
-    { icon: Tv, title: "+50,000 Channels", desc: "150+ Countries 🇺🇸🇬🇧🇨🇦" },
-    { icon: Film, title: "200,000+ VOD", desc: "Movies & Series 4K" },
-    { icon: Zap, title: "60 FPS 4K Ultra HD", desc: "Crystal Clear Sports" },
-    { icon: Headphones, title: "24/7 Live Support", desc: "WhatsApp & Email" },
+  const benefits = [
+    "50,000+ Live Channels in 4K UHD",
+    "150,000+ VOD Movies & Series",
+    "60 FPS Anti-Freeze Technology",
+    "Instant Setup on Any Device",
   ];
 
   return (
-    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 flex items-center justify-center bg-[#0F172A] overflow-hidden text-center">
+    <section className="relative pt-28 md:pt-36 pb-20 md:pb-28 bg-[#060810] bg-tech-grid bg-atmosphere overflow-hidden">
+      
+      {/* Hero Specific Atmospheric Glowing Orbs */}
+      <div className="absolute top-1/4 left-5 w-[400px] h-[400px] bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 right-5 w-[450px] h-[450px] bg-purple-600/18 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 w-[350px] h-[350px] bg-cyan-500/10 rounded-full blur-[110px] pointer-events-none" />
 
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-family-ai.png"
-          alt="Family watching FreeGoTV"
-          priority
-          fill
-          className="object-cover opacity-80"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-[#0F172A]/70" />
-      </div>
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-8">
+        
+        {/* Two-Column Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          {/* LEFT COLUMN: Copy & Call To Actions */}
+          <div className="lg:col-span-6 flex flex-col items-start text-left space-y-6">
+            
+            {/* Small Badge */}
+            <div className="inline-flex items-center gap-2 border border-[#38BDF8]/30 rounded-full px-4 py-1.5 bg-[#0D111B]/80 backdrop-blur-md shadow-lg shadow-cyan-500/5">
+              <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse"></span>
+              <span className="text-xs font-bold text-[#38BDF8] tracking-widest uppercase flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-[#818CF8]" />
+                #1 PREMIUM 4K IPTV SERVICE
+              </span>
+            </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-4 flex flex-col items-center gap-6">
+            {/* Main Title H1 */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white">
+              Stream 50,000+ Live Channels & Movies in{" "}
+              <span className="bg-gradient-to-r from-[#38BDF8] via-[#60A5FA] to-[#818CF8] bg-clip-text text-transparent">
+                4K Ultra HD
+              </span>
+            </h1>
 
-        {/* Top Tag */}
-        <div className="inline-flex items-center border border-[#14B8A6] rounded-full px-4 py-1.5 backdrop-blur-sm bg-[#0F172A]/30">
-          <span className="w-2 h-2 rounded-full bg-[#14B8A6] mr-2 animate-pulse"></span>
-          <span className="text-[10px] sm:text-xs font-bold text-[#0EA5E9] tracking-widest uppercase">
-            THE #1 RATED IPTV PROVIDER WORLDWIDE
-          </span>
-        </div>
+            {/* Supporting Paragraph */}
+            <p className="text-base sm:text-lg text-[#A7B0C0] leading-relaxed max-w-xl font-normal">
+              Experience zero buffering, crystal-clear 60 FPS sports, and instant access to over 150,000 movies & TV series. Compatible with Smart TV, Firestick, Android, Apple TV, iOS, and PC.
+            </p>
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white drop-shadow-2xl mt-4">
-          <span className="text-[#0EA5E9]">FreeGoTV</span> <span className="uppercase">— Best IPTV service in USA & Canada</span><br />
-          <span className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl uppercase">| 50,000+ Live Channels in 4K</span>
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-lg sm:text-xl text-white/90 font-medium max-w-3xl mt-4 drop-shadow-lg leading-relaxed">
-          FreeGoTV is the best IPTV subscription service in the USA and Canada — offering 50,000+ live TV channels and 150,000+ on-demand movies in 4K UHD. Trusted by thousands of subscribers across the United States and Canada, Moreover, it works on Smart TVs, Firestick, Android, iOS, and MAG Box — with up to 6 simultaneous connections no IP lock, no contracts, and instant activation. Best of all, plans start at $15/month with a free 24-hour trial included
-        </p>
-
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-5 mt-8 justify-center w-full sm:w-auto">
-          <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20freegotv%20IPTV."
-            target="_blank"
-            rel="noreferrer"
-            className="py-4 px-8 text-sm sm:text-base font-bold text-[#0F172A] bg-[#14B8A6] hover:bg-[#0C8CE9] transition-all duration-300 flex items-center justify-center tracking-wider hover:scale-105"
-          >
-            GET 12 MONTHS — 2 MONTHS FREE →
-          </a>
-          <a
-            href="#pricing"
-            className="py-4 px-8 text-sm sm:text-base font-bold text-[#0EA5E9] bg-black/30 backdrop-blur-md border-2 border-[#14B8A6] hover:bg-[#14B8A6]/20 transition-all duration-300 flex items-center justify-center tracking-wider hover:scale-105"
-          >
-            SEE PLANS →
-          </a>
-        </div>
-
-        {/* Bottom Icons */}
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16 text-white mt-10">
-          <div className="flex flex-col items-center gap-3 group hover:text-[#0EA5E9] transition-colors cursor-pointer">
-            <Monitor className="h-7 w-7 sm:h-9 sm:w-9 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-bold tracking-wider">Smart TV</span>
-          </div>
-          <div className="flex flex-col items-center gap-3 group hover:text-[#0EA5E9] transition-colors cursor-pointer">
-            <Laptop className="h-7 w-7 sm:h-9 sm:w-9 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-bold tracking-wider">Laptop / PC</span>
-          </div>
-          <div className="flex flex-col items-center gap-3 group hover:text-[#0EA5E9] transition-colors cursor-pointer">
-            <Smartphone className="h-7 w-7 sm:h-9 sm:w-9 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-bold tracking-wider">Android</span>
-          </div>
-          <div className="flex flex-col items-center gap-3 group hover:text-[#0EA5E9] transition-colors cursor-pointer">
-            <Tablet className="h-7 w-7 sm:h-9 sm:w-9 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-bold tracking-wider">IOS</span>
-          </div>
-        </div>
-
-        {/* Highlights Cards (As requested) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-12 w-full max-w-[1300px]">
-          {highlights.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={index}
-                className="bg-[#121212]/90 backdrop-blur-md border border-[#2A2A2A] rounded-xl p-3 sm:p-4 flex items-center gap-3 hover:border-[#0EA5E9]/50 transition-all duration-300 group text-left shadow-2xl"
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
+              <a
+                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20bexytv%20IPTV."
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary text-base py-3.5 px-8 shadow-lg shadow-cyan-500/20"
               >
-                <div className="p-2.5 rounded-lg border border-[#0EA5E9]/30 text-[#0EA5E9] group-hover:scale-110 group-hover:bg-[#0EA5E9]/10 transition-all shrink-0 bg-black/40">
-                  <Icon className="w-5 h-5" strokeWidth={1.5} />
+                <Play className="w-5 h-5 fill-current" />
+                Start Free Trial
+              </a>
+              <a
+                href="#pricing"
+                className="btn-secondary text-base py-3.5 px-8"
+              >
+                Explore Plans <ArrowRight className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+
+            {/* Key Trust / Benefit Points */}
+            <div className="grid grid-cols-2 gap-3 pt-4 w-full max-w-lg border-t border-white/10 text-xs sm:text-sm text-[#A7B0C0]">
+              {benefits.map((benefit, i) => (
+                <div key={i} className="flex items-center gap-2 font-medium">
+                  <CheckCircle2 className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                  <span>{benefit}</span>
                 </div>
-                <div className="min-w-0">
-                  <p className="text-xs sm:text-[13px] font-bold text-white leading-tight truncate group-hover:text-[#0EA5E9] transition-colors">
-                    {item.title}
-                  </p>
-                  <p className="text-[10px] sm:text-[11px] text-[#A3A3A3] truncate mt-1 font-medium">{item.desc}</p>
-                </div>
+              ))}
+            </div>
+
+            {/* Realtime Stats Ribbon */}
+            <div className="flex items-center gap-6 pt-2 text-xs font-semibold text-slate-400">
+              <div className="flex items-center gap-2">
+                <Activity className="w-4 h-4 text-emerald-400" />
+                <span>99.9% Server Uptime</span>
               </div>
-            );
-          })}
+              <div className="flex items-center gap-2">
+                <Globe2 className="w-4 h-4 text-[#60A5FA]" />
+                <span>No IP Lock</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-[#818CF8]" />
+                <span>50k+ Active Users</span>
+              </div>
+            </div>
+
+          </div>
+
+          {/* RIGHT COLUMN: Original Interactive Web Player / IPTV Mockup */}
+          <div className="lg:col-span-6 w-full flex justify-center">
+            <IPTVMockupUI />
+          </div>
+
         </div>
 
       </div>

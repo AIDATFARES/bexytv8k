@@ -13,9 +13,10 @@ function walkSync(dir, filelist = []) {
         dirFile.endsWith(".ts") || 
         dirFile.endsWith(".tsx") || 
         dirFile.endsWith(".json") || 
-        dirFile.endsWith(".md")
+        dirFile.endsWith(".md") ||
+        dirFile.endsWith(".js")
       ) {
-        if (!dirFile.includes("package-lock.json") && !dirFile.includes("lh-report")) {
+        if (!dirFile.includes("package-lock.json") && !dirFile.includes("lh-report") && file !== "rebrand_bexy.js") {
           filelist.push(dirFile);
         }
       }
@@ -28,10 +29,14 @@ const files = walkSync(".");
 let modifiedCount = 0;
 
 const replacements = [
-  { regex: /bexytv/g, replace: "4k-iptv-usa" },
-  { regex: /BexyTV/g, replace: "4K IPTV USA" },
-  { regex: /BEXYTV/g, replace: "4K IPTV USA" },
-  { regex: /bexytv/g, replace: "4kiptvusa" },
+  { regex: /freegotv-iptv\.shop/g, replace: "bexytv.com" },
+  { regex: /FreeGo TV/g, replace: "BexyTV" },
+  { regex: /FreeGoTV/g, replace: "BexyTV" },
+  { regex: /FREEGOTV/g, replace: "BEXYTV" },
+  { regex: /freegotv-iptv/g, replace: "bexytv" },
+  { regex: /freegotv/g, replace: "bexytv" },
+  { regex: /Freegotv/g, replace: "Bexytv" },
+  { regex: /FreegoTv/g, replace: "BexyTV" },
 ];
 
 files.forEach(file => {
@@ -49,4 +54,4 @@ files.forEach(file => {
   }
 });
 
-console.log(`Modified ${modifiedCount} files for 4K IPTV USA branding.`);
+console.log(`Modified ${modifiedCount} files for branding.`);

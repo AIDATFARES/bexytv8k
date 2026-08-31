@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 // ═══════════════════════════════════════════════════════
-// FreeGoTV Blue-Green Color Transformation Script
+// BexyTV Blue-Green Color Transformation Script
 // ═══════════════════════════════════════════════════════
 //
 // NEW PALETTE:

@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     title: "IPTV Not Working: 20 Things to Check Before Contacting Your Provider",
     description: "Are you experiencing IPTV streaming problems? Learn how to easily troubleshoot connection issues, buffering, login failures, and channels not loading before contacting support.",
     date: "August 24, 2026",
-    author: "FreeGoTV Team",
+    author: "BexyTV Team",
     category: "Troubleshooting",
     coverImage: "/images/blog/iptv-not-working-20-things-to-check/iptv-not-working-troubleshooting.webp",
     content: `
@@ -39,7 +39,7 @@ Common causes of IPTV streaming problems include:
 * Local network configuration
 * Outdated software
 
-The good news? You can often identify and fix the problem yourself by checking a few things first. Whether you use the [FreeGoTV platform](/) or another service, this comprehensive guide will walk you through the troubleshooting steps.
+The good news? You can often identify and fix the problem yourself by checking a few things first. Whether you use the [BexyTV platform](/) or another service, this comprehensive guide will walk you through the troubleshooting steps.
 
 ---
 
@@ -112,7 +112,7 @@ Remember that passwords are case-sensitive. A single typo or an accidental space
 
 Expired or inactive subscriptions are a common cause of sudden access problems. If your account has lapsed, you won't be able to connect to the servers.
 
-If you are a FreeGoTV user, you can easily review the [IPTV pricing](/pricing) and renew or upgrade your plan to restore your access instantly.
+If you are a BexyTV user, you can easily review the [IPTV pricing](/pricing) and renew or upgrade your plan to restore your access instantly.
 
 ---
 
@@ -251,7 +251,7 @@ Testing the same service on another compatible device can help determine whether
 * Account (login issue)
 * Service (server-side issue)
 
-If your [FreeGoTV IPTV](/) account works on your smartphone but not your TV, you instantly know the issue is related to the TV itself.
+If your [BexyTV IPTV](/) account works on your smartphone but not your TV, you instantly know the issue is related to the TV itself.
 
 ---
 
@@ -305,7 +305,7 @@ You should reach out to your provider's support team when:
 * The issue persists after doing all basic troubleshooting
 * The problem clearly appears to be a service-side outage
 
-If you are a FreeGoTV subscriber and need assistance, you can always reach out to our dedicated [customer support](/contact) team for fast help. You can also check our [frequently asked questions](/faq) for more instant answers.
+If you are a BexyTV subscriber and need assistance, you can always reach out to our dedicated [customer support](/contact) team for fast help. You can also check our [frequently asked questions](/faq) for more instant answers.
 
 ---
 
@@ -316,7 +316,7 @@ Troubleshooting IPTV issues doesn't have to be a headache. By systematically che
 Always determine whether the issue comes from:
 **Internet → Device → App → Credentials → Playlist → Provider**
 
-By choosing a premium, high-quality provider like **FreeGoTV**, you minimize these issues significantly. With our vast [IPTV features](/#how-it-works) and optimized servers, you can enjoy a smoother, more reliable streaming experience. 
+By choosing a premium, high-quality provider like **BexyTV**, you minimize these issues significantly. With our vast [IPTV features](/#how-it-works) and optimized servers, you can enjoy a smoother, more reliable streaming experience. 
 `
   },
   {
@@ -325,7 +325,7 @@ By choosing a premium, high-quality provider like **FreeGoTV**, you minimize the
     title: "IPTV Has Sound but No Picture: Complete Troubleshooting Guide",
     description: "Are you hearing audio but seeing a black screen? Discover the top reasons why your IPTV has sound but no picture and how to fix display issues instantly.",
     date: "August 24, 2026",
-    author: "FreeGoTV Team",
+    author: "BexyTV Team",
     category: "Troubleshooting",
     coverImage: "/images/blog/iptv-sound-but-no-picture/iptv-sound-no-picture.webp",
     content: `
@@ -347,7 +347,7 @@ While this may seem like the entire stream is broken, it’s actually a sign tha
 * Stream-specific problems
 * Network or stream-quality limitations
 
-Just because the audio is working does not necessarily mean the entire IPTV service is functioning correctly—or conversely, it doesn't mean your provider is at fault. Whether you're using a generic app or the **FreeGoTV** service, we'll walk you through exactly how to diagnose and fix the "sound but no picture" issue.
+Just because the audio is working does not necessarily mean the entire IPTV service is functioning correctly—or conversely, it doesn't mean your provider is at fault. Whether you're using a generic app or the **BexyTV** service, we'll walk you through exactly how to diagnose and fix the "sound but no picture" issue.
 
 ---
 
@@ -520,7 +520,7 @@ This simple test can help determine whether the issue affects:
 * VOD only
 * All video playback across the entire app
 
-If VOD works flawlessly but Live TV has no picture, the issue is strictly with the live streaming protocols. You can view our [FreeGoTV plans](/pricing) to see the massive VOD options we offer.
+If VOD works flawlessly but Live TV has no picture, the issue is strictly with the live streaming protocols. You can view our [BexyTV plans](/pricing) to see the massive VOD options we offer.
 
 ---
 
@@ -591,7 +591,7 @@ When does contacting the provider make sense? You should contact support if:
 * Other troubleshooting steps did not resolve the issue.
 * The problem appears to be server-side or stream-side.
 
-If you are a FreeGoTV subscriber and need assistance, you can always reach out to our dedicated [contact support](/contact) team for fast help. You can also check our [IPTV FAQ](/faq) for more instant answers.
+If you are a BexyTV subscriber and need assistance, you can always reach out to our dedicated [contact support](/contact) team for fast help. You can also check our [IPTV FAQ](/faq) for more instant answers.
 
 ---
 
@@ -635,18 +635,18 @@ No single cause is always responsible, which is why testing sequentially is so i
 
 ---
 
-# FREEGOTV SECTION
+# BEXYTV SECTION
 
-## Using FreeGoTV on Compatible Devices
+## Using BexyTV on Compatible Devices
 
-If you are experiencing this issue while using the [FreeGoTV platform](/), you should first determine whether the problem is:
+If you are experiencing this issue while using the [BexyTV platform](/), you should first determine whether the problem is:
 * Device-specific
 * Application-specific
 * Channel-specific
 * Network-related
 * Service-related
 
-We encourage users to test another compatible device or player where appropriate. By choosing the right [supported devices](/#how-it-works), you can minimize codec and playback issues entirely. With our premium [FreeGoTV plans](/pricing), you gain access to high-quality streams optimized for modern hardware. 
+We encourage users to test another compatible device or player where appropriate. By choosing the right [supported devices](/#how-it-works), you can minimize codec and playback issues entirely. With our premium [BexyTV plans](/pricing), you gain access to high-quality streams optimized for modern hardware. 
 
 ---
 
@@ -657,7 +657,7 @@ Troubleshooting a black screen with working audio requires a process of eliminat
 The most useful diagnostic sequence is:
 **Channel → App → Device → Display → Decoder → Network → Provider**
 
-By following these steps, you can quickly identify the root cause. With a premium provider like **FreeGoTV**, you can expect high reliability and extensive compatibility across a wide range of devices, ensuring you spend more time watching and less time troubleshooting.
+By following these steps, you can quickly identify the root cause. With a premium provider like **BexyTV**, you can expect high reliability and extensive compatibility across a wide range of devices, ensuring you spend more time watching and less time troubleshooting.
 `
   }
 
@@ -668,7 +668,7 @@ By following these steps, you can quickly identify the root cause. With a premiu
     title: "IPTV 4K Buffering: How to Fix 4K Streaming Problems",
     description: "Discover why IPTV 4K buffering happens and learn how to fix 4K streaming problems. Get practical troubleshooting steps to improve your 4K IPTV streaming quality.",
     date: "August 24, 2026",
-    author: "FreeGoTV Team",
+    author: "BexyTV Team",
     category: "Troubleshooting",
     coverImage: "/images/blog/iptv-4k-buffering/iptv-4k-buffering.png",
     content: `
@@ -680,7 +680,7 @@ Nothing ruins movie night faster than seeing the dreaded loading circle in the m
 
 Why do 4K streams buffer more often? A 4K video contains four times the pixels of a standard 1080p HD video. This means 4K IPTV streaming requires significantly more bandwidth, a more stable network connection, and a device capable of processing all that data smoothly. It's important to remember that buffering does not always mean the IPTV service itself is broken. More often than not, it points to a bottleneck somewhere between the provider's server and your screen.
 
-In this guide, we'll explain how to properly diagnose the problem by checking your network, device, application, and stream. Whether you're using the premium [FreeGoTV platform](/) or another provider, we’ll help you eliminate IPTV 4K streaming problems for good.
+In this guide, we'll explain how to properly diagnose the problem by checking your network, device, application, and stream. Whether you're using the premium [BexyTV platform](/) or another provider, we’ll help you eliminate IPTV 4K streaming problems for good.
 
 ---
 
@@ -886,7 +886,7 @@ To clear the cache, navigate to your device's app settings, locate your IPTV app
 
 If you're still experiencing how to stop IPTV buffering, the current player application itself may be poorly optimized for 4K streams on your specific device.
 
-If the FreeGoTV service (or your current provider) supports multiple compatible players, testing another highly-rated player can help isolate the problem. Often, simply switching apps resolves mysterious playback issues.
+If the BexyTV service (or your current provider) supports multiple compatible players, testing another highly-rated player can help isolate the problem. Often, simply switching apps resolves mysterious playback issues.
 
 ---
 
@@ -946,7 +946,7 @@ When should you finally contact support? Reaching out to your provider becomes a
 * Your device and application are fully updated.
 * Basic troubleshooting steps have failed.
 
-If you are a FreeGoTV subscriber, we are always here to help. Just remember that while we provide premium servers, we cannot guarantee completely buffer-free viewing if local network or device limitations exist. Our [Customer Support](/contact) team can help diagnose server-side issues quickly.
+If you are a BexyTV subscriber, we are always here to help. Just remember that while we provide premium servers, we cannot guarantee completely buffer-free viewing if local network or device limitations exist. Our [Customer Support](/contact) team can help diagnose server-side issues quickly.
 
 ---
 
@@ -974,11 +974,11 @@ To quickly resolve IPTV 4K streaming problems, run through this list:
 
 ---
 
-## Troubleshooting 4K IPTV with FreeGoTV
+## Troubleshooting 4K IPTV with BexyTV
 
-If you are a subscriber using the **FreeGoTV** service, you can use the exact diagnostic process outlined above. Determine whether the buffering problem is related to your internet connection, Wi-Fi stability, device capabilities, the IPTV player, 4K compatibility, an individual stream, or a service-side issue.
+If you are a subscriber using the **BexyTV** service, you can use the exact diagnostic process outlined above. Determine whether the buffering problem is related to your internet connection, Wi-Fi stability, device capabilities, the IPTV player, 4K compatibility, an individual stream, or a service-side issue.
 
-[FreeGoTV](/) provides robust, optimized servers designed to deliver exceptional 4K quality. If you want to experience the difference a premium service makes, explore our [IPTV plans from FreeGoTV](/pricing). 
+[BexyTV](/) provides robust, optimized servers designed to deliver exceptional 4K quality. If you want to experience the difference a premium service makes, explore our [IPTV plans from BexyTV](/pricing). 
 
 For more information, you can review our [Features](/how-it-works) page or visit our [FAQ](/faq) for instant answers to common questions.
 `
@@ -991,7 +991,7 @@ For more information, you can review our [Features](/how-it-works) page or visit
     title: "IPTV on Multiple Devices: How Multi-Screen Streaming Works",
     description: "Want to watch IPTV on multiple screens? Learn how multi-device IPTV streaming works, bandwidth requirements, and how to set up your subscription across different devices.",
     date: "August 24, 2026",
-    author: "FreeGoTV Team",
+    author: "BexyTV Team",
     category: "Guides",
     coverImage: "/images/blog/iptv-on-multiple-devices/iptv-on-multiple-devices.png",
     content: `
@@ -1003,7 +1003,7 @@ In today's connected household, a single television is rarely enough. Family mem
 
 Multi-screen streaming allows you to expand your entertainment system beyond the traditional single set-top box. However, because IPTV relies on internet data rather than a physical cable connection, streaming across multiple devices introduces new rules, bandwidth requirements, and subscription limits.
 
-In this guide, we will break down exactly how multi-device streaming works, what you need to look out for, and how you can seamlessly set up the [FreeGoTV platform](/) or other IPTV services on every screen in your house.
+In this guide, we will break down exactly how multi-device streaming works, what you need to look out for, and how you can seamlessly set up the [BexyTV platform](/) or other IPTV services on every screen in your house.
 
 ---
 
@@ -1171,11 +1171,11 @@ Always look for:
 
 ---
 
-## Using FreeGoTV on Multiple Devices
+## Using BexyTV on Multiple Devices
 
-At **FreeGoTV**, we understand that modern households require flexibility. When you explore our [IPTV plans from FreeGoTV](/pricing), you will find clear, transparent rules regarding simultaneous connections. 
+At **BexyTV**, we understand that modern households require flexibility. When you explore our [IPTV plans from BexyTV](/pricing), you will find clear, transparent rules regarding simultaneous connections. 
 
-Whether you are looking to stream on a Smart TV in the living room, a Firestick in the bedroom, or a smartphone on the train, the [FreeGoTV IPTV service](/) supports a vast array of devices. 
+Whether you are looking to stream on a Smart TV in the living room, a Firestick in the bedroom, or a smartphone on the train, the [BexyTV IPTV service](/) supports a vast array of devices. 
 
 If you ever encounter an issue sharing your streams across your home, our dedicated [Customer Support](/contact) team is ready to assist. Be sure to check out our [FAQ](/faq) page for instant answers on configuring your favorite apps.
 

@@ -1,49 +1,54 @@
 import HeroSection from "@/components/home/HeroSection";
-import Link from "next/link";
-
-export const metadata = {
-  alternates: {
-    canonical: "/",
-  },
-};
-
-
-import BrandMarquee from "@/components/home/BrandMarquee";
+import ComparisonSection from "@/components/home/ComparisonSection";
+import SportsSection from "@/components/home/SportsSection";
 import MovieStrips from "@/components/home/MovieStrips";
+import BrandMarquee from "@/components/home/BrandMarquee";
 import ChannelCategories from "@/components/home/ChannelCategories";
 import DeviceSupport from "@/components/home/DeviceSupport";
-import ComparisonSection from "@/components/home/ComparisonSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
 import PricingSection from "@/components/home/PricingSection";
 import FAQSection from "@/components/home/FAQSection";
 import LatestArticlesSection from "@/components/home/LatestArticlesSection";
 import SupportCtaSection from "@/components/home/SupportCtaSection";
+import Link from "next/link";
+
+export const metadata = {
+  title: "BexyTV - Premium 4K IPTV Service in USA & Canada | 50,000+ Live Channels",
+  description: "Stream 50,000+ live channels and 150,000+ movies in 4K UHD with BexyTV. Instant activation, zero buffering, 60 FPS sports, and multi-device support.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (
-    <main className="flex-col flex min-h-screen">
-      {/* Hero Section */}
+    <main className="flex-col flex min-h-screen bg-[#060810] text-[#F8FAFC]">
+      {/* 1. Hero Section with Original IPTV Interface Mockup */}
       <HeroSection />
 
-      {/* What is FreeGoTV (About Service) replacing TopFeatureBar */}
+      {/* 2. What is BexyTV / About Service */}
       <ComparisonSection />
 
-      {/* Cinematic Experience Section */}
+      {/* 3. Dedicated Live Sports Section (NFL, NBA, UFC, NHL, MLB, MLS) */}
+      <SportsSection />
+
+      {/* 4. Cinematic Movies & Channels Experience */}
       <MovieStrips>
         <div className="text-center mt-2 relative z-20">
-          <p className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-[#64748B] uppercase">50,000+ PREMIUM LIVE CHANNELS</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-[#A7B0C0] uppercase">50,000+ PREMIUM LIVE CHANNELS</p>
         </div>
         
         <BrandMarquee />
         
         <div className="text-center mt-8 mb-6 relative z-20">
-          <p className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-[#64748B] uppercase">150,000+ LATEST MOVIES & SERIES</p>
+          <p className="text-xs font-bold tracking-[0.2em] text-[#A7B0C0] uppercase">150,000+ LATEST MOVIES & SERIES</p>
         </div>
       </MovieStrips>
 
-      <div className="bg-white w-full pb-16">
-        <div className="text-center mb-6 relative z-20">
-          <p className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-[#64748B] uppercase">ALL MAJOR SPORTS & LEAGUES LIVE</p>
+      {/* Sports Leagues Marquee */}
+      <div className="bg-[#080B14] w-full pb-16 border-t border-white/10">
+        <div className="text-center py-6 relative z-20">
+          <p className="text-xs font-bold tracking-[0.2em] text-[#A7B0C0] uppercase">ALL MAJOR SPORTS & LEAGUES LIVE</p>
         </div>
         <BrandMarquee 
           imagesFolder="dawryate" 
@@ -58,27 +63,30 @@ export default function Home() {
             "Untitled-design-57.webp",
             "Untitled-design-58.webp"
           ]}
-          cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[300px] relative rounded-md overflow-hidden shadow-2xl border border-black/5 hover:scale-105 hover:border-black/30 hover:z-10 transition-all duration-300"
+          cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[300px] relative rounded-xl overflow-hidden shadow-2xl border border-white/10 hover:scale-105 hover:border-[#38BDF8]/50 hover:z-10 transition-all duration-300"
           imageClassName="object-cover"
         />
       </div>
 
-      {/* Channel & Installation Quick Links */}
-      <div className="w-full bg-white py-6 px-4 text-center border-t border-black/5 relative z-20">
-        <p className="text-center text-sm md:text-base text-[#64748B] max-w-3xl mx-auto">
-          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#0EA5E9] hover:text-[#0D9488]" href="/channels">FreeGoTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#0EA5E9] hover:text-[#0D9488]" href="/installation">FreeGoTV Installation Guide</Link> for a quick start.
+      {/* Channel Quick Bar */}
+      <div className="w-full bg-[#0D111B] py-6 px-4 text-center border-y border-white/10 relative z-20">
+        <p className="text-center text-sm md:text-base text-[#A7B0C0] max-w-3xl mx-auto">
+          Explore the comprehensive <Link prefetch={false} className="font-bold text-[#38BDF8] hover:text-[#818CF8]" href="/channels">BexyTV Channel Catalog</Link> or follow our step-by-step <Link prefetch={false} className="font-bold text-[#38BDF8] hover:text-[#818CF8]" href="/installation">Installation Guide</Link> for instant setup.
         </p>
       </div>
 
+      {/* 5. Pricing Section */}
       <PricingSection />
+
+      {/* 6. Why BexyTV Feature Highlights */}
       <ChannelCategories />
 
-      {/* Device Support */}
+      {/* 7. Wide Device Compatibility */}
       <DeviceSupport />
 
       {/* Device Logos Marquee */}
-      <div className="w-full bg-white border-t border-black/[0.05] pt-12 pb-6 relative z-10">
-        <p className="text-center text-sm font-bold tracking-widest text-[#64748B] uppercase mb-8">Supported on all your favorite devices</p>
+      <div className="w-full bg-[#080B14] border-t border-white/10 pt-12 pb-8 relative z-10">
+        <p className="text-center text-xs font-bold tracking-widest text-[#A7B0C0] uppercase mb-8">Supported on all your favorite devices</p>
         <BrandMarquee
           imagesFolder="devices"
           images={[
@@ -94,18 +102,21 @@ export default function Home() {
             "Windows-krooz-tv.webp",
             "xbox-live-krooz-tv.webp"
           ]}
-          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-stone-200 rounded-2xl p-4 md:p-6 hover:border-sky-300 transition-all duration-300 shadow-md flex items-center justify-center"
-          imageClassName="object-contain drop-shadow-sm"
+          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-[#0D111B] border border-white/10 rounded-2xl p-4 md:p-6 hover:border-[#38BDF8]/50 transition-all duration-300 shadow-md flex items-center justify-center"
+          imageClassName="object-contain drop-shadow-sm invert opacity-80 hover:opacity-100"
         />
       </div>
 
+      {/* 8. How It Works (3 Steps) */}
       <HowItWorksSection />
 
-      {/* Info & Articles */}
+      {/* 9. FAQ Section */}
       <FAQSection />
+
+      {/* 10. Latest Articles & Tutorials */}
       <LatestArticlesSection />
 
-      {/* Social Proof & Conversion */}
+      {/* 11. Final Support CTA */}
       <SupportCtaSection />
     </main>
   );

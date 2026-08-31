@@ -1,71 +1,63 @@
-import { Check, Monitor, Globe2, Tv, Headphones } from "lucide-react";
-import Link from "next/link";
+import { Monitor, Globe2, Tv, Headphones, Sparkles } from "lucide-react";
 
 export default function ChannelCategories() {
   const features = [
     {
       icon: Monitor,
-      title: "For all devices",
-      desc: "Our IPTV is 100% compatible with all operating systems, applications, TV boxes and devices available on the market.",
+      title: "Universal Devices",
+      desc: "100% compatible with Firestick, Smart TVs, Android, iOS, Windows, Mac, and MAG boxes.",
     },
     {
       icon: Globe2,
-      title: "Global Content",
-      desc: "Our IPTV subscription offers thousands of channels, movies, and series with the fastest and most stable server",
+      title: "Global 4K Servers",
+      desc: "High-speed anti-freeze servers operating across North America, Europe, and Asia.",
     },
     {
       icon: Tv,
-      title: "Best quality FHD/4K",
-      desc: "Enjoy your favorite shows, movies and events with the highest quality and performance.",
+      title: "60 FPS Ultra HD",
+      desc: "Stream live sports and blockbusters with crystal clear 4K resolution and high bitrates.",
     },
     {
       icon: Headphones,
-      title: "24/7 Support",
-      desc: "We offer 24/7 support to help you throughout your subscription, including installation, activation, and technical issues.",
+      title: "24/7 Live Support",
+      desc: "Instant technical help via WhatsApp and email whenever you need setup assistance.",
     },
   ];
 
   return (
-    <section className="relative z-10 bg-white py-16 text-[#0F172A] sm:py-24">
-      <div className="mx-auto max-w-[1200px] px-5">
+    <section className="relative z-10 bg-[#060810] bg-tech-grid py-20 text-white border-t border-white/10">
+      <div className="mx-auto max-w-[1340px] px-5">
         
-        {/* Heading above Red Box */}
-        <div className="mx-auto mb-12 max-w-4xl text-center">
-          <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <span className="h-px w-8 bg-gradient-to-r from-transparent to-[#0EA5E9]"></span>
-            <span className="text-[#0EA5E9] text-sm font-bold tracking-[0.2em] uppercase">Premium Quality</span>
-            <span className="h-px w-8 bg-gradient-to-l from-transparent to-[#0EA5E9]"></span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-black text-[#0F172A] tracking-tight leading-tight animate-fade-up">
+        {/* Heading */}
+        <div className="mx-auto mb-12 max-w-4xl text-center space-y-3">
+          <span className="inline-flex items-center gap-2 border border-[#38BDF8]/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
+            <Sparkles className="w-3.5 h-3.5" /> WHY BEXYTV STANDS OUT
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
             We Are Proud to Offer the <br className="hidden md:block" />
-            <span className="text-[#0EA5E9]">Premium IPTV Service.</span>
+            <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">
+              #1 Premium IPTV Experience
+            </span>
           </h2>
         </div>
 
-        {/* Orange Feature Box */}
-        <div 
-          className="bg-[#14B8A6] rounded-2xl md:rounded-3xl p-8 md:p-12 mb-20 shadow-[0_10px_40px_rgba(14,165,233,0.3)] animate-fade-up"
-          style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-            {features.map((feature, i) => {
-              const Icon = feature.icon;
-              return (
-                <div key={i} className="flex flex-col items-center">
-                  <div className="mb-6 inline-flex p-4 rounded-full bg-white shadow-sm">
-                    <Icon className="w-8 h-8 text-[#0EA5E9]" strokeWidth={2} />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#0F172A] mb-4">{feature.title}</h3>
-                  <p className="text-white text-[15px] leading-relaxed max-w-[280px] mx-auto font-medium">
-                    {feature.desc}
-                  </p>
+        {/* Feature Box Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, i) => {
+            const Icon = feature.icon;
+            return (
+              <div key={i} className="bexy-card p-6 flex flex-col items-center text-center">
+                <div className="mb-5 p-3 rounded-2xl bg-gradient-to-br from-[#38BDF8]/20 to-[#818CF8]/20 border border-[#38BDF8]/30 text-[#38BDF8]">
+                  <Icon className="w-7 h-7" strokeWidth={2} />
                 </div>
-              );
-            })}
-          </div>
+                <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
+                <p className="text-[#A7B0C0] text-xs leading-relaxed">
+                  {feature.desc}
+                </p>
+              </div>
+            );
+          })}
         </div>
-
-
 
       </div>
     </section>

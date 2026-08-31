@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://www.freegotv-iptv.shop/sitemap.xml',
+    sitemap: 'https://www.bexytv.com/sitemap.xml',
   };
 }

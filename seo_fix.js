@@ -75,8 +75,8 @@ files.forEach(file => {
   }
 
   if (file.includes("channels") && file.includes("page.tsx")) {
-    if (updated.includes("Popular FreeGoTV")) {
-      updated = updated.replace("Popular FreeGoTV", "Premium IPTV Channels");
+    if (updated.includes("Popular BexyTV")) {
+      updated = updated.replace("Popular BexyTV", "Premium IPTV Channels");
       updated = updated.replace("Live Channels &amp; VOD.", "Live TV, Sports &amp; VOD.");
       report.h1++;
     }

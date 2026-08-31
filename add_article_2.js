@@ -12,7 +12,7 @@ const newArticle = `
     title: "IPTV on Multiple Devices: How Multi-Screen Streaming Works",
     description: "Want to watch IPTV on multiple screens? Learn how multi-device IPTV streaming works, bandwidth requirements, and how to set up your subscription across different devices.",
     date: "August 24, 2026",
-    author: "FreeGoTV Team",
+    author: "BexyTV Team",
     category: "Guides",
     coverImage: "/images/blog/iptv-on-multiple-devices/iptv-on-multiple-devices.png",
     content: \`
@@ -24,7 +24,7 @@ In today's connected household, a single television is rarely enough. Family mem
 
 Multi-screen streaming allows you to expand your entertainment system beyond the traditional single set-top box. However, because IPTV relies on internet data rather than a physical cable connection, streaming across multiple devices introduces new rules, bandwidth requirements, and subscription limits.
 
-In this guide, we will break down exactly how multi-device streaming works, what you need to look out for, and how you can seamlessly set up the [FreeGoTV platform](/) or other IPTV services on every screen in your house.
+In this guide, we will break down exactly how multi-device streaming works, what you need to look out for, and how you can seamlessly set up the [BexyTV platform](/) or other IPTV services on every screen in your house.
 
 ---
 
@@ -192,11 +192,11 @@ Always look for:
 
 ---
 
-## Using FreeGoTV on Multiple Devices
+## Using BexyTV on Multiple Devices
 
-At **FreeGoTV**, we understand that modern households require flexibility. When you explore our [IPTV plans from FreeGoTV](/pricing), you will find clear, transparent rules regarding simultaneous connections. 
+At **BexyTV**, we understand that modern households require flexibility. When you explore our [IPTV plans from BexyTV](/pricing), you will find clear, transparent rules regarding simultaneous connections. 
 
-Whether you are looking to stream on a Smart TV in the living room, a Firestick in the bedroom, or a smartphone on the train, the [FreeGoTV IPTV service](/) supports a vast array of devices. 
+Whether you are looking to stream on a Smart TV in the living room, a Firestick in the bedroom, or a smartphone on the train, the [BexyTV IPTV service](/) supports a vast array of devices. 
 
 If you ever encounter an issue sharing your streams across your home, our dedicated [Customer Support](/contact) team is ready to assist. Be sure to check out our [FAQ](/faq) page for instant answers on configuring your favorite apps.
 

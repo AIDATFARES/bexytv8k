@@ -17,7 +17,7 @@ const faqs = [
   { question: "1. How do I install IPTV on a Smart TV?", answer: "Install a compatible player such as Smart IPTV or IPTV Smarters from your TV's app store, then add the M3U URL or Xtream credentials from your welcome email." },
   { question: "2. Where do I find my M3U URL?", answer: "Your M3U URL is included in the welcome email sent after activation. Contact support if you need it resent." },
   { question: "3. How can I reduce buffering?", answer: "Use a stable internet connection, restart your device and router, and select an appropriate quality setting for your connection." },
-  { question: "4. How do I set up FreeGoTV using Xtream Codes API?", answer: "Choose Xtream Codes API in your player and enter the server URL, username, and password from your welcome email." },
+  { question: "4. How do I set up BexyTV using Xtream Codes API?", answer: "Choose Xtream Codes API in your player and enter the server URL, username, and password from your welcome email." },
   { question: "5. Can I connect using a MAC address (Portal URL)?", answer: "Yes. MAG and compatible portal devices can be activated using their MAC address. Send it to our support team for assistance." },
 ];
 
@@ -39,7 +39,7 @@ export default function DeviceSetupGuide() {
           const active = item.id === activeDevice;
           return (
             <button 
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-[#0EA5E9] bg-[#14B8A6] text-[#0F172A] shadow-lg shadow-sky-500/25" : "border-black/15 bg-white text-[#64748B] hover:border-[#0EA5E9]/60 hover:text-[#0F172A] hover:bg-sky-50"}`} 
+              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-[#6366F1] bg-[#D946EF] text-[#0F172A] shadow-lg shadow-sky-500/25" : "border-black/15 bg-white text-[#64748B] hover:border-[#6366F1]/60 hover:text-[#0F172A] hover:bg-sky-50"}`} 
               key={item.id} 
               onClick={() => setActiveDevice(item.id)} 
               type="button"
@@ -50,23 +50,23 @@ export default function DeviceSetupGuide() {
         })}
       </div>
 
-      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#14B8A6] bg-white p-6 sm:p-10 shadow-2xl overflow-hidden">
+      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#D946EF] bg-white p-6 sm:p-10 shadow-2xl overflow-hidden">
         
         {/* Device Header */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-stone-100 pb-6 mb-8">
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-50 shrink-0">
-            <DeviceIcon className="h-8 w-8 text-[#0EA5E9]" />
+            <DeviceIcon className="h-8 w-8 text-[#6366F1]" />
           </div>
           <div>
             <h3 className="text-2xl font-black text-[#0F172A] sm:text-3xl">{device.title}</h3>
-            <p className="mt-1 text-[#64748B] font-medium">Follow these steps to configure your {device.label} for FreeGoTV.</p>
+            <p className="mt-1 text-[#64748B] font-medium">Follow these steps to configure your {device.label} for BexyTV.</p>
           </div>
         </div>
         
         {/* Important Note */}
         {device.note && (
           <div className="mb-8 rounded-2xl border border-sky-200 bg-sky-50/50 p-5 flex items-start gap-4">
-            <HelpCircle className="h-6 w-6 text-[#0EA5E9] shrink-0" />
+            <HelpCircle className="h-6 w-6 text-[#6366F1] shrink-0" />
             <div>
               <p className="font-bold text-[#0F172A] mb-1">Important Note</p>
               <p className="text-sm leading-relaxed text-stone-700">{device.note}</p>
@@ -108,7 +108,7 @@ export default function DeviceSetupGuide() {
           {faqs.map((faq) => (
             <div className="flex flex-col rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm hover:border-sky-200 transition-colors" key={faq.question}>
               <div className="bg-stone-50 border-b border-stone-100 px-5 py-4 flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-[#0EA5E9] shrink-0" />
+                <HelpCircle className="w-5 h-5 text-[#6366F1] shrink-0" />
                 <h3 className="text-base sm:text-lg font-bold text-[#0F172A] leading-snug">
                   {faq.question}
                 </h3>
@@ -130,7 +130,7 @@ function SetupStep({ children, number, title }: { children: React.ReactNode; num
       
       {/* Content */}
       <div className="flex flex-1 gap-5 items-start">
-         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#14B8A6] text-lg font-extrabold text-[#0F172A] shadow-md">
+         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#D946EF] text-lg font-extrabold text-[#0F172A] shadow-md">
            {number}
          </span>
          <div className="flex-1 mt-1">
@@ -148,7 +148,7 @@ function SetupStep({ children, number, title }: { children: React.ReactNode; num
 function CodeLine({ label, text }: { label: string; text: string }) {
   return (
     <div className="rounded-xl bg-stone-50 border border-stone-200 px-4 py-3 font-mono text-xs text-stone-700 break-all">
-      <span className="font-bold text-[#0EA5E9] mr-2">{label}:</span> 
+      <span className="font-bold text-[#6366F1] mr-2">{label}:</span> 
       {text}
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, X, CreditCard, Bitcoin, Wallet } from "lucide-react";
+import { CheckCircle2, X, CreditCard, Bitcoin, Wallet, Sparkles, ShieldCheck } from "lucide-react";
 
 type PlanFeature = {
   text: string;
@@ -23,54 +23,72 @@ type Plan = {
 
 const plans: Plan[] = [
   {
+    id: "1-month",
+    name: "1 Month Pass",
+    subtitle: "Ideal for testing our 4K IPTV service with zero commitments.",
+    price: 14.99,
+    duration: "/ 1 Month",
+    features: [
+      { text: "50,000+ Live Channels 4K", included: true },
+      { text: "150,000+ Movies & TV Shows", included: true },
+      { text: "60 FPS Anti-Freeze Tech", included: true },
+      { text: "All Sports & PPV Included", included: true },
+      { text: "24/7 Live Support", included: true },
+    ],
+    buttonText: "Start 1 Month Plan",
+  },
+  {
     id: "3-months",
-    name: "FreeGoTV Basic",
-    subtitle: "The perfect entry point to experience true premium streaming.",
-    price: 35,
+    name: "3 Months Pass",
+    subtitle: "Great quarterly option for uninterrupted sports & movies.",
+    price: 34.99,
+    oldPrice: 45,
     duration: "/ 3 Months",
     saving: "Save 22%",
     features: [
-      { text: "HD/4K Streaming Quality", included: true },
-      { text: "Full EPG Support", included: true },
-      { text: "Antifreeze Technology", included: true },
-      { text: "24/7 Standard Support", included: true },
-      { text: "Multi-device connection", included: false },
+      { text: "50,000+ Live Channels 4K", included: true },
+      { text: "150,000+ Movies & TV Shows", included: true },
+      { text: "60 FPS Anti-Freeze Tech", included: true },
+      { text: "All Sports & PPV Included", included: true },
+      { text: "24/7 Priority Support", included: true },
     ],
-    buttonText: "Get Basic Plan",
-  },
-  {
-    id: "12-months",
-    name: "FreeGoTV Ultimate",
-    subtitle: "Our most popular choice for a full year of uninterrupted premium entertainment.",
-    price: 69.99,
-    oldPrice: 80,
-    duration: "/ 12 Months",
-    saving: "Save 61%",
-    popular: true,
-    features: [
-      { text: "Premium HD/4K/8K Quality", included: true },
-      { text: "Advanced EPG & Catchup", included: true },
-      { text: "Premium Antifreeze Tech v2", included: true },
-      { text: "24/7 Priority VIP Support", included: true },
-      { text: "Up to 3 simultaneous devices", included: true },
-    ],
-    buttonText: "Get Ultimate Plan",
+    buttonText: "Start 3 Months Plan",
   },
   {
     id: "6-months",
-    name: "FreeGoTV Pro",
-    subtitle: "An excellent mid-tier option delivering robust performance for six months.",
+    name: "6 Months Pass",
+    subtitle: "Semi-annual plan offering max value for families.",
     price: 49.99,
+    oldPrice: 75,
     duration: "/ 6 Months",
     saving: "Save 44%",
     features: [
-      { text: "HD/4K Streaming Quality", included: true },
-      { text: "Full EPG Support", included: true },
-      { text: "Antifreeze Technology", included: true },
-      { text: "24/7 Priority Support", included: true },
-      { text: "Multi-device connection", included: false },
+      { text: "50,000+ Live Channels 4K", included: true },
+      { text: "150,000+ Movies & TV Shows", included: true },
+      { text: "60 FPS Anti-Freeze Tech", included: true },
+      { text: "All Sports & PPV Included", included: true },
+      { text: "24/7 VIP Support", included: true },
     ],
-    buttonText: "Get Pro Plan",
+    buttonText: "Start 6 Months Plan",
+  },
+  {
+    id: "12-months",
+    name: "12 Months Pass",
+    subtitle: "Our highest savings deal + 2 extra months free included.",
+    price: 69.99,
+    oldPrice: 120,
+    duration: "/ 12 Months",
+    saving: "Save 61% + 2 Mo Free",
+    popular: true,
+    features: [
+      { text: "50,000+ Live Channels 4K", included: true },
+      { text: "150,000+ Movies & TV Shows", included: true },
+      { text: "60 FPS Anti-Freeze Tech v4", included: true },
+      { text: "All Sports & PPV Included", included: true },
+      { text: "24/7 Priority VIP Support", included: true },
+      { text: "Multi-Device Bonus Slot", included: true },
+    ],
+    buttonText: "Claim 12 Months Deal",
   },
 ];
 
@@ -81,38 +99,50 @@ export default function PricingSection() {
 
   function handleOrder(plan: Plan) {
     const text = encodeURIComponent(
-      `Hello! I would like to purchase the ${plan.name} plan (${plan.duration}) with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
+      `Hello! I would like to order the BexyTV ${plan.name} (${plan.duration}) with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
     );
     window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <section id="pricing" className="relative bg-[#f8fafc] py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="pricing" className="relative bg-[#060810] bg-tech-grid py-24 border-t border-white/10 overflow-hidden">
+      
+      {/* Background glow for pricing section */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none" />
+
+      <div className="mx-auto max-w-[1340px] px-4 sm:px-6 relative z-10">
         
-        <header className="mx-auto max-w-3xl text-center mb-10">
-          <p className="inline-flex rounded-full border border-[#0EA5E9]/30 bg-[#0EA5E9]/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#0EA5E9]">IPTV SUBSCRIPTION PLANS</p>
-          <h2 className="mt-5 text-4xl font-black leading-[1.1] tracking-tight text-[#0F172A] sm:text-5xl uppercase">
-            Select Your <span className="text-[#0EA5E9]">FreeGoTV IPTV</span> Subscription
+        {/* Header */}
+        <header className="mx-auto max-w-3xl text-center mb-12 space-y-4">
+          <span className="inline-flex items-center gap-2 border border-cyan-500/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
+            <Sparkles className="w-3.5 h-3.5" /> TRANSPARENT SUBSCRIPTION PRICING
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+            Choose Your <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">BexyTV</span> Plan
           </h2>
-          <p className="mt-5 text-xl font-bold tracking-wide text-[#0F172A] sm:text-2xl">Premium Entertainment Without the Premium Price Tag</p>
-          <p className="mt-2 text-sm text-[#64748B] sm:text-base">Experience crystal-clear streaming with zero hidden fees and instant activation. Unlock your unlimited entertainment library today.</p>
+          <p className="text-base sm:text-lg text-[#A7B0C0]">
+            No hidden fees, no contract, instant automated setup within 3 minutes of ordering.
+          </p>
         </header>
 
-        {/* Device Selector */}
-        <div className="mx-auto mb-10 max-w-2xl" role="radiogroup" aria-label="Number of device connections">
-          <p className="mb-3 text-center text-xs font-bold uppercase tracking-[0.15em] text-[#64748B]">Choose your connections</p>
-          <div className="grid grid-cols-3 rounded-2xl border border-[#0EA5E9]/30 bg-white p-1.5 shadow-sm">
+        {/* Device Connections Selector */}
+        <div className="mx-auto mb-12 max-w-xl text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-[#A7B0C0]">
+            Select Device Connections:
+          </p>
+          <div className="grid grid-cols-3 rounded-2xl border border-white/10 bg-[#0D111B] p-1.5 shadow-md">
             {[1, 2, 3].map((count) => {
               const selected = devices === count;
               return (
                 <button
-                  aria-checked={selected}
-                  className={`rounded-xl px-3 py-3 text-sm font-bold transition-all ${selected ? "bg-[#14B8A6] text-[#0F172A] shadow-lg shadow-sky-500/25" : "text-[#64748B] hover:text-[#0F172A] hover:bg-sky-50"}`}
                   key={count}
                   onClick={() => setDevices(count)}
-                  role="radio"
                   type="button"
+                  className={`rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold transition-all ${
+                    selected
+                      ? "bg-gradient-to-r from-[#38BDF8] to-[#818CF8] text-[#061018] shadow-md"
+                      : "text-[#A7B0C0] hover:text-white hover:bg-white/5"
+                  }`}
                 >
                   {count} Device{count > 1 ? "s" : ""}
                 </button>
@@ -121,62 +151,69 @@ export default function PricingSection() {
           </div>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 items-start pt-4">
+        {/* 4 Pricing Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch pt-2">
           {plans.map((plan) => (
-            <article 
+            <article
               key={plan.id}
-              className={`relative flex flex-col rounded-2xl bg-white p-8 transition-transform duration-300 hover:-translate-y-1 border-2 ${
-                plan.popular 
-                  ? "border-[#0EA5E9] shadow-[0_15px_40px_-10px_rgba(14,165,233,0.25)] md:-mt-4" 
-                  : "border-sky-300 shadow-sm hover:shadow-md hover:border-[#0EA5E9]"
+              className={`bexy-card p-6 flex flex-col justify-between relative transition-all duration-300 ${
+                plan.popular
+                  ? "border-[#38BDF8] shadow-[0_0_30px_rgba(56,189,248,0.2)] card-glow-featured bg-[#111621]"
+                  : "bg-[#0D111B]"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center justify-center rounded-b-xl rounded-t-sm bg-gradient-to-r from-[#14B8A6] to-slate-800 px-5 py-1.5 shadow-md whitespace-nowrap">
-                  <span className="text-[10px] font-extrabold uppercase tracking-wide text-[#0F172A]">Best Value - Most Popular</span>
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#38BDF8] to-[#818CF8] text-[#061018] font-black text-[10px] uppercase tracking-widest px-3.5 py-1 rounded-full shadow-md whitespace-nowrap">
+                  MOST POPULAR
                 </div>
               )}
-              
-              <h3 className="text-xl font-bold text-[#0F172A]">{plan.name}</h3>
-              <p className="mt-2 text-sm text-[#64748B] leading-relaxed min-h-[40px]">{plan.subtitle}</p>
-              
-              <div className="mt-6 flex items-baseline">
-                <span className="text-5xl font-black tracking-tighter text-[#0EA5E9]">${priceFor(plan)}</span>
-                <span className="ml-1 text-xs font-semibold text-[#64748B]">{plan.duration}</span>
-              </div>
-              
-              <div className="min-h-[24px] mt-1 flex items-center gap-2">
-                {plan.saving && (
-                  <p className="text-xs font-bold text-blue-500">{plan.saving}</p>
-                )}
-                {plan.oldPrice && (
-                   <p className="text-xs font-semibold text-[#64748B] line-through">${(plan.oldPrice * devices).toFixed(2)}</p>
-                )}
+
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <h3 className="text-xl font-bold text-white">{plan.name}</h3>
+                  {plan.saving && (
+                    <span className="text-[10px] font-bold bg-cyan-500/20 text-[#38BDF8] border border-cyan-500/30 px-2 py-0.5 rounded-full">
+                      {plan.saving}
+                    </span>
+                  )}
+                </div>
+
+                <p className="text-xs text-[#A7B0C0] leading-relaxed min-h-[36px] mb-4">
+                  {plan.subtitle}
+                </p>
+
+                {/* Price Display */}
+                <div className="my-4 pb-4 border-b border-white/10">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl font-black text-white">${priceFor(plan)}</span>
+                    <span className="text-xs text-[#A7B0C0] font-medium">{plan.duration}</span>
+                  </div>
+                  {plan.oldPrice && (
+                    <div className="text-xs text-slate-500 line-through mt-1">
+                      Was ${(plan.oldPrice * devices).toFixed(2)}
+                    </div>
+                  )}
+                </div>
+
+                {/* Feature Bullet List */}
+                <ul className="space-y-3 my-4">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2.5 text-xs text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                      <span>{feature.text}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <ul className="mt-6 flex-grow space-y-4">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    {feature.included ? (
-                      <CheckCircle2 className={`h-5 w-5 shrink-0 ${plan.popular ? "text-[#0EA5E9]" : "text-blue-500"}`} strokeWidth={2.5} />
-                    ) : (
-                      <X className="h-5 w-5 shrink-0 text-[#64748B]" strokeWidth={2.5} />
-                    )}
-                    <span className={`text-sm font-medium ${feature.included ? "text-stone-700" : "text-[#64748B]"}`}>
-                      {feature.text}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              
-              <button 
+              {/* Action Button */}
+              <button
                 type="button"
                 onClick={() => handleOrder(plan)}
-                className={`mt-8 w-full rounded-xl py-4 text-sm font-bold text-[#0F172A] transition-all duration-300 ${
-                  plan.popular 
-                    ? "bg-[#14B8A6] shadow-[0_8px_20px_rgba(14,165,233,0.3)] hover:bg-[#0C8CE9] hover:-translate-y-0.5" 
-                    : "bg-[#0F172A] hover:bg-[#14B8A6] text-white hover:shadow-lg hover:-translate-y-0.5"
+                className={`w-full mt-6 py-3 rounded-full text-xs font-bold transition-all ${
+                  plan.popular
+                    ? "btn-primary"
+                    : "btn-secondary text-white"
                 }`}
               >
                 {plan.buttonText}
@@ -185,24 +222,19 @@ export default function PricingSection() {
           ))}
         </div>
 
-        {/* Payment Methods & Guarantee */}
-        <div className="mx-auto mt-16 max-w-4xl">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl bg-white border border-stone-200 p-6 shadow-sm">
-            
-            <div className="flex flex-col gap-2 text-center sm:text-left">
-              <p className="text-base font-bold text-[#0F172A] flex items-center justify-center sm:justify-start gap-2">
-                <CheckCircle2 className="h-5 w-5 text-[#0EA5E9]" />
-                Secure Payments & Instant Access
-              </p>
-              <p className="text-sm text-[#64748B]">Pay safely using Crypto, Credit Card, or PayPal. Your details are encrypted instantly.</p>
+        {/* Security & Guarantee Trust Bar */}
+        <div className="mt-12 max-w-3xl mx-auto border border-white/10 rounded-2xl bg-[#0D111B] p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+          <div className="flex items-center gap-3">
+            <ShieldCheck className="w-6 h-6 text-[#38BDF8] shrink-0" />
+            <div className="text-left">
+              <span className="font-bold text-white block">100% Risk-Free Guarantee</span>
+              <span className="text-[#A7B0C0]">Instant automated key activation after checkout.</span>
             </div>
-
-            <div className="flex items-center gap-4 text-[#64748B]">
-              <CreditCard className="h-8 w-8 hover:text-[#0EA5E9] transition-colors" />
-              <Bitcoin className="h-8 w-8 hover:text-[#0EA5E9] transition-colors" />
-              <Wallet className="h-8 w-8 hover:text-[#0EA5E9] transition-colors" />
-            </div>
-
+          </div>
+          <div className="flex items-center gap-3 text-slate-400">
+            <CreditCard className="w-6 h-6 hover:text-white transition-colors" />
+            <Bitcoin className="w-6 h-6 hover:text-white transition-colors" />
+            <Wallet className="w-6 h-6 hover:text-white transition-colors" />
           </div>
         </div>
 

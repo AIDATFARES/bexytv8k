@@ -118,9 +118,9 @@ export default function GlobalCoverageSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full border border-[#0EA5E9]/30 bg-stone-50 mb-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
+            className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full border border-[#6366F1]/30 bg-stone-50 mb-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
           >
-            <Globe className="w-3.5 h-3.5 text-[#0EA5E9]" />
+            <Globe className="w-3.5 h-3.5 text-[#6366F1]" />
             <span className="text-[10px] font-bold text-sky-400 uppercase tracking-widest">
               GLOBAL COVERAGE
             </span>
@@ -134,7 +134,7 @@ export default function GlobalCoverageSection() {
             className="text-4xl md:text-5xl font-extrabold font-sans uppercase tracking-tight mb-4"
           >
             <span className="text-[#0F172A] block mb-1">AVAILABLE IN</span>
-            <span className="bg-gradient-to-r from-[#14B8A6] via-purple-400 to-[#0EA5E9] text-transparent bg-clip-text block">
+            <span className="bg-gradient-to-r from-[#D946EF] via-purple-400 to-[#6366F1] text-transparent bg-clip-text block">
               150+ COUNTRIES
             </span>
           </motion.h2>
@@ -158,12 +158,12 @@ export default function GlobalCoverageSection() {
               }}
               className={`px-5 py-2 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase transition-all duration-300 border ${
                 activeRegion === region
-                  ? "bg-[#0EA5E9]/30 text-sky-300 border-[#0EA5E9]/60 shadow-[0_0_20px_rgba(79,70,229,0.3)]"
+                  ? "bg-[#6366F1]/30 text-sky-300 border-[#6366F1]/60 shadow-[0_0_20px_rgba(79,70,229,0.3)]"
                   : "bg-white text-[#64748B] border-black/10 hover:border-black/20 hover:text-slate-800"
               }`}
             >
               {region === "ALL" && activeRegion === "ALL" && (
-                <Globe className="w-3 h-3 inline mr-2 text-[#0EA5E9] mb-0.5" />
+                <Globe className="w-3 h-3 inline mr-2 text-[#6366F1] mb-0.5" />
               )}
               {region}
             </button>
@@ -181,7 +181,7 @@ export default function GlobalCoverageSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2 }}
-                className="bg-stone-50/90 border border-black/10 hover:border-[#0EA5E9]/40 hover:bg-white rounded-xl px-3.5 py-2.5 flex items-center gap-3 transition-all cursor-default group shadow-sm"
+                className="bg-stone-50/90 border border-black/10 hover:border-[#6366F1]/40 hover:bg-white rounded-xl px-3.5 py-2.5 flex items-center gap-3 transition-all cursor-default group shadow-sm"
               >
                 <img
                   src={`https://flagcdn.com/w40/${country.code}.webp`}
@@ -205,10 +205,10 @@ export default function GlobalCoverageSection() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-center mt-8">
             <button
               onClick={() => setIsExpanded(true)}
-              className="flex items-center space-x-2 px-6 py-2.5 rounded-full border border-black/15 bg-stone-50 text-xs font-bold text-stone-700 hover:text-[#0F172A] hover:border-[#0EA5E9]/40 transition-colors shadow-md"
+              className="flex items-center space-x-2 px-6 py-2.5 rounded-full border border-black/15 bg-stone-50 text-xs font-bold text-stone-700 hover:text-[#0F172A] hover:border-[#6366F1]/40 transition-colors shadow-md"
             >
               <span>SHOW ALL COUNTRIES</span>
-              <ChevronDown className="w-4 h-4 text-[#0EA5E9]" />
+              <ChevronDown className="w-4 h-4 text-[#6366F1]" />
             </button>
           </motion.div>
         )}

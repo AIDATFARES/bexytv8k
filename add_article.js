@@ -12,7 +12,7 @@ const newArticle = `
     title: "IPTV 4K Buffering: How to Fix 4K Streaming Problems",
     description: "Discover why IPTV 4K buffering happens and learn how to fix 4K streaming problems. Get practical troubleshooting steps to improve your 4K IPTV streaming quality.",
     date: "August 24, 2026",
-    author: "FreeGoTV Team",
+    author: "BexyTV Team",
     category: "Troubleshooting",
     coverImage: "/images/blog/iptv-4k-buffering/iptv-4k-buffering.png",
     content: \`
@@ -24,7 +24,7 @@ Nothing ruins movie night faster than seeing the dreaded loading circle in the m
 
 Why do 4K streams buffer more often? A 4K video contains four times the pixels of a standard 1080p HD video. This means 4K IPTV streaming requires significantly more bandwidth, a more stable network connection, and a device capable of processing all that data smoothly. It's important to remember that buffering does not always mean the IPTV service itself is broken. More often than not, it points to a bottleneck somewhere between the provider's server and your screen.
 
-In this guide, we'll explain how to properly diagnose the problem by checking your network, device, application, and stream. Whether you're using the premium [FreeGoTV platform](/) or another provider, we’ll help you eliminate IPTV 4K streaming problems for good.
+In this guide, we'll explain how to properly diagnose the problem by checking your network, device, application, and stream. Whether you're using the premium [BexyTV platform](/) or another provider, we’ll help you eliminate IPTV 4K streaming problems for good.
 
 ---
 
@@ -230,7 +230,7 @@ To clear the cache, navigate to your device's app settings, locate your IPTV app
 
 If you're still experiencing how to stop IPTV buffering, the current player application itself may be poorly optimized for 4K streams on your specific device.
 
-If the FreeGoTV service (or your current provider) supports multiple compatible players, testing another highly-rated player can help isolate the problem. Often, simply switching apps resolves mysterious playback issues.
+If the BexyTV service (or your current provider) supports multiple compatible players, testing another highly-rated player can help isolate the problem. Often, simply switching apps resolves mysterious playback issues.
 
 ---
 
@@ -290,7 +290,7 @@ When should you finally contact support? Reaching out to your provider becomes a
 * Your device and application are fully updated.
 * Basic troubleshooting steps have failed.
 
-If you are a FreeGoTV subscriber, we are always here to help. Just remember that while we provide premium servers, we cannot guarantee completely buffer-free viewing if local network or device limitations exist. Our [Customer Support](/contact) team can help diagnose server-side issues quickly.
+If you are a BexyTV subscriber, we are always here to help. Just remember that while we provide premium servers, we cannot guarantee completely buffer-free viewing if local network or device limitations exist. Our [Customer Support](/contact) team can help diagnose server-side issues quickly.
 
 ---
 
@@ -318,11 +318,11 @@ To quickly resolve IPTV 4K streaming problems, run through this list:
 
 ---
 
-## Troubleshooting 4K IPTV with FreeGoTV
+## Troubleshooting 4K IPTV with BexyTV
 
-If you are a subscriber using the **FreeGoTV** service, you can use the exact diagnostic process outlined above. Determine whether the buffering problem is related to your internet connection, Wi-Fi stability, device capabilities, the IPTV player, 4K compatibility, an individual stream, or a service-side issue.
+If you are a subscriber using the **BexyTV** service, you can use the exact diagnostic process outlined above. Determine whether the buffering problem is related to your internet connection, Wi-Fi stability, device capabilities, the IPTV player, 4K compatibility, an individual stream, or a service-side issue.
 
-[FreeGoTV](/) provides robust, optimized servers designed to deliver exceptional 4K quality. If you want to experience the difference a premium service makes, explore our [IPTV plans from FreeGoTV](/pricing). 
+[BexyTV](/) provides robust, optimized servers designed to deliver exceptional 4K quality. If you want to experience the difference a premium service makes, explore our [IPTV plans from BexyTV](/pricing). 
 
 For more information, you can review our [Features](/how-it-works) page or visit our [FAQ](/faq) for instant answers to common questions.
 \`
