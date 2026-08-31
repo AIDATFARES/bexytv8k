@@ -2,7 +2,6 @@
 
 import { Apple, Box, ChevronDown, Download, HelpCircle, Monitor, Satellite, Smartphone, Tv } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
 
 const devices = [
   { id: "smart-tv", label: "Smart TV", icon: Monitor, title: "Smart TV Setup (Samsung, LG, Sony, etc.)", app: "Smart IPTV or IPTV Smarters", note: "Samsung TVs commonly use Smart IPTV, while LG TVs can use IPTV Smarters or SS IPTV." },
@@ -27,19 +26,24 @@ export default function DeviceSetupGuide() {
   const DeviceIcon = device.icon;
 
   return (
-    <section className="mb-16 md:mb-[100px]">
-      <header className="mx-auto mb-9 max-w-2xl text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl">Device Setup Instructions</h2>
-        <p className="mt-3 text-base text-[#64748B]">Select your device to receive clear setup instructions.</p>
+    <section className="mb-16 md:mb-[100px] text-[#F8FAFC]">
+      <header className="mx-auto mb-10 max-w-2xl text-center">
+        <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl uppercase">Device Setup Instructions</h2>
+        <p className="mt-3 text-sm text-[#A7B0C0]">Select your device below for tailored step-by-step setup guides.</p>
       </header>
 
-      <div className="mb-7 flex flex-wrap justify-center gap-2">
+      {/* Device Tabs */}
+      <div className="mb-8 flex flex-wrap justify-center gap-3">
         {devices.map((item) => {
           const Icon = item.icon;
           const active = item.id === activeDevice;
           return (
             <button 
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-[#6366F1] bg-[#D946EF] text-[#0F172A] shadow-lg shadow-sky-500/25" : "border-black/15 bg-white text-[#64748B] hover:border-[#6366F1]/60 hover:text-[#0F172A] hover:bg-sky-50"}`} 
+              className={`inline-flex items-center gap-2.5 rounded-2xl border px-5 py-3 text-xs font-extrabold uppercase tracking-wider transition-all duration-300 ${
+                active 
+                  ? "border-[#38BDF8] bg-gradient-to-r from-[#38BDF8] to-[#818CF8] text-[#060810] shadow-lg shadow-cyan-500/25" 
+                  : "border-white/10 bg-[#0D111B] text-[#A7B0C0] hover:border-[#38BDF8]/40 hover:text-white hover:bg-white/5"
+              }`} 
               key={item.id} 
               onClick={() => setActiveDevice(item.id)} 
               type="button"
@@ -50,26 +54,26 @@ export default function DeviceSetupGuide() {
         })}
       </div>
 
-      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#D946EF] bg-white p-6 sm:p-10 shadow-2xl overflow-hidden">
+      <article className="mx-auto max-w-[1000px] rounded-3xl border border-white/10 bg-[#0D111B] p-6 sm:p-10 shadow-2xl overflow-hidden">
         
         {/* Device Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-stone-100 pb-6 mb-8">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-50 shrink-0">
-            <DeviceIcon className="h-8 w-8 text-[#6366F1]" />
+        <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6 border-b border-white/10 pb-6 mb-8">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/20 shrink-0">
+            <DeviceIcon className="h-8 w-8" />
           </div>
           <div>
-            <h3 className="text-2xl font-black text-[#0F172A] sm:text-3xl">{device.title}</h3>
-            <p className="mt-1 text-[#64748B] font-medium">Follow these steps to configure your {device.label} for BexyTV.</p>
+            <h3 className="text-2xl font-black text-white sm:text-3xl">{device.title}</h3>
+            <p className="mt-1 text-xs text-[#A7B0C0]">Follow these exact steps to configure your {device.label} for BexyTV streaming.</p>
           </div>
         </div>
         
         {/* Important Note */}
         {device.note && (
-          <div className="mb-8 rounded-2xl border border-sky-200 bg-sky-50/50 p-5 flex items-start gap-4">
-            <HelpCircle className="h-6 w-6 text-[#6366F1] shrink-0" />
+          <div className="mb-8 rounded-2xl border border-[#38BDF8]/30 bg-[#38BDF8]/5 p-5 flex items-start gap-4">
+            <HelpCircle className="h-6 w-6 text-[#38BDF8] shrink-0 mt-0.5" />
             <div>
-              <p className="font-bold text-[#0F172A] mb-1">Important Note</p>
-              <p className="text-sm leading-relaxed text-stone-700">{device.note}</p>
+              <p className="font-bold text-white mb-1 text-sm">Important Note</p>
+              <p className="text-xs leading-relaxed text-[#A7B0C0]">{device.note}</p>
             </div>
           </div>
         )}
@@ -80,40 +84,40 @@ export default function DeviceSetupGuide() {
             number="1" 
             title="Install IPTV App"
           >
-            Navigate to your device's app store, search for <strong>{device.app}</strong>, and install the application directly to your device.
+            Navigate to your device's official app store, search for <strong className="text-white">{device.app}</strong>, and download the application directly.
           </SetupStep>
           
           <SetupStep 
             number="2" 
-            title="Configure your playlist"
+            title="Configure Playlist & Xtream Credentials"
           >
-            Launch the IPTV app, open its settings menu, and enter the M3U playlist details or Xtream Codes credentials supplied in your welcome email.
+            Launch the app, open its settings menu, and enter the M3U playlist URL or Xtream Codes login details sent to your WhatsApp or Email.
             <div className="mt-4">
-              <CodeLine label="M3U URL" text="Use the secure playlist URL from your welcome email" />
+              <CodeLine label="M3U URL" text="Check your welcome email for your dedicated M3U URL & Xtream API Codes" />
             </div>
           </SetupStep>
           
           <SetupStep 
             number="3" 
-            title="Start Watching"
+            title="Start Streaming in 4K"
           >
-            Save your settings and allow the app a few moments to load the channels. You now have immediate access to live channels, movies and TV shows in stunning 4K quality!
+            Save your settings and give the player a few seconds to load channel lists. Enjoy 50,000+ live channels and 150,000+ VODs immediately!
           </SetupStep>
         </div>
       </article>
 
       <div className="mx-auto mt-20 max-w-[1000px]">
-        <h2 className="mb-8 text-center text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl">Installation FAQ</h2>
-        <div className="grid gap-5 md:grid-cols-2">
+        <h2 className="mb-8 text-center text-3xl font-black tracking-tight text-white sm:text-4xl uppercase">Installation FAQ</h2>
+        <div className="grid gap-6 md:grid-cols-2">
           {faqs.map((faq) => (
-            <div className="flex flex-col rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm hover:border-sky-200 transition-colors" key={faq.question}>
-              <div className="bg-stone-50 border-b border-stone-100 px-5 py-4 flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-[#6366F1] shrink-0" />
-                <h3 className="text-base sm:text-lg font-bold text-[#0F172A] leading-snug">
+            <div className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#0D111B] shadow-xl hover:border-[#38BDF8]/40 transition-colors" key={faq.question}>
+              <div className="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-3">
+                <HelpCircle className="w-5 h-5 text-[#38BDF8] shrink-0" />
+                <h3 className="text-base font-bold text-white leading-snug">
                   {faq.question}
                 </h3>
               </div>
-              <div className="p-5 text-sm text-stone-700 leading-relaxed bg-white flex-1">
+              <div className="p-6 text-xs text-[#A7B0C0] leading-relaxed flex-1">
                 <p>{faq.answer}</p>
               </div>
             </div>
@@ -126,29 +130,26 @@ export default function DeviceSetupGuide() {
 
 function SetupStep({ children, number, title }: { children: React.ReactNode; number: string; title: string }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-6 bg-white border border-stone-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-sky-300 transition-colors">
-      
-      {/* Content */}
+    <div className="flex flex-col sm:flex-row gap-6 bg-[#111726] border border-white/10 p-6 sm:p-8 rounded-2xl shadow-xl hover:border-[#38BDF8]/40 transition-colors">
       <div className="flex flex-1 gap-5 items-start">
-         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#D946EF] text-lg font-extrabold text-[#0F172A] shadow-md">
+         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-r from-[#38BDF8] to-[#818CF8] text-base font-black text-[#060810] shadow-md">
            {number}
          </span>
-         <div className="flex-1 mt-1">
-           <h3 className="text-lg font-bold text-[#0F172A] sm:text-xl">{title}</h3>
-           <div className="mt-3 text-sm leading-relaxed text-[#64748B]">
+         <div className="flex-1 mt-0.5">
+           <h3 className="text-lg font-bold text-white">{title}</h3>
+           <div className="mt-2 text-xs leading-relaxed text-[#A7B0C0]">
              {children}
            </div>
          </div>
       </div>
-      
     </div>
   );
 }
 
 function CodeLine({ label, text }: { label: string; text: string }) {
   return (
-    <div className="rounded-xl bg-stone-50 border border-stone-200 px-4 py-3 font-mono text-xs text-stone-700 break-all">
-      <span className="font-bold text-[#6366F1] mr-2">{label}:</span> 
+    <div className="rounded-xl bg-[#060810] border border-white/10 px-4 py-3 font-mono text-xs text-cyan-300 break-all">
+      <span className="font-bold text-[#38BDF8] mr-2">{label}:</span> 
       {text}
     </div>
   );

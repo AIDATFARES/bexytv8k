@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Legal Disclaimer & DMCA | BexyTV",
@@ -25,37 +26,37 @@ const sections = [
   {
     title: "Availability and Service Changes",
     content: [
-      <>Channel and VOD options may vary in availability, quality (including 4K/FHD/HD), features, plans, and <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/pricing">pricing</Link>, and can be modified or removed by region without prior notification. We do not assure the availability of any particular <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/channels">channel</Link>, event, or title.</>,
+      <>Channel and VOD options may vary in availability, quality (including 4K/FHD/HD), features, plans, and <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/pricing">pricing</Link>, and can be modified or removed by region without prior notification. We do not assure the availability of any particular <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/channels">channel</Link>, event, or title.</>,
     ],
   },
   {
     title: "User Responsibility and Compliance",
     content: [
-      "You are entirely accountable for your account usage and for following all relevant local laws and regulations. Avoid any actions with the service that could infringe on third-party rights. If you are uncertain about the legality of your usage, obtain independent legal counsel prior to proceeding.",
+      "You are entirely accountable for your account usage and for following all relevant local laws and regulations. Avoid any actions with the service that could infringe on third-party rights.",
     ],
   },
   {
     title: "Third‑Party Links and Services",
     content: [
-      "Our site could have links to third-party websites, applications, or services. We do not oversee and are not responsible for the content, policies, or practices of these third-party entities. Utilizing third-party services is at your own risk.",
+      "Our site could have links to third-party websites, applications, or services. We do not oversee and are not responsible for the content, policies, or practices of these third-party entities.",
     ],
   },
   {
     title: "No Warranties",
     content: [
-      "THE SERVICE AND WEBSITE ARE OFFERED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED. THIS INCLUDES, BUT IS NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON‑INFRINGEMENT. We do not guarantee uninterrupted, error-free, or secure operation.",
+      "THE SERVICE AND WEBSITE ARE OFFERED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED.",
     ],
   },
   {
     title: "Limitation of Liability",
     content: [
-      "BexyTV, its owners, affiliates, employees, and agents shall not be liable to the fullest extent permitted by law for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, or goodwill connected to your use of the site or service.",
+      "BexyTV, its owners, affiliates, employees, and agents shall not be liable to the fullest extent permitted by law for any indirect, incidental, special, consequential, or punitive damages.",
     ],
   },
   {
     title: "Indemnification",
     content: [
-      "You agree to defend, indemnify, and shield BexyTV from any claims, liabilities, damages, losses, and expenses (including reasonable attorney fees) related to your use of the service or any infringement of this disclaimer or applicable law.",
+      "You agree to defend, indemnify, and shield BexyTV from any claims, liabilities, damages, losses, and expenses related to your use of the service or any infringement of this disclaimer.",
     ],
   },
   {
@@ -66,17 +67,17 @@ const sections = [
     items: [
       "Identification of the work claimed to be infringed.",
       "Specify the exact location, like a URL or channel name, of the material you assert is infringing.",
-      "We need your name, organization (if relevant), address, phone number, and email.",
-      "You need to provide a statement affirming your honest belief that the disputed usage is not sanctioned by the copyright holder, their agent, or legal regulations.",
-      "A perjury-penalized statement indicating that the information in the notice is accurate and that you are either the copyright owner or are authorized to represent the owner's interests.",
-      "A valid copyright claim necessitates a physical or electronic signature from the owner or their representative.",
+      "Your name, organization (if relevant), address, phone number, and email.",
+      "A statement affirming your honest belief that the disputed usage is not sanctioned by the copyright holder, their agent, or legal regulations.",
+      "A perjury-penalized statement indicating that the information in the notice is accurate and that you are authorized to represent the owner's interests.",
+      "Physical or electronic signature of the copyright owner or authorized representative.",
     ],
-    after: "Submit DMCA notices: Access our Contact form. Valid notifications will be examined, and actions executed quickly.",
+    after: "Submit DMCA notices via our Contact form. Valid notifications will be examined and processed promptly.",
   },
   {
     title: "Changes to This Disclaimer",
     content: [
-      "This disclaimer might be updated from time to time. The 'Last updated' date above shows the most recent change. Continued use of this site or service after changes indicates your acceptance of the revised terms.",
+      "This disclaimer might be updated from time to time. Continued use of this site or service after changes indicates your acceptance of the revised terms.",
     ],
   },
 ];
@@ -85,37 +86,42 @@ export default function DmcaPage() {
   const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   
   return (
-    <main className="flex-grow px-5 pb-20 pt-12 sm:px-8 md:pt-16">
-      <article className="mx-auto max-w-4xl">
-        <header className="border-b border-black/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-[#6366F1]/35 bg-[#6366F1]/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-sky-400">Legal information</span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-[#0F172A]">Legal Disclaimer</span>
-            <span className="mt-1 block text-[#6366F1]">&amp; DMCA Notice.</span>
+    <main className="min-h-screen bg-[#060810] text-[#F8FAFC] px-5 pb-20 pt-16 sm:px-8 relative z-10">
+      {/* Background Glow */}
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />
+
+      <article className="mx-auto max-w-4xl relative z-10">
+        <header className="border-b border-white/10 pb-10 text-center mx-auto max-w-3xl">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8] mb-6">
+            <Sparkles className="w-3.5 h-3.5" /> Legal Notice
+          </span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight uppercase">
+            <span className="block text-white">Legal Disclaimer</span>
+            <span className="mt-2 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">&amp; DMCA Policy</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#64748B]">Last updated: {currentDate}</p>
+          <p className="mx-auto mt-5 max-w-2xl text-xs sm:text-sm leading-relaxed text-[#A7B0C0]">Last updated: {currentDate}</p>
         </header>
 
-        <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
+        <div className="mt-10 space-y-10 text-xs sm:text-sm leading-relaxed text-[#A7B0C0]">
           <div className="space-y-4">
-            <p>Content featured on this website is meant for general informational use and does not serve as legal advice. By engaging with our site or services, you agree to this disclaimer.</p>
-            <div className="rounded-xl border border-blue-500/20 bg-blue-500/10 p-5 text-sm">
-              <strong className="text-[#0F172A]">Important:</strong> BexyTV delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided 'as is' for general guidance, not legal counsel.
+            <p>Content featured on this website is meant for general informational use. By engaging with our site or services, you agree to this disclaimer.</p>
+            <div className="rounded-3xl border border-[#38BDF8]/30 bg-[#38BDF8]/10 p-6 text-xs text-white">
+              <strong className="text-[#38BDF8]">Important Notice:</strong> BexyTV delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided &apos;as is&apos; for general guidance.
             </div>
           </div>
 
           {sections.map((section, index) => (
-            <section key={section.title}>
-              <h2 className="text-2xl font-bold text-[#0F172A]">{index + 1}. {section.title}</h2>
-              {section.content.map((paragraph, i) => <p className="mt-4" key={i}>{paragraph}</p>)}
-              {section.items && section.items.length > 0 && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-tertiary">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
-              {section.after && <p className="mt-4">{section.after}</p>}
+            <section key={section.title} className="bg-[#0D111B] border border-white/10 rounded-3xl p-6 sm:p-8 shadow-xl">
+              <h2 className="text-lg sm:text-xl font-black text-white uppercase tracking-tight">{index + 1}. {section.title}</h2>
+              {section.content.map((paragraph, i) => <p className="mt-3" key={i}>{paragraph}</p>)}
+              {section.items && section.items.length > 0 && <ul className="mt-3 list-disc space-y-2 pl-6 marker:text-[#38BDF8]">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
+              {section.after && <p className="mt-3">{section.after}</p>}
             </section>
           ))}
           
-          <section>
-            <h2 className="text-2xl font-bold text-[#0F172A]">11. Contact</h2>
-            <p className="mt-4">For any inquiries, refer to our Terms of Service and <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/privacy-policy">Privacy Policy</Link>, or contact <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/contact">support</Link>.</p>
+          <section className="bg-[#0D111B] border border-white/10 rounded-3xl p-6 sm:p-8 shadow-xl">
+            <h2 className="text-lg sm:text-xl font-black text-white uppercase tracking-tight">11. Contact</h2>
+            <p className="mt-3">For any inquiries, refer to our Terms of Service and <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/privacy-policy">Privacy Policy</Link>, or contact <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/contact">support</Link>.</p>
           </section>
         </div>
       </article>

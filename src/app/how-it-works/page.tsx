@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, MonitorSmartphone, ShieldCheck, Zap, Globe2, Headphones, Tv } from "lucide-react";
+import { ArrowRight, Check, MonitorSmartphone, ShieldCheck, Zap, Globe2, Headphones, Tv, Sparkles } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 const steps = [
   {
     badge: "Step One",
-    title: "Place your order.",
+    title: "Place Your Order",
     description: (
       <>
         Choose the plan that suits you from our{" "}
-        <Link href="/pricing" className="text-[#6366F1] font-semibold hover:text-teal-600 transition-colors">
+        <Link href="/pricing" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
           pricing plans
         </Link>
-        , complete the payment, and receive your subscription details within 20 minutes by email or{" "}
-        <Link href="/contact" className="text-[#6366F1] font-semibold hover:text-teal-600 transition-colors">
+        , complete payment, and receive your login credentials instantly via email or{" "}
+        <Link href="/contact" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
           WhatsApp
         </Link>
         .
@@ -34,14 +34,14 @@ const steps = [
   },
   {
     badge: "Step Two",
-    title: "Installation & Setup",
+    title: "Quick Setup & Installation",
     description: (
       <>
         Follow our step-by-step{" "}
-        <Link href="/installation" className="text-[#6366F1] font-semibold hover:text-teal-600 transition-colors">
+        <Link href="/installation" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
           installation guide
         </Link>{" "}
-        to configure IPTV on Smart TV, Firestick, Android, iOS, and PC effortlessly.
+        to configure IPTV on Smart TV, Firestick, Android, iOS, or PC in under 5 minutes.
       </>
     ),
     image: "/step-2-setup-ai.png",
@@ -50,11 +50,11 @@ const steps = [
   },
   {
     badge: "Step Three",
-    title: "Watch and enjoy.",
+    title: "Start Streaming in 4K",
     description: (
       <>
         Stream all your favorite live sports, 4K movies, and premium channels from our complete{" "}
-        <Link href="/channels" className="text-[#6366F1] font-semibold hover:text-teal-600 transition-colors">
+        <Link href="/channels" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
           channels catalog
         </Link>
         .
@@ -71,28 +71,28 @@ const features = [
     icon: Tv,
     title: "Complete IPTV Subscription",
     description:
-      "Enjoy uninterrupted 4K/HD streaming. Choose from 1, 3, 6 or 12 month packages with full access to our streaming library.",
+      "Enjoy uninterrupted 4K 60FPS streaming. Choose from 1, 3, 6 or 12 month packages with full access to our streaming library.",
     link: "/pricing",
   },
   {
     icon: Globe2,
     title: "+50,000 Channels & 200,000+ VODs",
     description:
-      "Unlock over 50,000 live channels and 120,000+ films & series for the ultimate viewing experience.",
+      "Unlock over 50,000 live channels and 150,000+ films & series for the ultimate viewing experience.",
     link: "/channels",
   },
   {
     icon: MonitorSmartphone,
     title: "Live TV & TV Guide (EPG)",
     description:
-      "Get access to an interactive TV guide (EPG), Live TV, and replay options on any device.",
+      "Get access to an interactive electronic program guide (EPG), Live TV, and catch-up replay on any device.",
     link: "/installation",
   },
 ];
 
 const benefits = [
   { icon: ShieldCheck, text: "Secure & encrypted payments" },
-  { icon: Zap, text: "Instant delivery within 20 minutes" },
+  { icon: Zap, text: "Instant automated delivery" },
   { icon: Headphones, text: "24/7 dedicated support" },
   { icon: MonitorSmartphone, text: "Works on all devices" },
   { icon: Globe2, text: "150+ countries covered" },
@@ -101,36 +101,36 @@ const benefits = [
 
 export default function HowItWorksPage() {
   return (
-    <main className="bg-white min-h-screen">
+    <main className="bg-[#060810] text-[#F8FAFC] min-h-screen">
       {/* ─── Hero Header ─── */}
-      <section className="relative bg-white pt-16 pb-20 overflow-hidden border-b border-stone-100">
-        <div className="absolute inset-0 bg-gradient-to-b from-sky-50/60 to-transparent pointer-events-none" />
-        <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <span className="inline-flex rounded-full border border-[#6366F1]/30 bg-[#6366F1]/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#6366F1]">
-            Easy 3-Step Process
+      <section className="relative pt-16 pb-20 overflow-hidden border-b border-white/10">
+        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />
+        <div className="relative mx-auto max-w-4xl px-6 text-center z-10">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8]">
+            <Sparkles className="w-3.5 h-3.5" /> Easy 3-Step Process
           </span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05]">
-            <span className="text-[#0F172A]">How Does It Work?</span>
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] uppercase">
+            <span className="text-white">How Does It Work?</span>
             <br />
-            <span className="text-[#6366F1]">BexyTV</span>
+            <span className="bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">BexyTV 4K IPTV</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-[#64748B] leading-relaxed">
+          <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base text-[#A7B0C0] leading-relaxed">
             Get your{" "}
-            <Link href="/pricing" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
+            <Link href="/pricing" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
               IPTV subscription
             </Link>{" "}
-            in 3 easy steps. Choose the right plan, complete the payment, and receive your login details. Within minutes you can enjoy your favorite programs.
+            active in 3 simple steps. Choose your plan, pay securely, and start streaming high-definition channels in minutes.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/pricing"
-              className="inline-flex items-center justify-center gap-2 bg-[#D946EF] text-[#0F172A] font-bold px-8 py-3.5 rounded-md shadow-[0_4px_14px_rgba(14,165,233,0.3)] hover:bg-[#0C8CE9] hover:shadow-[0_6px_20px_rgba(14,165,233,0.4)] transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#38BDF8] to-[#818CF8] px-8 py-3.5 text-xs font-black text-[#060810] uppercase tracking-wider shadow-lg shadow-cyan-500/25 transition-all hover:scale-105"
             >
               View Plans <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/installation"
-              className="inline-flex items-center justify-center gap-2 border border-sky-200 bg-white text-[#6366F1] font-bold px-8 py-3.5 rounded-md hover:bg-sky-50 transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-[#0D111B] px-8 py-3.5 text-xs font-black text-white uppercase tracking-wider hover:bg-white/10 transition-all"
             >
               Installation Guide
             </Link>
@@ -139,16 +139,16 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ─── Timeline Steps ─── */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="mx-auto max-w-[960px] px-6 relative">
-          {/* Vertical Dashed Center Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-0.5 border-l-2 border-dashed border-sky-200 hidden md:block" />
+          {/* Vertical Center Line */}
+          <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-0.5 border-l-2 border-dashed border-white/10 hidden md:block" />
 
           {steps.map((step, i) => (
             <div key={i} className={`relative ${i < steps.length - 1 ? "mb-20" : ""}`}>
               {/* Step Badge */}
               <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-4 z-20 flex justify-center mb-6 md:mb-0">
-                <span className="bg-[#D946EF] text-[#0F172A] font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(14,165,233,0.4)]">
+                <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] text-[#060810] font-black text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-lg shadow-cyan-500/25">
                   {step.badge}
                 </span>
               </div>
@@ -156,17 +156,17 @@ export default function HowItWorksPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
                 {/* Card */}
                 <div
-                  className={`bg-white p-8 rounded-2xl shadow-sm border border-stone-100 ${
+                  className={`bg-[#0D111B] p-8 rounded-3xl border border-white/10 shadow-2xl ${
                     step.align === "right" ? "order-1 md:order-2" : ""
                   }`}
                 >
-                  <h3 className="text-xl font-extrabold text-[#6366F1] mb-3">{step.title}</h3>
-                  <p className="text-[#64748B] text-sm leading-relaxed">{step.description}</p>
+                  <h3 className="text-xl font-black text-white uppercase mb-3">{step.title}</h3>
+                  <p className="text-[#A7B0C0] text-xs sm:text-sm leading-relaxed">{step.description}</p>
                 </div>
 
                 {/* Image */}
                 <div
-                  className={`overflow-hidden rounded-2xl border border-stone-100 shadow-sm ${
+                  className={`overflow-hidden rounded-3xl border border-white/10 shadow-2xl ${
                     step.align === "right" ? "order-2 md:order-1" : ""
                   }`}
                 >
@@ -175,7 +175,7 @@ export default function HowItWorksPage() {
                     alt={step.imageAlt}
                     width={600}
                     height={380}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500 opacity-90 hover:opacity-100"
                   />
                 </div>
               </div>
@@ -185,15 +185,15 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ─── Getting Started Showcase ─── */}
-      <section className="py-20 bg-[#f8fafc] border-t border-stone-100">
+      <section className="py-20 bg-[#080B14] border-t border-white/10">
         <div className="mx-auto max-w-[1200px] px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#6366F1] tracking-tight italic">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
               Getting Started with BexyTV Is Easy
             </h2>
-            <p className="text-[#64748B] text-sm sm:text-base mt-4 leading-relaxed">
+            <p className="text-[#A7B0C0] text-xs sm:text-sm mt-4 leading-relaxed">
               Enjoy high quality IPTV streaming with BexyTV. Watch{" "}
-              <Link href="/channels" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
+              <Link href="/channels" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
                 live TV channels
               </Link>
               , movies, and sports anytime, anywhere.
@@ -203,28 +203,24 @@ export default function HowItWorksPage() {
           <div className="space-y-16 max-w-[1080px] mx-auto">
             {/* Feature Block 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div className="overflow-hidden rounded-2xl border border-stone-100 shadow-sm">
+              <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
                 <Image
                   src="/features-1-ai.png"
                   alt="Complete IPTV Subscription Experience"
                   width={600}
                   height={400}
-                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500 opacity-90 hover:opacity-100"
                 />
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#6366F1] leading-snug">
-                  <Link href="/pricing" className="hover:text-[#6366F1] transition-colors">
-                    We Offer You A Complete IPTV Subscription Experience
+                <h3 className="text-2xl sm:text-3xl font-black text-white leading-snug uppercase">
+                  <Link href="/pricing" className="hover:text-[#38BDF8] transition-colors">
+                    Complete IPTV Subscription Experience
                   </Link>
                 </h3>
-                <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  Enjoy uninterrupted IPTV 4K/HD with an{" "}
-                  <Link href="/pricing" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
-                    IPTV subscription
-                  </Link>{" "}
-                  from BexyTV. Choose from 1, 3, 6 or 12 months packages and experience continuous entertainment with full access to our{" "}
-                  <Link href="/channels" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
+                <p className="text-[#A7B0C0] text-xs sm:text-sm leading-relaxed">
+                  Enjoy uninterrupted 4K/HD streaming with a premium subscription from BexyTV. Choose from 1, 3, 6 or 12 months packages with full access to our{" "}
+                  <Link href="/channels" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
                     streaming library
                   </Link>
                   .
@@ -235,58 +231,58 @@ export default function HowItWorksPage() {
             {/* Feature Block 2 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <div className="space-y-4 order-2 md:order-1">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#6366F1] leading-snug">
-                  <Link href="/channels" className="hover:text-[#6366F1] transition-colors">
-                    +50,000 Channels &amp; 200,000+ VODs With Our IPTV Smarters Pro
+                <h3 className="text-2xl sm:text-3xl font-black text-white leading-snug uppercase">
+                  <Link href="/channels" className="hover:text-[#38BDF8] transition-colors">
+                    +50,000 Channels &amp; 200,000+ VODs
                   </Link>
                 </h3>
-                <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  Unlock a world of entertainment with over{" "}
-                  <Link href="/channels" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
-                    +50,000 live channels and +120,000 films &amp; series
+                <p className="text-[#A7B0C0] text-xs sm:text-sm leading-relaxed">
+                  Unlock a world of live entertainment with over{" "}
+                  <Link href="/channels" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
+                    +50,000 live channels and +150,000 films &amp; series
                   </Link>{" "}
                   for the ultimate viewing experience. Check out our{" "}
-                  <Link href="/pricing" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
+                  <Link href="/pricing" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
                     subscription plans
                   </Link>{" "}
                   to start watching immediately.
                 </p>
               </div>
-              <div className="overflow-hidden rounded-2xl border border-stone-100 shadow-sm order-1 md:order-2">
+              <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl order-1 md:order-2">
                 <Image
                   src="/features-2-ai.png"
                   alt="+50,000 Live Channels & VODs"
                   width={600}
                   height={400}
-                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500 opacity-90 hover:opacity-100"
                 />
               </div>
             </div>
 
             {/* Feature Block 3 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div className="overflow-hidden rounded-2xl border border-stone-100 shadow-sm">
+              <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
                 <Image
                   src="/features-3-ai.png"
                   alt="Live TV and TV Guide EPG"
                   width={600}
                   height={400}
-                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500 opacity-90 hover:opacity-100"
                 />
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#6366F1] leading-snug">
-                  <Link href="/installation" className="hover:text-[#6366F1] transition-colors">
-                    Live TV With IPTV Smarters Pro and TV Guide (EPG)
+                <h3 className="text-2xl sm:text-3xl font-black text-white leading-snug uppercase">
+                  <Link href="/installation" className="hover:text-[#38BDF8] transition-colors">
+                    Live TV &amp; TV Guide (EPG) Included
                   </Link>
                 </h3>
-                <p className="text-[#64748B] text-sm sm:text-base leading-relaxed">
-                  With BexyTV you get access to an interactive TV guide (EPG), Live TV, and replay options. Read our{" "}
-                  <Link href="/installation" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
+                <p className="text-[#A7B0C0] text-xs sm:text-sm leading-relaxed">
+                  With BexyTV you get access to an interactive electronic program guide (EPG), Live TV, and catch-up replay. Read our{" "}
+                  <Link href="/installation" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
                     IPTV setup guide
                   </Link>{" "}
                   or explore our{" "}
-                  <Link href="/faq" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
+                  <Link href="/faq" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
                     FAQ support
                   </Link>{" "}
                   for complete device instructions.
@@ -298,15 +294,15 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ─── Features Section ─── */}
-      <section className="py-20 bg-[#f8fafc] border-y border-stone-100">
+      <section className="py-20 border-y border-white/10">
         <div className="mx-auto max-w-[1200px] px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#0F172A] uppercase">
-              Getting Started Is <span className="text-[#6366F1]">Easy</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white uppercase">
+              Getting Started Is <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">Easy</span>
             </h2>
-            <p className="mt-4 text-[#64748B] max-w-2xl mx-auto">
+            <p className="mt-4 text-[#A7B0C0] text-xs sm:text-sm max-w-2xl mx-auto">
               Enjoy high quality IPTV streaming with BexyTV. Watch{" "}
-              <Link href="/channels" className="text-[#6366F1] font-semibold hover:text-[#6366F1] transition-colors">
+              <Link href="/channels" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
                 live TV channels
               </Link>
               , movies, and sports anytime, anywhere.
@@ -320,16 +316,16 @@ export default function HowItWorksPage() {
                 <Link
                   key={i}
                   href={feature.link}
-                  className="group flex flex-col rounded-2xl bg-white p-8 border border-stone-100 shadow-sm hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300"
+                  className="group flex flex-col rounded-3xl bg-[#0D111B] p-8 border border-white/10 shadow-xl hover:border-[#38BDF8]/50 hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-[#6366F1] group-hover:bg-[#D946EF] group-hover:text-[#0F172A] transition-colors">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/20 group-hover:bg-[#38BDF8] group-hover:text-[#060810] transition-colors">
                     <Icon className="h-7 w-7" strokeWidth={1.5} />
                   </div>
-                  <h3 className="mt-6 text-xl font-bold text-[#0F172A]">{feature.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#64748B] flex-grow">
+                  <h3 className="mt-6 text-xl font-black text-white uppercase">{feature.title}</h3>
+                  <p className="mt-3 text-xs leading-relaxed text-[#A7B0C0] flex-grow">
                     {feature.description}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[#6366F1] group-hover:gap-2 transition-all">
+                  <span className="mt-5 inline-flex items-center gap-1 text-xs font-black text-[#38BDF8] uppercase tracking-wider group-hover:gap-2 transition-all">
                     Learn more <ArrowRight className="h-4 w-4" />
                   </span>
                 </Link>
@@ -340,10 +336,10 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ─── Benefits Strip ─── */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#080B14]">
         <div className="mx-auto max-w-[1100px] px-6">
-          <h2 className="text-center text-2xl sm:text-3xl font-black text-[#0F172A] mb-10 uppercase">
-            Why Choose <span className="text-[#6366F1]">BexyTV</span>?
+          <h2 className="text-center text-2xl sm:text-3xl font-black text-white mb-10 uppercase">
+            Why Choose <span className="text-[#38BDF8]">BexyTV</span>?
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {benefits.map((benefit, i) => {
@@ -351,10 +347,10 @@ export default function HowItWorksPage() {
               return (
                 <div
                   key={i}
-                  className="flex items-center gap-3 rounded-xl border border-stone-100 bg-white px-5 py-4 shadow-sm"
+                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#0D111B] px-5 py-4 shadow-xl"
                 >
-                  <Icon className="h-5 w-5 text-[#6366F1] shrink-0" strokeWidth={2.5} />
-                  <span className="text-sm font-bold text-[#0F172A]">{benefit.text}</span>
+                  <Icon className="h-5 w-5 text-[#38BDF8] shrink-0" strokeWidth={2.5} />
+                  <span className="text-xs font-bold text-white">{benefit.text}</span>
                 </div>
               );
             })}
@@ -363,26 +359,26 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ─── CTA Banner ─── */}
-      <section className="py-20 bg-[#D946EF]">
+      <section className="py-20 bg-gradient-to-r from-[#0D111B] via-[#111726] to-[#0D111B] border-t border-white/10">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-black text-[#0F172A] uppercase">
+          <h2 className="text-3xl sm:text-4xl font-black text-white uppercase">
             Ready to Start Streaming?
           </h2>
-          <p className="mt-4 text-lg text-white font-medium">
-            Join thousands of satisfied customers. Get instant access to 50,000+ live channels, 120,000+ films & series, and 200,000+ VODs.
+          <p className="mt-4 text-xs sm:text-sm text-[#A7B0C0]">
+            Join thousands of satisfied customers. Get instant access to 50,000+ live channels, 150,000+ films &amp; series, and 200,000+ VODs in 4K.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20bexytv%20IPTV."
+              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20BexyTV%20IPTV."
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-white text-[#6366F1] font-bold px-8 py-3.5 rounded-md shadow-lg hover:bg-sky-50 transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#38BDF8] to-[#818CF8] px-8 py-3.5 text-xs font-black text-[#060810] uppercase tracking-wider shadow-lg shadow-cyan-500/25 transition-all hover:scale-105"
             >
               Get Free Trial <ArrowRight className="h-4 w-4" />
             </a>
             <Link
               href="/pricing"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-[#0F172A] font-bold px-8 py-3.5 rounded-md hover:bg-[#F8FAFC] transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-8 py-3.5 text-xs font-black text-white uppercase tracking-wider hover:bg-white/10 transition-all"
             >
               View All Plans
             </Link>

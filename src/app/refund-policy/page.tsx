@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Refund Policy | BexyTV",
@@ -13,7 +14,7 @@ const sections = [
   {
     title: "Our Commitment to You",
     content: [
-      "At BexyTV, we uphold the standard of our IPTV subscription service. This policy specifies when refunds may be applicable, ensuring that we maintain a transparent and just process for every customer.",
+      "At BexyTV, we uphold the standard of our 4K IPTV subscription service. This policy specifies when refunds may be applicable, ensuring that we maintain a transparent and just process for every customer.",
     ],
   },
   {
@@ -29,7 +30,7 @@ const sections = [
     title: "How to Request a Refund",
     content: ["To seek a refund, kindly follow these steps:"],
     items: [
-      <>Connect with our support team using our <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/contact">Contact page</Link>.</>,
+      <>Connect with our support team using our <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/contact">Contact page</Link>.</>,
       "Please use the subject: 'Refund Request'.",
       "Please provide your complete name, the email linked to your subscription, and the purpose of your inquiry.",
     ],
@@ -37,7 +38,7 @@ const sections = [
   {
     title: "Sample Refund Request Message",
     content: [
-      <>Contact: Send a message via our <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/contact">Contact page</Link></>,
+      <>Contact: Send a message via our <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/contact">Contact page</Link></>,
       "Message Title: Refund Request",
       "Hello,",
       "I am writing to ask for a refund regarding my IPTV subscription.",
@@ -52,7 +53,7 @@ const sections = [
     content: [],
     items: [
       "Account email used at checkout",
-      "Order/transaction ID from {Payment Gateway Name}",
+      "Order/transaction ID from payment receipt",
       "Brief reason and steps already tried with support",
       "Device/app details (e.g., Firestick + IPTV Smarters)",
     ],
@@ -61,8 +62,8 @@ const sections = [
     title: "Processing Timeline",
     content: [],
     items: [
-      "0–3 business days: Analysis executed by support team",
-      "Same day after approval: The refund has been initiated, returning funds to your original method ({Payment Gateway 1} / {Payment Gateway 2}).",
+      "0–3 business days: Technical analysis executed by support team",
+      "Same day after approval: Refund initiated returning funds to your original payment method.",
       "5–10 business days: Funds manifest according to bank/card issuer.",
     ],
     after: "Expect to receive an email update at every step. Response times may increase on weekends or holidays.",
@@ -71,10 +72,10 @@ const sections = [
     title: "Exceptions (When Refunds Are Not Provided)",
     content: ["Refunds will be denied in these outlined cases:"],
     items: [
-      <>You are discontent with the <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/channels">channel list</Link> or provided content.</>,
-      "Your connection speed is too slow or unstable to stream effectively.",
-      "Your actions have breached our Terms of Service, including account sharing.",
-      "Geo-blocking problems in your region are unfortunately outside of our influence and control.",
+      <>You are discontent with the <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/channels">channel list</Link> or provided content.</>,
+      "Your internet connection speed is too slow or unstable to stream effectively.",
+      "Your actions have breached our Terms of Service, including unauthorized account sharing.",
+      "Geo-blocking issues in your local network region outside our control.",
     ],
   },
   {
@@ -82,9 +83,9 @@ const sections = [
     content: [],
     items: [
       "Check Compatibility: Confirm your device/app supports M3U/Portal before purchase.",
-      "Stable Internet: Use 30 Mbps+ and 5GHz Wi-Fi or Ethernet for 4K.",
-      <>Use Setup Guides: Follow our step by step <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/installation">Installation page</Link>.</>,
-      <>Ask Support First: Most issues are solved in minutes—please <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/contact">contact support</Link>.</>,
+      "Stable Internet: Use 30 Mbps+ and Ethernet or 5GHz Wi-Fi for 4K streaming.",
+      <>Use Setup Guides: Follow our step-by-step <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/installation">Installation page</Link>.</>,
+      <>Ask Support First: Most issues are solved in minutes—please <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/contact">contact support</Link>.</>,
     ],
   },
 ];
@@ -93,29 +94,34 @@ export default function RefundPolicyPage() {
   const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   
   return (
-    <main className="flex-grow px-5 pb-20 pt-12 sm:px-8 md:pt-16 text-format-legal">
-      <article className="mx-auto max-w-4xl">
-        <header className="border-b border-black/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-[#6366F1]/35 bg-[#6366F1]/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-sky-400">Legal information</span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-[#0F172A]">Refund &amp; Money-Back</span>
-            <span className="mt-1 block text-[#6366F1]">Official Policy.</span>
+    <main className="min-h-screen bg-[#060810] text-[#F8FAFC] px-5 pb-20 pt-16 sm:px-8 relative z-10">
+      {/* Background Glow */}
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />
+
+      <article className="mx-auto max-w-4xl relative z-10">
+        <header className="border-b border-white/10 pb-10 text-center mx-auto max-w-3xl">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8] mb-6">
+            <Sparkles className="w-3.5 h-3.5" /> Legal Guarantee
+          </span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight uppercase">
+            <span className="block text-white">Refund &amp; Money-Back</span>
+            <span className="mt-2 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">Official Policy</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#64748B]">Last adjusted: {currentDate}</p>
+          <p className="mx-auto mt-5 max-w-2xl text-xs sm:text-sm leading-relaxed text-[#A7B0C0]">Last adjusted: {currentDate}</p>
         </header>
 
-        <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
+        <div className="mt-10 space-y-10 text-xs sm:text-sm leading-relaxed text-[#A7B0C0]">
           {sections.map((section, index) => (
-            <section key={section.title}>
-              <h2 className="text-2xl font-bold text-[#0F172A]">{index + 1}. {section.title}</h2>
-              {section.content.map((paragraph, i) => <p className="mt-4" key={i}>{paragraph}</p>)}
-              {section.items && section.items.length > 0 && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-tertiary">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
-              {section.after && <p className="mt-4">{section.after}</p>}
+            <section key={section.title} className="bg-[#0D111B] border border-white/10 rounded-3xl p-6 sm:p-8 shadow-xl">
+              <h2 className="text-lg sm:text-xl font-black text-white uppercase tracking-tight">{index + 1}. {section.title}</h2>
+              {section.content.map((paragraph, i) => <p className="mt-3" key={i}>{paragraph}</p>)}
+              {section.items && section.items.length > 0 && <ul className="mt-3 list-disc space-y-2 pl-6 marker:text-[#38BDF8]">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
+              {section.after && <p className="mt-3">{section.after}</p>}
             </section>
           ))}
-          <section>
-            <h2 className="text-2xl font-bold text-[#0F172A]">9. Contact Us</h2>
-            <p className="mt-4">If you have any questions regarding our Refund Policy, please contact our <Link className="font-semibold text-[#6366F1] hover:text-sky-400" href="/contact">support team</Link>.</p>
+          <section className="bg-[#0D111B] border border-white/10 rounded-3xl p-6 sm:p-8 shadow-xl">
+            <h2 className="text-lg sm:text-xl font-black text-white uppercase tracking-tight">9. Contact Us</h2>
+            <p className="mt-3">If you have any questions regarding our Refund Policy, please contact our <Link className="font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors" href="/contact">support team</Link>.</p>
           </section>
         </div>
       </article>
