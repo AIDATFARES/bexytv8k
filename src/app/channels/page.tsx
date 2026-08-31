@@ -161,7 +161,7 @@ export default function ChannelsPage() {
   }, [selectedTab, searchQuery]);
 
   return (
-    <main className="min-h-screen bg-[#060810] text-[#F8FAFC] pt-16 pb-24 relative overflow-hidden">
+    <main className="min-h-screen bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC] pt-16 pb-24 relative overflow-hidden">
       {/* Glow Backdrops */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />
 

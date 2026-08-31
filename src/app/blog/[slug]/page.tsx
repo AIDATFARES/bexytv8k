@@ -128,7 +128,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   };
 
   return (
-    <main className="min-h-screen bg-[#060810] text-[#F8FAFC] pt-16 pb-24 px-4 sm:px-6 md:px-12 max-w-[1024px] mx-auto w-full relative z-10">
+    <main className="w-full min-h-screen bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC] relative z-10">
+      <div className="pt-16 pb-24 px-4 sm:px-6 md:px-12 max-w-[1024px] mx-auto w-full relative z-10">
       {faqJsonLd && (
         <script
           type="application/ld+json"
@@ -237,6 +238,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </section>
         );
       })()}
+      </div>
     </main>
   );
 }

@@ -13,7 +13,7 @@ export default function BrandMarquee({
   images,
   cardClassName,
   imageClassName,
-  bgClassName = "bg-[#060810]"
+  bgClassName = "bg-transparent"
 }: BrandMarqueeProps) {
   const defaultBrands = [
     "0.webp", "1.webp", "10-National-Geographic-Channel.webp", "10.webp", "11.webp",

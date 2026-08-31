@@ -22,7 +22,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="flex-col flex min-h-screen bg-[#060810] text-[#F8FAFC]">
+    <main className="flex-col flex min-h-screen bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC]">
       {/* 1. Hero Section with Original IPTV Interface Mockup */}
       <HeroSection />
 
@@ -46,12 +46,12 @@ export default function Home() {
       </MovieStrips>
 
       {/* Sports Leagues Marquee */}
-      <div className="bg-[#080B14] w-full pb-16 border-t border-white/10">
+      <div className="w-full pb-16 border-t border-white/10 relative z-10 bg-transparent">
         <div className="text-center py-6 relative z-20">
           <p className="text-xs font-bold tracking-[0.2em] text-[#A7B0C0] uppercase">ALL MAJOR SPORTS & LEAGUES LIVE</p>
         </div>
         <BrandMarquee 
-          bgClassName="bg-[#080B14]"
+          bgClassName="bg-transparent"
           imagesFolder="dawryate" 
           images={[
             "Untitled-design-50.webp",
@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       {/* Channel Quick Bar */}
-      <div className="w-full bg-[#0D111B] py-6 px-4 text-center border-y border-white/10 relative z-20">
+      <div className="w-full bg-[#0D111B]/60 backdrop-blur-md py-6 px-4 text-center border-y border-white/10 relative z-20">
         <p className="text-center text-sm md:text-base text-[#A7B0C0] max-w-3xl mx-auto">
           Explore the comprehensive <Link prefetch={false} className="font-bold text-[#38BDF8] hover:text-[#818CF8]" href="/channels">BexyTV Channel Catalog</Link> or follow our step-by-step <Link prefetch={false} className="font-bold text-[#38BDF8] hover:text-[#818CF8]" href="/installation">Installation Guide</Link> for instant setup.
         </p>
@@ -86,10 +86,10 @@ export default function Home() {
       <DeviceSupport />
 
       {/* Device Logos Marquee */}
-      <div className="w-full bg-[#080B14] border-t border-white/10 pt-12 pb-8 relative z-10">
+      <div className="w-full border-t border-white/10 pt-12 pb-8 relative z-10 bg-transparent">
         <p className="text-center text-xs font-bold tracking-widest text-[#A7B0C0] uppercase mb-8">Supported on all your favorite devices</p>
         <BrandMarquee
-          bgClassName="bg-[#080B14]"
+          bgClassName="bg-transparent"
           imagesFolder="devices"
           images={[
             "Amazon-Fire-tv-stick-krooz-tv.webp",

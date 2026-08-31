@@ -9,7 +9,8 @@ export default function Blog() {
   const gridPosts = blogPosts.slice(1);
 
   return (
-    <main className="min-h-screen bg-[#060810] text-[#F8FAFC] pt-16 pb-24 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto w-full relative z-10">
+    <main className="w-full min-h-screen bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC] relative z-10">
+      <div className="pt-16 pb-24 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto w-full relative z-10">
       {/* Background Glow */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />
 
@@ -116,6 +117,7 @@ export default function Blog() {
           </form>
         </div>
       </section>
+      </div>
     </main>
   );
 }

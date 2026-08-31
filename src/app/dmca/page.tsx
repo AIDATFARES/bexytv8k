@@ -86,7 +86,7 @@ export default function DmcaPage() {
   const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   
   return (
-    <main className="min-h-screen bg-[#060810] text-[#F8FAFC] px-5 pb-20 pt-16 sm:px-8 relative z-10">
+    <main className="min-h-screen bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC] px-5 pb-20 pt-16 sm:px-8 relative z-10">
       {/* Background Glow */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />
 

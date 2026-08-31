@@ -13,7 +13,8 @@ export const metadata = {
 
 export default function Installation() {
   return (
-    <main className="mx-auto w-full max-w-[1440px] flex-grow px-5 pb-20 pt-12 sm:px-8 md:px-12 text-[#F8FAFC]">
+    <main className="w-full min-h-screen bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC] relative z-10">
+      <div className="mx-auto w-full max-w-[1440px] px-5 pb-20 pt-12 sm:px-8 md:px-12">
       <header className="mx-auto mb-16 max-w-3xl text-center sm:mb-20">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8]">
           <Sparkles className="w-3.5 h-3.5" /> Installation Guide
@@ -49,7 +50,7 @@ export default function Installation() {
           <div className="mt-16 border-t border-white/10 pt-12">
             <h3 className="text-center text-xs font-bold tracking-widest text-[#A7B0C0] uppercase mb-8">Supported on all your favorite devices</h3>
             <BrandMarquee 
-              bgClassName="bg-[#080B14]"
+              bgClassName="bg-transparent"
               imagesFolder="devices" 
               images={[
                 "Amazon-Fire-tv-stick-krooz-tv.webp",
@@ -80,6 +81,7 @@ export default function Installation() {
           Contact 24/7 Support
         </Link>
       </section>
+      </div>
     </main>
   );
 }

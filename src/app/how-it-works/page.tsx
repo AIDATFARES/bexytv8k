@@ -101,7 +101,7 @@ const benefits = [
 
 export default function HowItWorksPage() {
   return (
-    <main className="bg-[#060810] text-[#F8FAFC] min-h-screen">
+    <main className="bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC] min-h-screen">
       {/* ─── Hero Header ─── */}
       <section className="relative pt-16 pb-20 overflow-hidden border-b border-white/10">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />

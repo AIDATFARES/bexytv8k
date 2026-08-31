@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function ResellerPage() {
   return (
-    <main className="flex-grow pt-4">
+    <main className="flex-grow pt-4 bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC]">
       <ResellerPageContent />
     </main>
   );
