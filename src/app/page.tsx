@@ -38,7 +38,7 @@ export default function Home() {
           <p className="text-xs font-bold tracking-[0.2em] text-[#A7B0C0] uppercase">50,000+ PREMIUM LIVE CHANNELS</p>
         </div>
         
-        <BrandMarquee />
+        <BrandMarquee bgClassName="bg-transparent" />
         
         <div className="text-center mt-8 mb-6 relative z-20">
           <p className="text-xs font-bold tracking-[0.2em] text-[#A7B0C0] uppercase">150,000+ LATEST MOVIES & SERIES</p>
@@ -51,6 +51,7 @@ export default function Home() {
           <p className="text-xs font-bold tracking-[0.2em] text-[#A7B0C0] uppercase">ALL MAJOR SPORTS & LEAGUES LIVE</p>
         </div>
         <BrandMarquee 
+          bgClassName="bg-[#080B14]"
           imagesFolder="dawryate" 
           images={[
             "Untitled-design-50.webp",
@@ -88,6 +89,7 @@ export default function Home() {
       <div className="w-full bg-[#080B14] border-t border-white/10 pt-12 pb-8 relative z-10">
         <p className="text-center text-xs font-bold tracking-widest text-[#A7B0C0] uppercase mb-8">Supported on all your favorite devices</p>
         <BrandMarquee
+          bgClassName="bg-[#080B14]"
           imagesFolder="devices"
           images={[
             "Amazon-Fire-tv-stick-krooz-tv.webp",
