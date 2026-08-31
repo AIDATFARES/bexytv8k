@@ -60,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${inter.variable} ${geist.variable}`}>
       <head />
-      <body className="bg-[#060810] text-[#F8FAFC] font-body-lg min-h-screen flex flex-col antialiased selection:bg-[#38BDF8] selection:text-[#061018]">
+      <body className="bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC] font-body-lg min-h-screen flex flex-col antialiased selection:bg-[#38BDF8] selection:text-[#061018] relative">
         {/* Navbar Component */}
         <Navbar />
 
