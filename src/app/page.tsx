@@ -45,29 +45,6 @@ export default function Home() {
         </div>
       </MovieStrips>
 
-      {/* Sports Leagues Marquee */}
-      <div className="w-full pb-16 border-t border-white/10 relative z-10 bg-transparent">
-        <div className="text-center py-6 relative z-20">
-          <p className="text-xs font-bold tracking-[0.2em] text-[#A7B0C0] uppercase">ALL MAJOR SPORTS & LEAGUES LIVE</p>
-        </div>
-        <BrandMarquee 
-          bgClassName="bg-transparent"
-          imagesFolder="dawryate" 
-          images={[
-            "Untitled-design-50.webp",
-            "Untitled-design-51.webp",
-            "Untitled-design-52.webp",
-            "Untitled-design-53.webp",
-            "Untitled-design-54.webp",
-            "Untitled-design-55.webp",
-            "Untitled-design-56.webp",
-            "Untitled-design-57.webp",
-            "Untitled-design-58.webp"
-          ]}
-          cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[300px] relative rounded-xl overflow-hidden shadow-2xl border border-white/10 hover:scale-105 hover:border-[#38BDF8]/50 hover:z-10 transition-all duration-300"
-          imageClassName="object-cover"
-        />
-      </div>
 
       {/* Channel Quick Bar */}
       <div className="w-full bg-[#0D111B]/60 backdrop-blur-md py-6 px-4 text-center border-y border-white/10 relative z-20">
