@@ -44,14 +44,14 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="py-xl relative z-10 bg-surface-container-lowest/40">
-      <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
-        <div className="text-center max-w-3xl mx-auto mb-xl">
+    <section className="py-24 relative z-10 bg-[#060810] bg-tech-grid bg-atmosphere border-t border-white/10 text-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-xs block"
+            className="inline-flex items-center gap-2 border border-[#38BDF8]/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest mb-4"
           >
             Maximum Performance Architecture
           </motion.span>
@@ -59,7 +59,7 @@ export default function FeaturesSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-on-background mb-sm"
+            className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4"
           >
             BexyTV: Engineered for Uninterrupted IPTV Entertainment
           </motion.h2>
@@ -67,13 +67,13 @@ export default function FeaturesSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-body-lg text-body-lg text-on-surface-variant"
+            className="text-[#A7B0C0] text-base sm:text-lg"
           >
             Experience the pinnacle of IPTV technology. Our next-generation infrastructure is purpose-built to deliver flawless live sports, movies, and global broadcasts.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
@@ -83,15 +83,15 @@ export default function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="glass-panel rounded-xl p-lg border border-black/10 hover:border-primary/50 transition-all duration-300 group"
+                className="bexy-card rounded-xl p-6 border border-white/10 bg-[#0D111B] hover:border-[#38BDF8]/50 transition-all duration-300 group"
               >
-                <div className="p-md rounded-xl bg-surface-container-high w-fit mb-md group-hover:scale-110 transition-transform">
+                <div className="p-3 rounded-xl bg-white/5 w-fit mb-4 group-hover:scale-110 transition-transform">
                   <Icon className={`w-7 h-7 ${feature.color}`} />
                 </div>
-                <p className="font-title-md text-title-md text-on-surface font-semibold mb-xs group-hover:text-primary transition-colors">
+                <p className="text-lg font-bold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">
                   {feature.title}
                 </p>
-                <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                <p className="text-[#A7B0C0] text-sm leading-relaxed">
                   {feature.desc}
                 </p>
               </motion.div>

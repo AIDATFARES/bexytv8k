@@ -6,7 +6,7 @@ export default function LatestArticlesSection() {
   const displayPosts = blogPosts.slice(0, 3);
 
   return (
-    <section className="py-24 bg-[#060810] bg-tech-grid text-white relative z-10 border-t border-white/10 overflow-hidden">
+    <section className="py-24 bg-[#060810] bg-tech-grid bg-atmosphere text-white relative z-10 border-t border-white/10 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Header */}

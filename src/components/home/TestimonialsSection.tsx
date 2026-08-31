@@ -23,20 +23,20 @@ const metrics = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative z-10 overflow-hidden bg-white py-24 sm:py-28">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_22%_36%,rgba(92,49,153,0.12),transparent_28%),radial-gradient(ellipse_at_76%_52%,rgba(30,94,185,0.09),transparent_28%)]" />
-      <div className="relative">
+    <section className="relative z-10 overflow-hidden bg-[#060810] bg-tech-grid bg-atmosphere py-24 sm:py-28 border-t border-white/10 text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_22%_36%,rgba(56,189,248,0.12),transparent_28%),radial-gradient(ellipse_at_76%_52%,rgba(129,140,248,0.1),transparent_28%)]" />
+      <div className="relative z-10">
         <div className="mx-auto max-w-3xl px-5 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-amber-300">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/40 bg-[#38BDF8]/[0.08] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#38BDF8]">
             <Trophy className="h-3 w-3" /> TOP RATED IPTV PROVIDER
           </span>
-          <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-[#0F172A] sm:text-5xl animate-fade-up">
+          <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-white sm:text-5xl animate-fade-up">
             <span className="block">Join Thousands of Highly</span>
-            <span className="mt-1 block bg-gradient-to-r from-[#D946EF] via-[#8B5CF6] to-[#6366F1] bg-clip-text text-transparent">
+            <span className="mt-1 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">
               Satisfied BexyTV IPTV Streamers
             </span>
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#64748B] animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#A7B0C0] animate-fade-up" style={{ animationDelay: '0.1s' }}>
             Discover why thousands of users worldwide have made BexyTV their primary entertainment source. Read authentic reviews highlighting our unparalleled stability, comprehensive live sports coverage, and exceptional 4K visual quality.
           </p>
         </div>
@@ -47,12 +47,12 @@ export default function TestimonialsSection() {
             return (
               <div
                 key={metric.label}
-                className="rounded-xl border border-black/10 bg-stone-50/90 px-3 py-4 text-center shadow-[0_0_20px_rgba(0,0,0,0.18)] animate-fade-up"
+                className="rounded-xl border border-white/10 bg-[#0D111B] px-3 py-4 text-center shadow-[0_0_20px_rgba(0,0,0,0.4)] animate-fade-up"
                 style={{ animationDelay: `${0.2 + (index * 0.06)}s`, animationFillMode: 'both' }}
               >
                 <Icon className={`mx-auto h-4 w-4 ${metric.tone}`} />
-                <span className="mt-2 block text-base font-bold text-[#0F172A]">{metric.value}</span>
-                <small className="mt-0.5 block text-[8px] font-bold uppercase tracking-wide text-[#64748B]">
+                <span className="mt-2 block text-base font-bold text-white">{metric.value}</span>
+                <small className="mt-0.5 block text-[8px] font-bold uppercase tracking-wide text-[#A7B0C0]">
                   {metric.label}
                 </small>
               </div>

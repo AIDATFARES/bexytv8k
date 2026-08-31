@@ -25,7 +25,7 @@ export default function ChannelCategories() {
   ];
 
   return (
-    <section className="relative z-10 bg-[#060810] bg-tech-grid py-20 text-white border-t border-white/10">
+    <section className="relative z-10 bg-[#060810] bg-tech-grid bg-atmosphere py-20 text-white border-t border-white/10 overflow-hidden">
       <div className="mx-auto max-w-[1340px] px-5">
         
         {/* Heading */}

@@ -81,11 +81,11 @@ export default function GlobalCoverageSection() {
   const marqueeCountries = [...ALL_COUNTRIES, ...ALL_COUNTRIES];
 
   return (
-    <section className="py-16 md:py-24 relative z-10 bg-white overflow-hidden border-y border-black/5">
+    <section className="py-16 md:py-24 relative z-10 bg-[#060810] bg-tech-grid bg-atmosphere overflow-hidden border-t border-white/10 text-white">
       {/* Top Infinite Marquee */}
-      <div className="relative w-full border-b border-black/5 bg-white overflow-hidden py-3 mb-16">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      <div className="relative w-full border-b border-white/10 bg-[#060810] overflow-hidden py-3 mb-16">
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#060810] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#060810] to-transparent z-10 pointer-events-none" />
 
         <div className="flex w-[max-content] animate-marquee-fast hover:[animation-play-state:paused]">
           {marqueeCountries.map((country, idx) => (
@@ -99,17 +99,17 @@ export default function GlobalCoverageSection() {
                 height={13}
                 className="w-4 h-3 rounded-[2px] object-cover shadow-sm"
               />
-              <span className="text-[11px] font-bold text-[#64748B] uppercase tracking-widest whitespace-nowrap">
+              <span className="text-[11px] font-bold text-[#A7B0C0] uppercase tracking-widest whitespace-nowrap">
                 {country.name}
               </span>
-              <span className="text-[#64748B] px-2">•</span>
+              <span className="text-[#A7B0C0]/50 px-2">•</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-[radial-gradient(ellipse,rgba(79,70,229,0.12)_0%,transparent_70%)] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-[radial-gradient(ellipse,rgba(56,189,248,0.12)_0%,transparent_70%)] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 max-w-5xl relative z-10 mb-12">
         {/* Header Section */}
@@ -118,10 +118,10 @@ export default function GlobalCoverageSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full border border-[#6366F1]/30 bg-stone-50 mb-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
+            className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 mb-6 shadow-[0_0_15px_rgba(56,189,248,0.15)]"
           >
-            <Globe className="w-3.5 h-3.5 text-[#6366F1]" />
-            <span className="text-[10px] font-bold text-sky-400 uppercase tracking-widest">
+            <Globe className="w-3.5 h-3.5 text-[#38BDF8]" />
+            <span className="text-[10px] font-bold text-[#38BDF8] uppercase tracking-widest">
               GLOBAL COVERAGE
             </span>
           </motion.div>
@@ -133,8 +133,8 @@ export default function GlobalCoverageSection() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-extrabold font-sans uppercase tracking-tight mb-4"
           >
-            <span className="text-[#0F172A] block mb-1">AVAILABLE IN</span>
-            <span className="bg-gradient-to-r from-[#D946EF] via-purple-400 to-[#6366F1] text-transparent bg-clip-text block">
+            <span className="text-white block mb-1">AVAILABLE IN</span>
+            <span className="bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] text-transparent bg-clip-text block">
               150+ COUNTRIES
             </span>
           </motion.h2>
@@ -158,12 +158,12 @@ export default function GlobalCoverageSection() {
               }}
               className={`px-5 py-2 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase transition-all duration-300 border ${
                 activeRegion === region
-                  ? "bg-[#6366F1]/30 text-sky-300 border-[#6366F1]/60 shadow-[0_0_20px_rgba(79,70,229,0.3)]"
-                  : "bg-white text-[#64748B] border-black/10 hover:border-black/20 hover:text-slate-800"
+                  ? "bg-[#38BDF8]/20 text-[#38BDF8] border-[#38BDF8]/60 shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+                  : "bg-[#0D111B] text-[#A7B0C0] border-white/10 hover:border-white/20 hover:text-white"
               }`}
             >
               {region === "ALL" && activeRegion === "ALL" && (
-                <Globe className="w-3 h-3 inline mr-2 text-[#6366F1] mb-0.5" />
+                <Globe className="w-3 h-3 inline mr-2 text-[#38BDF8] mb-0.5" />
               )}
               {region}
             </button>
@@ -181,7 +181,7 @@ export default function GlobalCoverageSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2 }}
-                className="bg-stone-50/90 border border-black/10 hover:border-[#6366F1]/40 hover:bg-white rounded-xl px-3.5 py-2.5 flex items-center gap-3 transition-all cursor-default group shadow-sm"
+                className="bg-[#0D111B] border border-white/10 hover:border-[#38BDF8]/40 hover:bg-white/5 rounded-xl px-3.5 py-2.5 flex items-center gap-3 transition-all cursor-default group shadow-sm"
               >
                 <img
                   src={`https://flagcdn.com/w40/${country.code}.webp`}
@@ -192,7 +192,7 @@ export default function GlobalCoverageSection() {
                   height={15}
                   className="w-5 h-auto rounded-[2px] object-cover shadow-sm group-hover:scale-110 transition-transform"
                 />
-                <span className="text-xs font-semibold text-slate-800 group-hover:text-[#0F172A] truncate">
+                <span className="text-xs font-semibold text-[#A7B0C0] group-hover:text-white truncate">
                   {country.name}
                 </span>
               </motion.div>
@@ -205,19 +205,19 @@ export default function GlobalCoverageSection() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-center mt-8">
             <button
               onClick={() => setIsExpanded(true)}
-              className="flex items-center space-x-2 px-6 py-2.5 rounded-full border border-black/15 bg-stone-50 text-xs font-bold text-stone-700 hover:text-[#0F172A] hover:border-[#6366F1]/40 transition-colors shadow-md"
+              className="flex items-center space-x-2 px-6 py-2.5 rounded-full border border-white/15 bg-[#0D111B] text-xs font-bold text-white hover:border-[#38BDF8]/40 transition-colors shadow-md"
             >
               <span>SHOW ALL COUNTRIES</span>
-              <ChevronDown className="w-4 h-4 text-[#6366F1]" />
+              <ChevronDown className="w-4 h-4 text-[#38BDF8]" />
             </button>
           </motion.div>
         )}
       </div>
 
       {/* Bottom Infinite Marquee */}
-      <div className="relative w-full border-t border-black/5 bg-white overflow-hidden py-3">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      <div className="relative w-full border-t border-white/10 bg-[#060810] overflow-hidden py-3">
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#060810] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#060810] to-transparent z-10 pointer-events-none" />
 
         <div className="flex w-[max-content] animate-marquee-reverse hover:[animation-play-state:paused]">
           {marqueeCountries.map((country, idx) => (
@@ -231,10 +231,10 @@ export default function GlobalCoverageSection() {
                 height={13}
                 className="w-4 h-3 rounded-[2px] object-cover shadow-sm"
               />
-              <span className="text-[11px] font-bold text-[#64748B] uppercase tracking-widest whitespace-nowrap">
+              <span className="text-[11px] font-bold text-[#A7B0C0] uppercase tracking-widest whitespace-nowrap">
                 {country.name}
               </span>
-              <span className="text-[#64748B] px-2">•</span>
+              <span className="text-[#A7B0C0]/50 px-2">•</span>
             </div>
           ))}
         </div>

@@ -24,7 +24,7 @@ export default function MovieStrips({ children }: { children?: React.ReactNode }
   ];
 
   return (
-    <section className="w-full overflow-hidden bg-[#060810] bg-tech-grid py-20 relative flex flex-col gap-6 border-t border-white/10">
+    <section className="w-full overflow-hidden bg-[#060810] bg-tech-grid bg-atmosphere py-20 relative flex flex-col gap-6 border-t border-white/10">
       
       {/* Section Header */}
       <div className="text-center mb-6 px-4 z-20 space-y-3">

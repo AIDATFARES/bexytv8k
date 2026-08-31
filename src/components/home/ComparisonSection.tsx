@@ -3,7 +3,7 @@ import { CheckCircle, ShieldCheck, Zap, Tv } from "lucide-react";
 
 export default function ComparisonSection() {
   return (
-    <section className="bg-[#080B14] bg-tech-grid text-white relative z-10 py-24 border-t border-white/10 overflow-hidden">
+    <section className="bg-[#060810] bg-tech-grid bg-atmosphere text-white relative z-10 py-24 border-t border-white/10 overflow-hidden">
       
       {/* Decorative Glow */}
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />

@@ -60,7 +60,7 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="py-24 bg-[#080B14] bg-tech-grid text-white relative z-10 border-t border-white/10 overflow-hidden">
+    <section id="faq" className="py-24 bg-[#060810] bg-tech-grid bg-atmosphere text-white relative z-10 border-t border-white/10 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Header */}

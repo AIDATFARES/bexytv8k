@@ -105,7 +105,7 @@ export default function PricingSection() {
   }
 
   return (
-    <section id="pricing" className="relative bg-[#060810] bg-tech-grid py-24 border-t border-white/10 overflow-hidden">
+    <section id="pricing" className="relative bg-[#060810] bg-tech-grid bg-atmosphere py-24 border-t border-white/10 overflow-hidden">
       
       {/* Background glow for pricing section */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none" />

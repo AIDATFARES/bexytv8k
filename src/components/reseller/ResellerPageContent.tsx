@@ -156,7 +156,7 @@ export default function ResellerPageContent() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#060810] py-16 sm:py-20 lg:py-24 text-[#F8FAFC]">
+    <section className="relative overflow-hidden bg-[#060810] bg-tech-grid bg-atmosphere py-16 sm:py-20 lg:py-24 text-[#F8FAFC]">
       {/* Background Glow */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[600px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />
 

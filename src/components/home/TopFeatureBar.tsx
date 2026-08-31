@@ -11,14 +11,14 @@ export default function TopFeatureBar() {
   ];
 
   return (
-    <section className="bg-white relative z-20 w-full border-b border-black/10">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
+    <section className="bg-[#060810] bg-tech-grid bg-atmosphere relative z-20 w-full border-b border-white/10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 relative z-10">
         {/* Stats Section */}
         <div className="grid grid-cols-2 gap-8 py-10 text-center sm:grid-cols-4 sm:gap-4 sm:py-12">
           {stats.map((stat) => (
             <div key={stat.label} className="transition-all duration-300">
               <AnimatedStat {...stat} />
-              <span className="mt-1 block text-sm font-medium text-stone-700">{stat.label}</span>
+              <span className="mt-1 block text-sm font-medium text-[#A7B0C0]">{stat.label}</span>
             </div>
           ))}
         </div>
@@ -65,5 +65,5 @@ function AnimatedStat({ value, prefix, suffix }: { value: number; prefix: string
     return () => cancelAnimationFrame(frameId);
   }, [isInView, value, prefix, suffix]);
 
-  return <span className="block text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl" ref={ref}>{prefix}0{suffix}</span>;
+  return <span className="block text-3xl font-extrabold tracking-tight bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent sm:text-4xl" ref={ref}>{prefix}0{suffix}</span>;
 }

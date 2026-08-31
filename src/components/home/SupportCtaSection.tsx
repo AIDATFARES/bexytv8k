@@ -2,7 +2,7 @@ import { Mail, MessageSquare, Sparkles } from "lucide-react";
 
 export default function SupportCtaSection() {
   return (
-    <section className="border-t border-white/10 bg-[#060810] bg-tech-grid px-5 py-20 relative overflow-hidden">
+    <section className="border-t border-white/10 bg-[#060810] bg-tech-grid bg-atmosphere px-5 py-20 relative overflow-hidden">
       {/* Subtle glow background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
 

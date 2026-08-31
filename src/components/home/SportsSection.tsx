@@ -59,7 +59,7 @@ export default function SportsSection() {
   ];
 
   return (
-    <section id="sports" className="py-24 bg-[#080B14] bg-tech-grid relative z-10 border-t border-white/10 overflow-hidden">
+    <section id="sports" className="py-24 bg-[#060810] bg-tech-grid bg-atmosphere relative z-10 border-t border-white/10 overflow-hidden">
       
       {/* Glow Effects */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />

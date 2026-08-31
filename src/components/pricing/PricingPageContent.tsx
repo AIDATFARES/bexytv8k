@@ -103,7 +103,7 @@ export default function PricingPageContent() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#060810] py-16 sm:py-20 lg:py-24 text-[#F8FAFC]">
+    <section className="relative overflow-hidden bg-[#060810] bg-tech-grid bg-atmosphere py-16 sm:py-20 lg:py-24 text-[#F8FAFC]">
       {/* Glow Backdrops */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#38BDF8]/10 via-[#818CF8]/5 to-transparent blur-3xl opacity-50" />
       
