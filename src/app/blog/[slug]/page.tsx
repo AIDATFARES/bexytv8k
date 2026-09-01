@@ -113,17 +113,17 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     blockquote: ({ node, ...props }: any) => <blockquote className="border-l-4 border-[#38BDF8] pl-4 py-2 mb-6 italic bg-white/5 rounded-r text-[#F8FAFC]" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    table: ({ node, ...props }: any) => <div className="overflow-x-auto mb-8"><table className="w-full text-left border-collapse" {...props} /></div>,
+    table: ({ node, ...props }: any) => <span className="overflow-x-auto mb-8 block"><table className="w-full text-left border-collapse" {...props} /></span>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     th: ({ node, ...props }: any) => <th className="border-b border-white/10 py-3 px-4 font-bold text-white bg-white/5 text-xs uppercase" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     td: ({ node, ...props }: any) => <td className="border-b border-white/10 py-3 px-4 text-xs text-[#A7B0C0]" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     img: ({ node, alt, src, ...props }: any) => (
-      <div className="my-8 flex flex-col items-center">
+      <span className="my-8 flex flex-col items-center block">
         <img src={src} alt={alt} className="rounded-2xl max-w-full border border-white/10" {...props} />
         {alt && <span className="text-xs text-center block mt-2 text-[#A7B0C0] opacity-80">{alt}</span>}
-      </div>
+      </span>
     ),
   };
 
