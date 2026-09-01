@@ -110,16 +110,16 @@ export default function HowItWorksPage() {
             <Sparkles className="w-3.5 h-3.5" /> Easy 3-Step Process
           </span>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] uppercase">
-            <span className="text-white">How Does It Work?</span>
+            <span className="text-white">How Does BexyTV IPTV Work?</span>
             <br />
-            <span className="bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">BexyTV 4K IPTV</span>
+            <span className="bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">3-Step 4K Setup Guide</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base text-[#A7B0C0] leading-relaxed">
-            Get your{" "}
+            Activate your{" "}
             <Link href="/pricing" className="text-[#38BDF8] font-bold hover:text-[#818CF8] transition-colors">
-              IPTV subscription
+              BexyTV IPTV subscription
             </Link>{" "}
-            active in 3 simple steps. Choose your plan, pay securely, and start streaming high-definition channels in minutes.
+            in 3 simple steps. Choose your plan, pay securely, and start streaming high-definition channels, live sports, and VODs in under 3 minutes.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -29,11 +29,11 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Plans", href: "/pricing" },
-    { name: "Install", href: "/installation" },
-    { name: "Devices", href: "/#devices" },
-    { name: "Sports", href: "/#sports" },
-    { name: "Blog", href: "/blog" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "How It Works", href: "/how-it-works" },
+    { name: "Channels List", href: "/channels" },
+    { name: "Contact Support", href: "/contact" },
+    { name: "Reseller", href: "/reseller" },
   ];
 
   return (
@@ -94,24 +94,13 @@ export default function Navbar() {
 
         {/* RIGHT ACTIONS */}
         <div className="hidden lg:flex items-center gap-4 shrink-0 z-20">
-          <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20want%20to%20Login%20to%20my%20BexyTV%20account."
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-semibold text-[#A7B0C0] hover:text-[#60A5FA] transition-colors flex items-center gap-1.5 px-3 py-2"
-          >
-            <User className="w-4 h-4 text-[#38BDF8]" />
-            Login
-          </a>
-          <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20bexytv%20IPTV."
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href="/pricing"
             className="btn-primary text-sm py-2.5 px-6"
           >
             <Play className="w-4 h-4 fill-current" />
-            Start Free Trial
-          </a>
+            Get Started
+          </Link>
         </div>
 
         {/* MOBILE MENU BUTTON */}
@@ -140,22 +129,13 @@ export default function Navbar() {
             ))}
           </nav>
           <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
-            <a
-              href="https://wa.me/213552069874?text=Hello,%20I%20want%20to%20Login%20to%20my%20BexyTV%20account."
-              target="_blank"
-              rel="noreferrer"
-              className="w-full text-center py-2.5 rounded-full text-sm font-semibold text-[#A7B0C0] border border-white/10"
+            <Link
+              href="/pricing"
+              onClick={() => setMobileMenuOpen(false)}
+              className="btn-primary w-full text-center py-3 justify-center"
             >
-              Login
-            </a>
-            <a
-              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20bexytv%20IPTV."
-              target="_blank"
-              rel="noreferrer"
-              className="btn-primary w-full text-center py-3"
-            >
-              Start Free Trial
-            </a>
+              Get Started
+            </Link>
           </div>
         </div>
       )}

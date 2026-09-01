@@ -22,14 +22,14 @@ export default function Contact() {
 
       <div className="mx-auto mb-14 max-w-3xl text-center relative z-10">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8]">
-          <Sparkles className="w-3.5 h-3.5" /> 24/7 Technical Support
+          <Sparkles className="w-3.5 h-3.5" /> BEXYTV IPTV SUPPORT
         </span>
         <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight uppercase">
           <span className="block text-white">Get in Touch with</span>
-          <span className="mt-2 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">Our Support Team</span>
+          <span className="mt-2 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">BexyTV IPTV Support</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-xs sm:text-sm leading-relaxed text-[#A7B0C0]">
-          We&apos;re here to ensure your 4K streaming experience is flawless. Send us a message and our technical team will reply within minutes.
+          We are here 24/7 to ensure your 4K IPTV streaming experience is flawless. Reach out for instant subscription setup, free trial access, or technical guidance.
         </p>
       </div>
 
@@ -44,9 +44,9 @@ export default function Contact() {
             <p className="text-xs text-[#A7B0C0] mb-4">For general inquiries and setup help.</p>
             <a
               className="text-xs font-bold text-[#38BDF8] hover:text-[#818CF8] transition-colors"
-              href="mailto:support@bexytv.com"
+              href="mailto:support@bexytv8k.shop"
             >
-              support@bexytv.com
+              support@bexytv8k.shop
             </a>
           </div>
 

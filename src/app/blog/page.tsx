@@ -27,72 +27,82 @@ export default function Blog() {
         </p>
       </header>
 
-      {/* Featured Post */}
-      {featuredPost && (
-        <section className="mb-20 relative z-10">
-          <Link href={`/blog/${featuredPost.slug}`}>
-            <div className="bg-[#0D111B] border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row group cursor-pointer transition-all duration-500 hover:border-[#38BDF8]/50 shadow-2xl">
-              <div className="md:w-3/5 h-64 md:h-96 relative overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
-                  alt={featuredPost.title}
-                  src={featuredPost.coverImage || ""}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D111B] to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#0D111B] opacity-80 md:opacity-100"></div>
-              </div>
-              <div className="md:w-2/5 p-8 md:p-12 flex flex-col justify-center z-10 relative">
-                <span className="inline-block px-3 py-1 bg-[#38BDF8]/10 text-[#38BDF8] rounded-full text-[10px] font-black uppercase tracking-wider mb-4 w-max border border-[#38BDF8]/20">
-                  {featuredPost.category}
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-black text-white mb-4 group-hover:text-[#38BDF8] transition-colors leading-snug">
-                  {featuredPost.title}
-                </h2>
-                <p className="text-xs text-[#A7B0C0] mb-6 line-clamp-3 leading-relaxed">
-                  {featuredPost.description}
-                </p>
-                <div className="flex items-center gap-3 mt-auto text-xs font-black uppercase tracking-wider text-[#38BDF8]">
-                  <span>Read Full Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+      {/* Featured & Grid Posts / Empty State */}
+      {blogPosts.length === 0 ? (
+        <div className="text-center py-16 px-6 bg-[#0D111B] border border-white/10 rounded-3xl mb-16 max-w-2xl mx-auto shadow-2xl relative z-10">
+          <p className="text-sm font-semibold text-[#A7B0C0] mb-2">New Streaming Guides Coming Soon</p>
+          <p className="text-xs text-[#64748B]">We are currently updating our article library. Check back soon for new guides and news!</p>
+        </div>
+      ) : (
+        <>
+          {/* Featured Post */}
+          {featuredPost && (
+            <section className="mb-20 relative z-10">
+              <Link href={`/blog/${featuredPost.slug}`}>
+                <div className="bg-[#0D111B] border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row group cursor-pointer transition-all duration-500 hover:border-[#38BDF8]/50 shadow-2xl">
+                  <div className="md:w-3/5 h-64 md:h-96 relative overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                      alt={featuredPost.title}
+                      src={featuredPost.coverImage || ""}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D111B] to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#0D111B] opacity-80 md:opacity-100"></div>
+                  </div>
+                  <div className="md:w-2/5 p-8 md:p-12 flex flex-col justify-center z-10 relative">
+                    <span className="inline-block px-3 py-1 bg-[#38BDF8]/10 text-[#38BDF8] rounded-full text-[10px] font-black uppercase tracking-wider mb-4 w-max border border-[#38BDF8]/20">
+                      {featuredPost.category}
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl font-black text-white mb-4 group-hover:text-[#38BDF8] transition-colors leading-snug">
+                      {featuredPost.title}
+                    </h2>
+                    <p className="text-xs text-[#A7B0C0] mb-6 line-clamp-3 leading-relaxed">
+                      {featuredPost.description}
+                    </p>
+                    <div className="flex items-center gap-3 mt-auto text-xs font-black uppercase tracking-wider text-[#38BDF8]">
+                      <span>Read Full Article</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </Link>
-        </section>
-      )}
+              </Link>
+            </section>
+          )}
 
-      {/* Blog Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 relative z-10">
-        {gridPosts.map((post) => (
-          <Link href={`/blog/${post.slug}`} key={post.id}>
-            <article className="bg-[#0D111B] border border-white/10 rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:border-[#38BDF8]/50 hover:-translate-y-1 transition-all duration-300 h-full shadow-xl">
-              <div className="h-48 relative overflow-hidden shrink-0">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
-                  alt={post.title}
-                  src={post.coverImage || ""}
-                />
-                <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#0D111B] to-transparent"></div>
-                <span className="absolute top-4 left-4 px-2.5 py-1 bg-[#060810]/80 backdrop-blur-md text-[#38BDF8] rounded-xl text-[9px] font-black uppercase tracking-wider border border-white/10">
-                  {post.category}
-                </span>
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-base font-bold text-white mb-3 group-hover:text-[#38BDF8] transition-colors leading-snug">
-                  {post.title}
-                </h3>
-                <p className="text-xs text-[#A7B0C0] mb-4 line-clamp-2 leading-relaxed">
-                  {post.description}
-                </p>
-                <div className="mt-auto text-[10px] font-semibold text-[#64748B] uppercase tracking-wider">
-                  {post.date} • 5 min read
-                </div>
-              </div>
-            </article>
-          </Link>
-        ))}
-      </section>
+          {/* Blog Grid */}
+          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 relative z-10">
+            {gridPosts.map((post) => (
+              <Link href={`/blog/${post.slug}`} key={post.id}>
+                <article className="bg-[#0D111B] border border-white/10 rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:border-[#38BDF8]/50 hover:-translate-y-1 transition-all duration-300 h-full shadow-xl">
+                  <div className="h-48 relative overflow-hidden shrink-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                      alt={post.title}
+                      src={post.coverImage || ""}
+                    />
+                    <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#0D111B] to-transparent"></div>
+                    <span className="absolute top-4 left-4 px-2.5 py-1 bg-[#060810]/80 backdrop-blur-md text-[#38BDF8] rounded-xl text-[9px] font-black uppercase tracking-wider border border-white/10">
+                      {post.category}
+                    </span>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-base font-bold text-white mb-3 group-hover:text-[#38BDF8] transition-colors leading-snug">
+                      {post.title}
+                    </h3>
+                    <p className="text-xs text-[#A7B0C0] mb-4 line-clamp-2 leading-relaxed">
+                      {post.description}
+                    </p>
+                    <div className="mt-auto text-[10px] font-semibold text-[#64748B] uppercase tracking-wider">
+                      {post.date} • 5 min read
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </section>
+        </>
+      )}
 
       {/* Newsletter Signup */}
       <section className="bg-[#0D111B] border border-white/10 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">

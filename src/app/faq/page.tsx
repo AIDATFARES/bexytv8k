@@ -192,16 +192,16 @@ export default function FAQ() {
       <div className="mx-auto max-w-[1140px]">
         <header className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8]">
-            <Sparkles className="w-3.5 h-3.5" /> Help Center
+            <Sparkles className="w-3.5 h-3.5" /> BEXYTV IPTV HELP CENTER
           </span>
           <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight uppercase">
-            Frequently Asked Questions<br />
-            <span className="bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">(FAQ)</span>
+            BexyTV IPTV Frequently Asked Questions<br />
+            <span className="bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">(FAQ &amp; Support)</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-sm sm:text-base leading-relaxed text-[#A7B0C0]">
-            Find quick answers to common questions about BexyTV 4K IPTV service, including{" "}
-            <Link href="/pricing" className="text-[#38BDF8] font-semibold hover:text-[#818CF8] transition-colors">subscriptions</Link>,{" "}
-            <Link href="/installation" className="text-[#38BDF8] font-semibold hover:text-[#818CF8] transition-colors">device setup</Link>, 60 FPS streaming, and instant payments.
+            Find quick answers to common questions about BexyTV IPTV service, including{" "}
+            <Link href="/pricing" className="text-[#38BDF8] font-semibold hover:text-[#818CF8] transition-colors">IPTV subscription plans</Link>,{" "}
+            <Link href="/installation" className="text-[#38BDF8] font-semibold hover:text-[#818CF8] transition-colors">device setup tutorials</Link>, 60 FPS 4K streaming performance, and instant credential delivery.
           </p>
         </header>
 
@@ -282,11 +282,11 @@ export default function FAQ() {
           
           <div className="mt-10 grid gap-8 xl:grid-cols-[280px_minmax(0,1fr)] xl:gap-10">
             <div className="grid gap-4 sm:grid-cols-3 xl:grid-cols-1">
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-3xl border border-white/10 bg-[#0D111B] p-6 text-center transition-all hover:border-[#38BDF8]/50 shadow-xl" href="mailto:support@bexytv.com">
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-3xl border border-white/10 bg-[#0D111B] p-6 text-center transition-all hover:border-[#38BDF8]/50 shadow-xl" href="mailto:support@bexytv8k.shop">
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/20"><Mail className="h-5 w-5" /></span>
                 <span className="mt-4 block text-base font-bold text-white">Email Us</span>
                 <span className="mt-2 block text-xs text-[#A7B0C0]">For general inquiries and setup.</span>
-                <span className="mt-3 block text-xs font-semibold text-[#38BDF8]">support@bexytv.com</span>
+                <span className="mt-3 block text-xs font-semibold text-[#38BDF8]">support@bexytv8k.shop</span>
               </a>
               
               <a className="flex min-h-40 flex-col items-center justify-center rounded-3xl border border-white/10 bg-[#0D111B] p-6 text-center transition-all hover:border-[#38BDF8]/50 shadow-xl" href="https://wa.me/213552069874?text=Hello%20BexyTV%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">

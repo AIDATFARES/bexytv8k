@@ -24,14 +24,14 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Premium 4K IPTV Subscription – Zero Buffering | BexyTV",
   description: "Experience the ultimate 4K IPTV subscription with BexyTV. Stream 50,000+ live sports, movies & global channels with zero buffering. Start your free trial today!",
-  metadataBase: new URL("https://www.bexytv.com"),
+  metadataBase: new URL("https://www.bexytv8k.shop"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Premium 4K IPTV Subscription – Zero Buffering | BexyTV",
     description: "Experience the ultimate 4K IPTV subscription with BexyTV. Stream 50,000+ live sports, movies & global channels with zero buffering. Start your free trial today!",
-    url: "https://www.bexytv.com",
+    url: "https://www.bexytv8k.shop",
     siteName: "BexyTV",
     images: [
       {
@@ -116,7 +116,7 @@ export default function RootLayout({
               <ul className="space-y-2.5 text-xs text-[#A7B0C0]">
                 <li><Link prefetch={false} className="hover:text-[#60A5FA] transition-colors" href="/pricing">Get Started</Link></li>
                 <li><a className="hover:text-[#60A5FA] transition-colors" href="https://wa.me/213552069874" target="_blank" rel="noreferrer">WhatsApp Chat</a></li>
-                <li><a className="hover:text-[#60A5FA] transition-colors" href="mailto:support@bexytv.com">Email Support</a></li>
+                <li><a className="hover:text-[#60A5FA] transition-colors" href="mailto:support@bexytv8k.shop">Email Support</a></li>
                 <li><Link prefetch={false} className="hover:text-[#60A5FA] transition-colors" href="/channels">Channels List</Link></li>
                 <li><Link prefetch={false} className="hover:text-[#60A5FA] transition-colors" href="/installation">Setup Guides</Link></li>
               </ul>

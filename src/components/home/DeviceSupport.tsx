@@ -21,16 +21,16 @@ export default function DeviceSupport() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="inline-flex items-center gap-2 border border-[#38BDF8]/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
-            WIDE DEVICE COMPATIBILITY
+            BEXYTV IPTV COMPATIBILITY
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
-            Stream BexyTV Seamlessly on{" "}
+            Stream BexyTV IPTV Seamlessly on{" "}
             <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">
               All Your Devices
             </span>
           </h2>
           <p className="text-[#A7B0C0] text-base sm:text-lg">
-            Enjoy full multi-device support with 0 buffering. Easy 2-minute setup with step-by-step installation guides for every platform.
+            Enjoy full multi-device compatibility with zero buffering. Follow our easy <Link href="/installation" className="text-[#38BDF8] hover:underline font-medium">IPTV installation tutorials</Link> for Firestick, Smart TV, Android, Apple TV, and PC.
           </p>
         </div>
 

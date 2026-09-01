@@ -41,18 +41,18 @@ export default function ComparisonSection() {
           {/* Text Side */}
           <div className="flex flex-col justify-center">
             <span className="inline-flex items-center gap-2 border border-[#38BDF8]/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest w-fit mb-4">
-              ABOUT THE SERVICE
+              ABOUT BEXYTV IPTV
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
-              What is <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">BexyTV?</span> — The #1 IPTV Service
+              What is <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">BexyTV IPTV?</span> — Premium 4K IPTV Service
             </h2>
             
             <p className="text-[#A7B0C0] text-sm md:text-base mb-4 leading-relaxed">
-              BexyTV is the premier IPTV subscription service in the USA, Canada, and Europe. Delivering live TV, on-demand movies, and 60 FPS sports to viewers over high-speed internet without expensive cable boxes or restrictive contracts.
+              BexyTV IPTV is a leading high-performance IPTV subscription provider across the USA, Canada, UK, and Europe. Delivering live TV broadcasts, on-demand movie libraries, and 60 FPS sports events directly over your high-speed internet without cable boxes or hidden fees.
             </p>
             
             <p className="text-[#A7B0C0] text-sm md:text-base mb-8 leading-relaxed">
-              Compatible with all internet-connected platforms — Firestick, Smart TV, Android, iOS, MAG, and Windows. Experience high-definition streaming with zero buffering and up to 3 simultaneous device connections per subscription.
+              Compatible with all popular streaming platforms—including Amazon Firestick, Smart TVs, Android TV, Apple TV, iOS, and PC. Explore our <a href="/pricing" className="text-[#38BDF8] hover:underline font-medium">IPTV subscription pricing</a> or browse our comprehensive <a href="/channels" className="text-[#38BDF8] hover:underline font-medium">IPTV channel catalog</a> for instant setup.
             </p>
 
             {/* Stats Cards */}

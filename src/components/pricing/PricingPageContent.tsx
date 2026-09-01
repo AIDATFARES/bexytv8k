@@ -110,14 +110,14 @@ export default function PricingPageContent() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 z-10">
         <header className="mx-auto max-w-3xl text-center mb-16">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8]">
-            <Sparkles className="w-3.5 h-3.5" /> BexyTV Plans
+            <Sparkles className="w-3.5 h-3.5" /> BEXYTV IPTV PLANS
           </span>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
             <span className="block text-white uppercase">Premium IPTV Subscription</span>
             <span className="mt-2 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent uppercase">Plans &amp; Pricing</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#A7B0C0] sm:text-base">Choose the BexyTV plan that fits you, with instant delivery, zero buffering guarantee, and 24/7 VIP support.</p>
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-[#A7B0C0]">Need help getting started? Visit our <Link className="font-semibold text-[#38BDF8] hover:text-[#818CF8]" href="/installation">installation guide</Link> or browse the <Link className="font-semibold text-[#38BDF8] hover:text-[#818CF8]" href="/channels">channel catalog</Link> before ordering.</p>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#A7B0C0] sm:text-base">Choose the BexyTV IPTV subscription plan that fits your entertainment needs. Enjoy 50,000+ live channels, 150,000+ VOD movies, 60 FPS sports, and instant activation.</p>
+          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-[#A7B0C0]">Need setup help? Check our <Link className="font-semibold text-[#38BDF8] hover:text-[#818CF8]" href="/installation">IPTV installation guide</Link> or explore our <Link className="font-semibold text-[#38BDF8] hover:text-[#818CF8]" href="/channels">IPTV channel catalog</Link> before placing your order.</p>
         </header>
 
         {/* Device Selector */}

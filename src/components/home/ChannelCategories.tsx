@@ -31,7 +31,7 @@ export default function ChannelCategories() {
         {/* Heading */}
         <div className="mx-auto mb-12 max-w-4xl text-center space-y-3">
           <span className="inline-flex items-center gap-2 border border-[#38BDF8]/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5" /> WHY BEXYTV STANDS OUT
+            <Sparkles className="w-3.5 h-3.5" /> WHY BEXYTV IPTV STANDS OUT
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
             We Are Proud to Offer the <br className="hidden md:block" />

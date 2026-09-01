@@ -115,13 +115,13 @@ export default function PricingSection() {
         {/* Header */}
         <header className="mx-auto max-w-3xl text-center mb-12 space-y-4">
           <span className="inline-flex items-center gap-2 border border-cyan-500/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5" /> TRANSPARENT SUBSCRIPTION PRICING
+            <Sparkles className="w-3.5 h-3.5" /> TRANSPARENT BEXYTV IPTV SUBSCRIPTIONS
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
-            Choose Your <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">BexyTV</span> Plan
+            Choose Your <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">BexyTV IPTV</span> Subscription Plan
           </h2>
           <p className="text-base sm:text-lg text-[#A7B0C0]">
-            No hidden fees, no contract, instant automated setup within 3 minutes of ordering.
+            No contracts or hidden fees. Instant automated activation within 3 minutes for Smart TV, Firestick, Android, and Apple TV.
           </p>
         </header>
 

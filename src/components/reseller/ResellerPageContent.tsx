@@ -166,16 +166,16 @@ export default function ResellerPageContent() {
         <header className="relative mx-auto max-w-4xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8]">
             <Sparkles className="h-3.5 w-3.5" />
-            IPTV Reseller Partner Program
+            BEXYTV IPTV RESELLER PROGRAM
           </span>
 
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight uppercase">
-            <span className="block text-white">IPTV Reseller Program</span>
-            <span className="mt-2 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">Become a Partner Today</span>
+            <span className="block text-white">BexyTV IPTV Reseller Program</span>
+            <span className="mt-2 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">Launch Your IPTV Business</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-xs sm:text-sm leading-relaxed text-[#A7B0C0]">
-            Launch your own profitable IPTV business with BexyTV. Access high-capacity 60 FPS Anti-Freeze servers, dedicated reseller control panels, instant credit delivery, and 24/7 technical support.
+            Launch your high-margin IPTV reseller business with BexyTV. Access high-capacity 60 FPS Anti-Freeze servers, robust Xtream Codes reseller panels, instant credit delivery, and 24/7 partner support.
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">

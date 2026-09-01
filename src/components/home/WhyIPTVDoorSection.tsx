@@ -21,9 +21,9 @@ export default function WhyIPTVBexyTVSection() {
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_42%,rgba(56,189,248,0.12),transparent_42%)] pointer-events-none" />
     <div className="relative mx-auto max-w-[1120px] px-5 sm:px-8 z-10">
       <div className="mx-auto mb-14 max-w-3xl text-center">
-        <span className="inline-flex rounded-full border border-[#38BDF8]/35 bg-[#38BDF8]/[0.08] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#38BDF8]">Why choose BexyTV?</span>
-        <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-white sm:text-5xl"><span className="block">Engineered For</span><span className="mt-1 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">Premium BexyTV IPTV</span></h2>
-        <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#A7B0C0]">Everything you need for an elite live television and on-demand entertainment experience—delivered flawlessly to any screen.</p>
+        <span className="inline-flex rounded-full border border-[#38BDF8]/35 bg-[#38BDF8]/[0.08] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#38BDF8]">Why Choose BexyTV IPTV?</span>
+        <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-white sm:text-5xl"><span className="block">Engineered For</span><span className="mt-1 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent">Superior 4K IPTV Performance</span></h2>
+        <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#A7B0C0]">Discover why thousands of households choose BexyTV IPTV for live sports, premium global channels, and instant on-demand movies across all supported devices.</p>
       </div>
 
       <div className="grid gap-5 md:grid-cols-3">

@@ -70,7 +70,7 @@ export default function SportsSection() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 border border-cyan-500/30 rounded-full px-4 py-1 bg-[#0D111B] text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
-            <Trophy className="w-3.5 h-3.5" /> UNLIMITED LIVE SPORTS
+            <Trophy className="w-3.5 h-3.5" /> UNLIMITED BEXYTV IPTV SPORTS
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
             Watch NFL, NBA, UFC & Soccer Live in{" "}
@@ -79,7 +79,7 @@ export default function SportsSection() {
             </span>
           </h2>
           <p className="text-[#A7B0C0] text-base sm:text-lg">
-            Say goodbye to expensive cable packages and blackouts. BexyTV gives you front-row seat access to every major sport and Pay-Per-View event worldwide.
+            Say goodbye to expensive cable packages and regional blackouts. BexyTV IPTV provides front-row access to every major sports league and Pay-Per-View event worldwide.
           </p>
         </div>
 

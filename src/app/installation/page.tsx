@@ -17,14 +17,14 @@ export default function Installation() {
       <div className="mx-auto w-full max-w-[1440px] px-5 pb-20 pt-12 sm:px-8 md:px-12">
       <header className="mx-auto mb-16 max-w-3xl text-center sm:mb-20">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8]/30 bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#38BDF8]">
-          <Sparkles className="w-3.5 h-3.5" /> Installation Guide
+          <Sparkles className="w-3.5 h-3.5" /> BEXYTV IPTV INSTALLATION
         </span>
         <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-          <span className="block text-white uppercase">IPTV Installation Guide</span>
+          <span className="block text-white uppercase">BexyTV IPTV Setup Guide</span>
           <span className="mt-2 block bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] bg-clip-text text-transparent uppercase">For All Supported Devices</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#A7B0C0] sm:text-base">Comprehensive step-by-step instructions to configure BexyTV on all your favorite streaming devices.</p>
-        <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-[#A7B0C0]">BexyTV works on Smart TVs, Firestick, Android, iOS, MAG, and more. New to BexyTV? Check <Link className="font-semibold text-[#38BDF8] hover:text-[#818CF8]" href="/pricing">BexyTV Pricing</Link>, or browse the <Link className="font-semibold text-[#38BDF8] hover:text-[#818CF8]" href="/channels">BexyTV Channel List</Link> before you start.</p>
+        <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#A7B0C0] sm:text-base">Comprehensive step-by-step instructions to configure BexyTV IPTV on your Firestick, Smart TV, Android, Apple TV, and PC in under 5 minutes.</p>
+        <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-[#A7B0C0]">BexyTV IPTV supports TiviMate, IPTV Smarters Pro, and IBO Player. Ready to start streaming? Explore our <Link className="font-semibold text-[#38BDF8] hover:text-[#818CF8]" href="/pricing">BexyTV IPTV Plans</Link> or browse the <Link className="font-semibold text-[#38BDF8] hover:text-[#818CF8]" href="/channels">BexyTV Channel Lineup</Link>.</p>
         
         <div className="mt-10 flex flex-wrap justify-center gap-x-9 gap-y-4 text-xs font-bold text-[#A7B0C0] uppercase tracking-wider">
           <span className="inline-flex items-center gap-2"><Monitor className="h-4 w-4 text-[#38BDF8]" />15+ Devices Supported</span>

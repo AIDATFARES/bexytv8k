@@ -14,10 +14,10 @@ export default function SupportCtaSection() {
             <MessageSquare className="h-5 w-5" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight tracking-tight">
-            Need Immediate <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">BexyTV</span> Assistance?
+            Need Immediate <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">BexyTV IPTV</span> Assistance?
           </h2>
           <p className="mt-3 text-xs sm:text-sm leading-relaxed text-[#A7B0C0]">
-            Our dedicated technical team is available 24/7. Get instant help with setup, device configuration, or free trial creation via WhatsApp or email.
+            Our dedicated technical team is available 24/7. Get instant help with subscription activation, device configuration, or free trial access via WhatsApp or email.
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:w-44">
@@ -32,7 +32,7 @@ export default function SupportCtaSection() {
           </a>
           <a
             className="btn-secondary text-xs py-3 px-4 text-center"
-            href="mailto:support@bexytv.com"
+            href="mailto:support@bexytv8k.shop"
           >
             <Mail className="h-4 w-4" />
             Email Support
