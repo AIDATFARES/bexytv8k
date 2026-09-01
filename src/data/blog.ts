@@ -417,7 +417,6 @@ Ready to upgrade your sports viewing experience? Check out our flexible [IPTV su
     date: "September 1, 2026",
     author: "BexyTV Team",
     category: "IPTV Infrastructure",
-    coverImage: "/blog/bexytv-iptv-restreaming-architecture.webp",
     content: `Behind every modern digital television deployment lies a sophisticated server pipeline designed to ingest, process, and distribute high-definition live video feeds over the internet. While consumer streaming apps make watching live TV look as simple as opening a channel guide, the underlying infrastructure relies on complex networking protocols, real-time video encoding, edge delivery networks, and legal compliance frameworks.
 
 Understanding IPTV restreaming—the process of receiving a live video feed from an authorized source and redistributing it across a separate distribution network—is essential for OTT operators, IPTV resellers, technical engineers, and business leaders evaluating digital media infrastructure in 2026.
@@ -489,8 +488,6 @@ When a user clicks play in their IPTV app, the system validates their active sub
 The user's device (Smart TV, Firestick, or mobile phone) decodes the HLS/DASH segments and displays the live broadcast with low latency.
 
 Learn more about live TV delivery infrastructure in our guide on [how BexyTV works](/how-it-works).
-
-![IPTV restreaming architecture from source server to viewer](/blog/bexytv-iptv-restreaming-architecture.webp)
 
 ---
 
@@ -638,8 +635,6 @@ Streaming live sports presents technical challenges far greater than standard li
 - **High Motion Bitrate Demands:** Fast-moving camera pans during football or hockey require 60 FPS frame rates and elevated bitrates to prevent macroblocking.
 - **Zero Latency Tolerance:** Viewers expect real-time action; a 60-second delay means neighbors might spoil a touchdown before it appears on screen.
 
-![IPTV restreaming server infrastructure and streaming delivery](/blog/bexytv-iptv-restreaming-server.webp)
-
 ---
 
 ## Is IPTV Restreaming Legal?
@@ -722,8 +717,6 @@ At **BexyTV**, we operate strictly as a premium consumer-facing live TV streamin
 *(Note: BexyTV provides consumer live TV subscription services. We do not sell raw restreaming panel feeds or unmanaged server infrastructure.)*
 
 Explore our flexible plans on our [pricing page](/pricing) or read [IPTV FAQ](/faq) for detailed service information.
-
-![Legal checks for IPTV restreaming and content redistribution](/blog/bexytv-iptv-restreaming-legal-checks.webp)
 
 ---
 
@@ -1655,7 +1648,7 @@ Ready to upgrade your sports streaming setup? Check out our flexible [IPTV subsc
     date: "September 1, 2026",
     author: "BexyTV Team",
     category: "Streaming Industry",
-    coverImage: "/blog/bexytv-tvapp-tvpass-shutdown-2026.webp",
+    coverImage: "/blog/bexytv-tvapp-tvpass-shutdown-cover.webp",
     content: `In early 2026, millions of cord-cutters and live TV viewers noticed that popular free streaming index websites **TheTVApp** and **TVPass** became suddenly inaccessible. Browser connection errors, DNS resolution failures, and dead server endpoints sparked an immediate surge in online search queries from users wondering what happened, whether the disruption was a temporary technical glitch, or if the services had permanently closed.
 
 When popular web portals disappear overnight, confusion spreads rapidly across online forums, social media channels, and community chat groups. Speculation regarding government seizures, legal domain take-downs, infrastructure failure, or domain transfers often creates conflicting reports.
@@ -1701,7 +1694,7 @@ Understanding how the downtime unfolded helps separate real network events from 
 - **February 2026 – Present:** Proliferation of copycat replacement domains and suspicious APK download links using TVApp branding across social media.
 - **Current Status (September 2026):** Original primary portals remain offline with zero official operator statements or public law enforcement seizure notices published.
 
-![TheTVApp and TVPass shutdown status in 2026](/blog/bexytv-tvapp-tvpass-shutdown-2026.webp)
+![TheTVApp and TVPass shutdown status in 2026](/blog/bexytv-tvapp-tvpass-status-2026.webp)
 
 ---
 
@@ -1801,7 +1794,7 @@ Before interacting with any replacement streaming portal found online, run throu
 9. **Check Security Scanner Reports:** Run domain URLs through VirusTotal or Google Safe Browsing.
 10. **Watch for Redirect Loops:** Excessive pop-up redirects are a major indicator of ad-fraud networks.
 
-![What happens when a streaming service shuts down](/blog/bexytv-streaming-service-shutdown-explained.webp)
+![Security risks from fake streaming replacement websites](/blog/bexytv-tvapp-tvpass-security-risks.webp)
 
 ---
 
@@ -1865,8 +1858,6 @@ At **BexyTV**, we provide a premium consumer live TV streaming environment desig
 
 Explore our flexible options on our [pricing page](/pricing) or check out our complete [IPTV channel list](/channels).
 
-![Live TV and IPTV alternatives after TheTVApp and TVPass shutdown](/blog/bexytv-live-tv-alternatives-2026.webp)
-
 ---
 
 ## What About NFL, NBA, MLB and NHL?
@@ -1902,8 +1893,6 @@ When a major free streaming portal goes offline, cybercriminals exploit the resu
 - **Financial Fraud:** Phishing pages demand "A $1 Verification Fee" to unlock replacement video streams, stealing credit card data.
 
 **Safety Golden Rule:** Never install unknown applications or enter sensitive financial credentials on unverified third-party websites.
-
-![Security risks from fake streaming replacement websites](/blog/bexytv-streaming-security-risks.webp)
 
 ---
 
