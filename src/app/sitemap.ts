@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Map dynamic blog routes
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date), // Requires standard date format in blog.ts if sorting, but fine as a string
+    lastModified: isNaN(new Date(post.date).getTime()) ? new Date() : new Date(post.date),
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
