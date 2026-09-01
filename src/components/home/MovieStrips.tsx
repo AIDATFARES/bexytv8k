@@ -46,8 +46,15 @@ export default function MovieStrips({ children }: { children?: React.ReactNode }
       <div className="relative flex w-max items-center">
         <div className="flex gap-4 md:gap-6 px-2 md:px-3 animate-marquee" style={{ animationDuration: '30s' }}>
           {[...channelImages, ...channelImages, ...channelImages].map((img, i) => (
-            <div key={i} className="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[300px] relative rounded-xl overflow-hidden shadow-2xl border border-white/10 hover:scale-105 hover:border-[#38BDF8]/50 hover:z-10 transition-all duration-300">
-              <Image src={`/movie/${img}`} alt="Media Poster" fill sizes="(max-width: 640px) 140px, (max-width: 1024px) 180px, 200px" className="object-cover" />
+            <div key={i} className="flex-shrink-0 w-[280px] sm:w-[360px] md:w-[460px] aspect-[16/9] relative rounded-xl overflow-hidden shadow-2xl border border-white/10 hover:scale-105 hover:border-[#38BDF8]/50 hover:z-10 transition-all duration-300">
+              <Image 
+                src={`/movie/${img}`} 
+                alt="IPTV Interface Preview" 
+                fill 
+                quality={95}
+                sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 460px" 
+                className="object-cover" 
+              />
             </div>
           ))}
         </div>
