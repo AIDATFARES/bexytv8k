@@ -16,9 +16,36 @@ export default function BrandMarquee({
   bgClassName = "bg-transparent"
 }: BrandMarqueeProps) {
   const defaultBrands = [
-    "0.webp", "1.webp", "10-National-Geographic-Channel.webp", "10.webp", "11.webp",
-    "13.webp", "14.webp", "15.webp", "16 (1).webp", "17.webp", "2.webp", "20-disney.webp",
-    "21.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp"
+    "0.png",
+    "1.png",
+    "10-National-Geographic-Channel (1).png",
+    "10.png",
+    "11.png",
+    "13.png",
+    "14.png",
+    "16 (1).png",
+    "17.png",
+    "2.png",
+    "21.png",
+    "3.png",
+    "4 (1).png",
+    "6.png",
+    "7.png",
+    "A-11.webp",
+    "A-2.webp",
+    "A-3-e1701993527905.webp",
+    "A-6.webp",
+    "brand_item05-150x46-1-1.webp",
+    "brand_item08-150x46-1-1.webp",
+    "brand_item12-1.webp",
+    "brand_item13-150x46-1-1.webp",
+    "brand_item14-150x46-1-1.webp",
+    "brand_item15-150x46-1-1.webp",
+    "brand_item16-150x46-1-1.webp",
+    "brand_item17-150x46-1-1.webp",
+    "brand_item18-150x46-1-1.webp",
+    "brand_item21-150x46-1-1.webp",
+    "brand_item22-150x46-1-1.webp"
   ];
 
   const brandList = images || defaultBrands;
@@ -39,15 +66,15 @@ export default function BrandMarquee({
         {repeatList.map((brand, i) => (
           <div 
             key={i} 
-            className={cardClassName || "flex-shrink-0 w-[110px] h-[55px] md:w-[150px] md:h-[70px] relative bg-white/95 hover:bg-white border border-white/20 rounded-xl p-3 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/10 flex items-center justify-center"}
+            className={cardClassName || "flex-shrink-0 w-[120px] h-[60px] md:w-[160px] md:h-[75px] relative bg-[#0D111B]/90 hover:bg-[#151D2A] border border-white/10 hover:border-[#38BDF8]/40 rounded-2xl p-3.5 hover:scale-105 transition-all duration-300 shadow-xl shadow-black/40 flex items-center justify-center"}
           >
             <div className="relative w-full h-full overflow-hidden rounded-lg">
               <Image 
                 src={`/${imagesFolder}/${brand}`} 
                 alt="Brand Logo" 
                 fill
-                sizes="(max-width: 640px) 110px, (max-width: 1024px) 150px, 160px"
-                className={imageClassName || "object-contain drop-shadow-sm"}
+                unoptimized
+                className={imageClassName || "object-contain drop-shadow-md brightness-110"}
               />
             </div>
           </div>
