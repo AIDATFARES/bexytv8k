@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import DeviceSetupGuide from "@/components/installation/DeviceSetupGuide";
-import BrandMarquee from "@/components/home/BrandMarquee";
 import { Clock3, Download, Headphones, Link2, Monitor, PlayCircle, Sparkles } from "lucide-react";
 
 export const metadata = {
@@ -49,25 +49,16 @@ export default function Installation() {
           {/* Apps Platform Logos Banner */}
           <div className="mt-16 border-t border-white/10 pt-12">
             <h3 className="text-center text-xs font-bold tracking-widest text-[#A7B0C0] uppercase mb-8">Supported on all your favorite devices</h3>
-            <BrandMarquee 
-              bgClassName="bg-transparent"
-              imagesFolder="devices" 
-              images={[
-                "Amazon-Fire-tv-stick-krooz-tv.webp",
-                "Apple-TV-krooz-tv.webp",
-                "hisense-krooz-tv.webp",
-                "iptv-smarter-krooz-tv.webp",
-                "LG-smart-krooz-tv.webp",
-                "Shield-krooz-tv.webp",
-                "Smart-android-tv-krooz-tv.webp",
-                "sony-select-krooz-tv.webp",
-                "Tv-media-boxs-krooz-tv.webp",
-                "Windows-krooz-tv.webp",
-                "xbox-live-krooz-tv.webp"
-              ]}
-              cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-[#0D111B] border border-white/10 rounded-2xl p-4 md:p-6 hover:border-[#38BDF8]/40 transition-all duration-300 shadow-md flex items-center justify-center"
-              imageClassName="object-contain drop-shadow-sm brightness-125"
-            />
+            <div className="w-full flex justify-center items-center">
+              <Image 
+                src="/supported-devices-banner.webp"
+                alt="Supported Devices - Samsung, Apple TV, FireTV, Android TV, Roku, PS5, Xbox"
+                width={1024}
+                height={93}
+                unoptimized
+                className="w-full max-w-4xl h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
           </div>
         </div>
       </section>
