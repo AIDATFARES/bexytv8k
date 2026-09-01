@@ -42,6 +42,7 @@ export default function IPTVMockupUI() {
           width={900}
           height={506}
           priority
+          unoptimized
           className="w-full h-auto object-cover rounded-xl group-hover/img:scale-[1.01] transition-transform duration-500"
         />
       </div>

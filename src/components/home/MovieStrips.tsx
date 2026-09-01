@@ -51,8 +51,7 @@ export default function MovieStrips({ children }: { children?: React.ReactNode }
                 src={`/movie/${img}`} 
                 alt="IPTV Interface Preview" 
                 fill 
-                quality={95}
-                sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 460px" 
+                unoptimized
                 className="object-cover" 
               />
             </div>
