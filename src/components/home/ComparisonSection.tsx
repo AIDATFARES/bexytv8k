@@ -14,7 +14,7 @@ export default function ComparisonSection() {
           {/* Image Side */}
           <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
             <Image 
-              src="/unnamed-300x171.jpg" 
+              src="/imggt1-1.webp" 
               alt="Watching BexyTV on Smart TV" 
               fill 
               sizes="(max-width: 1024px) 100vw, 50vw"
