@@ -4,23 +4,16 @@ import { Sparkles, ArrowRight } from "lucide-react";
 
 export default function MovieStrips({ children }: { children?: React.ReactNode }) {
   const channelImages = [
-    "7R05LaU8Em2zN0LaAqEZMVCx3wb.webp",
-    "8iFUWLKBAWDrJ9rOunscgIDrGQ1.webp",
-    "Lanterns-S01E.jpg",
-    "Mutiny-2026.jpg",
-    "OBX-S05.jpg",
-    "SMBND-2026-5.jpg",
-    "c987gxFjXqYOxZEZKcTkS1ONTWH.webp",
-    "hFborW6HmffKL05GIWlkTFdvVpN.webp",
-    "iLhi3wqsLOdHB61vySJRm7y09XS.webp",
-    "iwCeOpuBtuTP1kLosqgniey5OvX.webp",
-    "zqxIT48mWFsC4NSjGEHAcp1pjEo.webp",
-    "فيلم-Demon-Slayer-Infinity-Castle-2025-مترجم.jpg",
-    "فيلم-Evil-Dead-Burn-2026-مترجم.jpg",
-    "فيلم-The-Last-House-2026-مترجم.jpg",
-    "مسلسل-From-الموسم-الرابع-مترجم-كامل.jpg",
-    "مسلسل-House-of-The-Dragon-الموسم-الثالث.jpg",
-    "مسلسل-Reacher-الموسم-الرابع-مترجم-كامل.jpg"
+    "Preview1.webp",
+    "Preview2.webp",
+    "Preview3.webp",
+    "Preview3 (1).webp",
+    "Preview 4.webp",
+    "Preview5.webp",
+    "Preview6.webp",
+    "Preview 7.webp",
+    "Preview8.webp",
+    "Preview9.webp"
   ];
 
   return (
