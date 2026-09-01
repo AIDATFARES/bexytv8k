@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contact BexyTV Support – 24/7 Customer Assistance",
-  description: "Need help with your IPTV subscription? Contact the BexyTV support team for technical assistance, billing inquiries, and instant troubleshooting.",
+  title: "Contact Support 24/7 – Instant WhatsApp & Email Help | BexyTV",
+  description: "Need immediate setup or technical assistance? Contact our 24/7 support team via WhatsApp or email for instant account activation & customer support.",
   alternates: {
     canonical: "/contact",
   },

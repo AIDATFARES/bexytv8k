@@ -13,8 +13,8 @@ import SupportCtaSection from "@/components/home/SupportCtaSection";
 import Link from "next/link";
 
 export const metadata = {
-  title: "BexyTV - Premium 4K IPTV Service in USA & Canada | 50,000+ Live Channels",
-  description: "Stream 50,000+ live channels and 150,000+ movies in 4K UHD with BexyTV. Instant activation, zero buffering, 60 FPS sports, and multi-device support.",
+  title: "BexyTV – Premium 4K IPTV Subscription | 50,000+ Channels",
+  description: "Stream 50,000+ live sports & channels + 150,000+ VOD movies in 60 FPS 4K Ultra HD with BexyTV. Instant activation, zero buffering & 24/7 WhatsApp support.",
   alternates: {
     canonical: "/",
   },

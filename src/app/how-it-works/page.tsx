@@ -4,8 +4,8 @@ import { ArrowRight, Check, MonitorSmartphone, ShieldCheck, Zap, Globe2, Headpho
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How BexyTV Works – Easy 3-Step Setup Guide",
-  description: "Learn how to get started with BexyTV in 3 easy steps. Place your order, install our IPTV service on any device, and start streaming 50,000+ channels instantly.",
+  title: "How BexyTV Works – 3 Easy Steps to 4K Ultra HD Streaming",
+  description: "Discover how simple it is to get started with BexyTV. Pick your plan, receive instant login credentials via WhatsApp/Email, and enjoy buffer-free 4K live TV.",
   alternates: {
     canonical: "/how-it-works",
   },

@@ -4,8 +4,8 @@ import DeviceSetupGuide from "@/components/installation/DeviceSetupGuide";
 import { Clock3, Download, Headphones, Link2, Monitor, PlayCircle, Sparkles } from "lucide-react";
 
 export const metadata = {
-  title: "How to Setup BexyTV – Easy IPTV Installation Guide",
-  description: "Follow our step-by-step IPTV installation guide to easily set up BexyTV on your Smart TV, Firestick, PC, Android, or iOS device. Start streaming in minutes!",
+  title: "How to Setup BexyTV – Easy Step-by-Step IPTV Installation Guide",
+  description: "Easy step-by-step IPTV setup guide for Smart TVs, Firestick, Android TV, iOS, Windows & MAG devices. Start streaming BexyTV in under 5 minutes!",
   alternates: {
     canonical: "/installation",
   },

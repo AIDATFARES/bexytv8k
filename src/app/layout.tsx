@@ -22,15 +22,15 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Premium 4K IPTV Subscription – Zero Buffering | BexyTV",
-  description: "Experience the ultimate 4K IPTV subscription with BexyTV. Stream 50,000+ live sports, movies & global channels with zero buffering. Start your free trial today!",
+  title: "BexyTV – Premium 4K IPTV Subscription | 50,000+ Channels",
+  description: "Stream 50,000+ live sports & channels + 150,000+ VOD movies in 60 FPS 4K Ultra HD. Anti-Freeze v2 tech, zero buffering, instant WhatsApp setup. Get started today!",
   metadataBase: new URL("https://www.bexytv8k.shop"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Premium 4K IPTV Subscription – Zero Buffering | BexyTV",
-    description: "Experience the ultimate 4K IPTV subscription with BexyTV. Stream 50,000+ live sports, movies & global channels with zero buffering. Start your free trial today!",
+    title: "BexyTV – Premium 4K IPTV Subscription | 50,000+ Channels",
+    description: "Stream 50,000+ live sports & channels + 150,000+ VOD movies in 60 FPS 4K Ultra HD. Anti-Freeze v2 tech, zero buffering, instant WhatsApp setup. Get started today!",
     url: "https://www.bexytv8k.shop",
     siteName: "BexyTV",
     images: [
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium 4K IPTV Subscription – Zero Buffering | BexyTV",
-    description: "Experience the ultimate 4K IPTV subscription with BexyTV. Stream 50,000+ live sports, movies & global channels with zero buffering. Start your free trial today!",
+    title: "BexyTV – Premium 4K IPTV Subscription | 50,000+ Channels",
+    description: "Stream 50,000+ live sports & channels + 150,000+ VOD movies in 60 FPS 4K Ultra HD. Anti-Freeze v2 tech, zero buffering, instant WhatsApp setup. Get started today!",
     images: ["/og-image.jpg"],
   },
 };

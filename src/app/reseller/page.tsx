@@ -1,8 +1,8 @@
 import ResellerPageContent from "@/components/reseller/ResellerPageContent";
 
 export const metadata = {
-  title: "Start Your IPTV Reseller Business – High Margins | BexyTV",
-  description: "Launch your profitable IPTV reseller business today. Access our powerful reseller panel, custom credit packages, and 24/7 dedicated support. Explore reseller plans!",
+  title: "IPTV Reseller Panel & Packages – High Margin Profit | BexyTV",
+  description: "Start a profitable IPTV business with BexyTV Reseller Panel. Unmatched server stability, automated credit delivery, custom branding & 24/7 reseller support.",
   alternates: {
     canonical: "/reseller",
   },
