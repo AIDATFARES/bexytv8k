@@ -21,11 +21,38 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return { title: 'Post Not Found | BexyTV' };
   }
 
+  const siteUrl = 'https://www.bexytv8k.shop';
+  const postUrl = `${siteUrl}/blog/${post.slug}`;
+  const ogImage = post.coverImage
+    ? (post.coverImage.startsWith('http') ? post.coverImage : `${siteUrl}${post.coverImage}`)
+    : `${siteUrl}/og-image.jpg`;
+
   return {
     title: post.title,
     description: post.description,
     alternates: {
       canonical: `/blog/${post.slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: postUrl,
+      siteName: 'BexyTV',
+      type: 'article',
+      images: [
+        {
+          url: ogImage,
+          width: 1280,
+          height: 720,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: [ogImage],
     },
   };
 }
@@ -84,6 +111,57 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     }
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.description,
+    "image": post.coverImage ? (post.coverImage.startsWith('http') ? post.coverImage : `https://www.bexytv8k.shop${post.coverImage}`) : undefined,
+    "datePublished": post.date,
+    "author": {
+      "@type": "Organization",
+      "name": post.author || "BexyTV Team",
+      "url": "https://www.bexytv8k.shop",
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BexyTV",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bexytv8k.shop/icon.png",
+      },
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.bexytv8k.shop/blog/${post.slug}`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.bexytv8k.shop",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.bexytv8k.shop/blog",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": `https://www.bexytv8k.shop/blog/${post.slug}`,
+      },
+    ],
+  };
+
   const faqJsonLd = faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -130,6 +208,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   return (
     <main className="w-full min-h-screen bg-[#060810] bg-tech-grid bg-atmosphere text-[#F8FAFC] relative z-10">
       <div className="pt-16 pb-24 px-4 sm:px-6 md:px-12 max-w-[1024px] mx-auto w-full relative z-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {faqJsonLd && (
         <script
           type="application/ld+json"
@@ -172,8 +258,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         )}
 
         <div className="max-w-none text-[#A7B0C0]">
-          <BlogOfferCard />
-
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
             {contentPart1}
           </ReactMarkdown>
@@ -185,6 +269,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               {contentPart2}
             </ReactMarkdown>
           )}
+
+          <BlogOfferCard />
 
           {faqs.length > 0 && (
             <div className="mt-12 mb-8 border-t border-white/10 pt-8">
